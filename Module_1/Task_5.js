@@ -4,11 +4,8 @@ const Prime = (num) => {
 };
 
 const Dup = (arr) => {
-  for (var i = 0; i < arr.length; i++) {
-    for (var j = i + 1; j < arr.length; j++) {
-      if (arr[i] == arr[j]) arr.shift(arr[j]);
-    }
-  }
+  var unique = [...new Set(arr)];
+  console.log(unique);
 };
 
 var arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
@@ -25,6 +22,3 @@ if (miniFlag && !flag)
   console.log("One or more items are Prime but Whole list is not Prime ");
 
 Dup(arr);
-for (var i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}

@@ -1,14 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+ 
+  <Navbar />
+   <HomePage />
+   <Footer />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './components/HomePage.vue'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+// import PhotoSlider from './components/PhotoSlider.vue'
+
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    HomePage,
+    Navbar,
+    // PhotoSlider,
+    Footer
   }
 }
 </script>
@@ -18,8 +28,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 10px;
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

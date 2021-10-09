@@ -1,15 +1,18 @@
 <template>
-    <div>
+    <div class="box1">
 <div class="navbar">
-  <a >Logo</a>
+  
+      <img href="/"  id="logo-image" src="https://pbs.twimg.com/profile_images/1192434574577610752/NyX82InT_400x400.jpg"  alt="">
   <!-- <a href="#news">News</a> -->
-  <div >
+ 
+
+
     <div  class="dropdown">
 
-  <router-link  :to="{ name: 'product', params: { category: 'women' } }">WOMEN</router-link>
-  <router-link :to="{ name: 'product', params: { category: 'men' } }">MEN</router-link>
-  <router-link  :to="{ name: 'product', params: { category: 'gear' } }">GEAR</router-link>
-  <router-link  :to="{ name: 'product', params: { category: 'training' } }">TRAINING</router-link>
+  <router-link  class="category" :to="{ name: 'product', params: { category: women } }" :key="$route.path" > WOMEN</router-link>
+  <router-link class="category" :to="{ name: 'product', params: { category: men } }" :key="$route.path" > MEN</router-link>
+  <router-link class="category"  :to="{ name: 'product', params: { category: 'electronics' } }" :key="$route.path" > GEAR</router-link>
+  <router-link class="category"  :to="{ name: 'product', params: { category: 'jewelery' } }" :key="$route.path" > TRAINING</router-link>
  
     <div class="dropdown-content">
      
@@ -39,60 +42,131 @@
     </div>
      </div>
 
-    <spam class="reightside">
-    <input class="search" type="text" placeholder="Search..">
-   <i class="fa fa-user-circle-o" style="font-size:28px;color:black"></i>
-<i class="fa fa-heart-o" style="font-size:36px;"></i>
-<i class="fa fa-shopping-cart" style="font-size:36px"></i>
-</spam>
+    <div id="search">
+            <form class="example" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search fa-1x"></i></button>
+            </form>
+    </div>
+    <div id="right">
+        <a href=""><img src="https://static.thenounproject.com/png/2014807-200.png" alt=""></a>
+        <a href=""><img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt=""></a>
+    </div>
 </div>
-  </div>
+  
+    
 
-<router-view></router-view>
+<!-- <router-view></router-view> -->
  
     
     </div>
 </template>
 <script>
 export default {
-    name:'Navbar.vue'
+    name:'Navbar.vue',data() {
+      return {
+        men:"men's clothing",
+
+        women:"women's clothing"
+      }
+    },
 }
 </script>
 <style scoped>
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-  padding: 0px;
+.box1{
+      /* border: 1px solid black; */
 
 }
+#search{
+    display: inline-block;
+    text-decoration-line: underline;
+    /* border-bottom: 1px solid black; */
+    padding: 10px;
+    padding-top: 0px;
+    margin-left: 250px;
+}
 
+#search form input{
+    border: white;
+    width: 300px;
+}
+#search form input:focus{
+    outline: none;
+}
+#search form input::placeholder{
+   font-weight: 500;
+   font-size: 16px;
+}
+#search form button{
+    border: white;
+    background: white;
+    color: grey;
+}
+#right{
+    /* display: inline-block; */
+    /* float: right; */
+    margin-top: 8px;
+    /* padding: 10px; */
+}
+#right a img{
+    margin-left: 35px;
+    height: 25px;
+    width: 25px;
+}
+
+#logo-image{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+}
+.category{
+  color: #ddd;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  font-family: Arial;
+  padding: 0px;
+  /* border:4px solid blue; */
+  display: flex;
+  align-content: center;
+  align-items: center
+  
+}
 /* Links inside the navbar */
 .navbar a {
   float: left;
   font-size: 16px;
-  color: black;
+  color: #1D1F22;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: Raleway;
+font-style: normal;
+font-weight: bolder;
+
 }
 .reightside {
-  float: right;
+  /* float: right; */
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 6px;
   border: none;
   /* margin-top: 8px;
   margin-right: 16px; */
   font-size: 17px;
+    /* border: 2px solid black; */
+
 }
  
 /* The dropdown container */
 .dropdown {
   float: left;
   overflow: hidden;
+  /* border: 2px solid rgb(209, 8, 8); */
+  margin-left:82px 
 }
-
 /* Dropdown button */
 .dropbtnroute {
   font-size: 16px;
@@ -114,13 +188,6 @@ export default {
   font: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
-.navbar a:hover, .dropdown:hover .dropbtnw {
-  /* background-color: red; */
-}
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  /* background-color: red; */
-}
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -136,9 +203,9 @@ export default {
 .search {
   float: right;
   padding-left:10px;
-
   border: none;
   font-size: 17px;
+  
 }
 /* Mega Menu header, if needed */
 .dropdown-content .header {
@@ -146,12 +213,10 @@ export default {
   padding: 16px;
   color: white;
 }
-
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
@@ -160,7 +225,6 @@ export default {
   background-color: #ffff;
   height: 250px;
 }
-
 /* Style links inside the columns */
 .column a {
   float: none;
@@ -170,13 +234,12 @@ export default {
   display: block;
   text-align: left;
   
+  
 }
-
 /* Add a background color on hover */
 .column a:hover {
   background-color: #ddd;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -184,5 +247,3 @@ export default {
   clear: both;
 }
 </style>
-
-

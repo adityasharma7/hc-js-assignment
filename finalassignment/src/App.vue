@@ -1,27 +1,42 @@
 <template>
-<Home />
-  <div id="app">
+   <Navbar />   
+
+         <router-link to="/">Home</router-link> |
+<router-link to="/about">About</router-link>
+<hr>
+
     
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-
-  <!-- <router-view /> -->
+  <router-view :key="$route.path"></router-view>
+  <Footer />  
+  <ScrollTopComponent>
+      <i class="fa fa-arrow-circle-up" style="font-size:48px;color:black"></i>
+  </ScrollTopComponent>
 </template>
-
-<style>
-
-</style>
-
 <script>
-import Home from './views/Home.vue'
-
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/footer.vue";
+import ScrollTopComponent from "@/components/scroll.vue";
 export default {
-  name:'app',
+  name:"app",
   components:{
-    Home
-  }
+    Navbar,Footer,ScrollTopComponent
+  },
   
 }
 </script>
 
+<style scoped>
+.verticalLine {
+  border-left: solid black;
+  margin-left:15%;
+  
+}
+.btn {
+    border-radius: 8px;
+    background-color:red;
+    padding-top: 27px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+</style>

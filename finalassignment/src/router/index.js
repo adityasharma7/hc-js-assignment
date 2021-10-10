@@ -6,6 +6,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    props:true
   },
   {
     path: "/about",
@@ -16,6 +17,27 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+ { name:'Category',
+        
+        path: "/category/:category",
+        component: () =>
+      import(/* webpackChunkName: "about" */ "../components/products.vue"),
+        props:true,
+},
+{ name:'CategoryDetail',
+        
+        path: "/category/:id",
+        component: () =>
+      import(/* webpackChunkName: "about" */ "../components/productdetails.vue"),
+        props:true,
+},
+// { name:'login',
+        
+//         path: "/login",
+//         component: () =>
+//       import(/* webpackChunkName: "about" */ "../components/login.vue"),
+//         props:true,
+// },
 ];
 
 const router = createRouter({

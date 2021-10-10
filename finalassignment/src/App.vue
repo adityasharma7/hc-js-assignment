@@ -7,6 +7,7 @@
 
     
   <router-view :key="$route.path"></router-view>
+  <hr>
   <Footer />  
   <ScrollTopComponent>
       <i class="fa fa-arrow-circle-up" style="font-size:48px;color:black"></i>
@@ -16,6 +17,7 @@
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/footer.vue";
 import ScrollTopComponent from "@/components/scroll.vue";
+
 export default {
   name:"app",
   components:{

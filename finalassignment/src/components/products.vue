@@ -1,4 +1,8 @@
 <template>
+  <router-link to="/">Home</router-link> |
+{{category}}
+<br>
+
  <form>
    Sort By:
         <select @change="report($event)">
@@ -10,15 +14,30 @@
          <b style="float:right" id="ii">product found:{{size}}</b>
       </form>
 
+    
+     <hr>
+     <h2>Categories</h2>
+     
      <br>
+     <h3>Men</h3>
+         <br>
+     
+     <h3 >Women</h3>
+       
+     <br>
+     <h3>Electronics</h3>
+        
+     <br>
+     <h3>Jewelery</h3>
 <div id="prod">
+     <!-- {{items}} -->
      
     <div id="titl" v-for="item in items" :key="item.id"> 
     
         
 
           
-           <router-link :to="{ name: 'CategoryDetail', params: { id: item.id } }">
+           <router-link :to="{ name: 'CategoryDetail', params: { id: item.id,categories:item.category} }">
                <!-- <router-link to=""> -->
                
                <img :src="item.image" style="height:200px; width:200px; border-radius:20px;">
@@ -82,19 +101,28 @@ size:0,
 </script>
 
 <style scoped>
+h3{
+  align-content: flex-start;
+}
 #prod{
-    margin-left: 2%;
+    margin-left: 200px;
+    margin-top:0%;
     /* border:2px solid black; */
     display:flex;
     flex-wrap: wrap;
+    /* border:2px solid black; */
 }
 #titl{
-       /* border:2px solid black; */
+       border:1px solid black;
        width: 20%;
        padding: 10px;
+       margin-right: 2px;
 }
 #ii{
   float: right;
   /* border:2px solid black; */
+}
+hr{
+  border-bottom:1px solid black;
 }
 </style>

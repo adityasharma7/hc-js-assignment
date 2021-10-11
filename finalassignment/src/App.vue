@@ -1,13 +1,13 @@
 <template>
    <Navbar />   
 
-         <router-link to="/">Home</router-link> |
-<router-link to="/about">About</router-link>
+       
 <hr>
 
     
   <router-view :key="$route.path"></router-view>
   <hr>
+ 
   <Footer />  
   <ScrollTopComponent>
       <i class="fa fa-arrow-circle-up" style="font-size:48px;color:black"></i>
@@ -40,5 +40,8 @@ export default {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
+}
+hr{
+  border-bottom:1px solid black;
 }
 </style>

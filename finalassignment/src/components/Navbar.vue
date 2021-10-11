@@ -35,7 +35,7 @@
     <router-link to="">  <li><img id="logo_per" src="https://th.bing.com/th/id/OIP.EiQFO53l9iKsj-UqggtspwHaHv?w=191&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li></router-link>
       <li><img id="logo_per" src="https://th.bing.com/th/id/OIP.dvYM-Hh9XdaVPthO2PfEzQHaGe?pid=ImgDet&rs=1"></li>
     </ul>
-    <hr>
+   
 </div>
 </template>
 <script>

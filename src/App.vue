@@ -1,26 +1,77 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <component :is="layout">
+      <router-view />
+    </component>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import get from 'lodash-es/get'
+const DefaultLayout = () => import(/* webpackChunkName: "vsf-layout-default" */ './layouts/Default')
+const MinimalLayout = () => import(/* webpackChunkName: "vsf-layout-minimal" */ './layouts/Minimal')
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    DefaultLayout,
+    MinimalLayout
+  },
+  computed: {
+    layout () {
+      return `${get(this.$route, 'meta.layout', 'default')}-layout`
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" src="theme/css/main.scss"></style>
+<style lang="scss">
+@import "~@storefront-ui/shared/styles/helpers/breakpoints";
+body {
+  --overlay-z-index: 2;
+  --sidebar-aside-z-index: 2;
+  --sidebar-z-index: 2;
+  --bottom-navigation-height: 3.75rem;
+  --footer-height: 345px;
+  --_header-height: 80px;
+  --_header-mobile-height: 50px;
+  --select-dropdown-z-index: 2;
+  --bar-height: 3.125rem;
+  --notification-font-size: var(--font-sm);
+  font-family: var(--font-family-secondary);
+  margin: 0;
+  padding: 0;
+  a {
+    text-decoration: none;
+    color: var(--c-link);
+    cursor: pointer;
+    &:hover {
+      color: var(--c-link-hover);
+    }
+  }
+  .sf-select {
+    &__dropdown {
+      padding-bottom: env(safe-area-inset-bottom); //safe area padding for dropdown
+    }
+  }
+  .global--max-width {
+    min-height: calc(100vh - var(--_header-mobile-height) - var(--bottom-navigation-height));
+    @include for-desktop {
+      min-height: calc(100vh - var(--_header-height) - var(--footer-height));
+      max-width: 1272px;
+    }
+  }
+}
+
+#viewport {
+  position: relative;
+}
+
+@include for-desktop {
+  .sidebar {
+    &__microcart {
+      --sidebar-aside-width: 700px;
+    }
+  }
 }
 </style>

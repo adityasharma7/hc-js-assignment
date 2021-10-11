@@ -6,7 +6,7 @@
       <input type="checkbox" id="show-menu">
       <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
       <div class="content">
-      <div class="logo"><a href="#"><img src="@/assets/logo.svg" style="height:40px; width:40px;"></a></div>
+      <div class="logo"><router-link to="/"><img src="@/assets/logo.svg" style="height:40px; width:40px;"></router-link></div>
         <ul class="links">
          <li>
           <router-link class="desktop-link category" :to="{ name: 'products', params: { category: 'women'}}" > WOMEN</router-link>
@@ -43,7 +43,7 @@
   </div>
 
 <div class="main">
-  <Home />
+  <router-view></router-view>
 </div>
     
   <div id="footer">
@@ -95,7 +95,7 @@
 
 <script>
 
-import Home from '@/components/Home.vue'
+
 import bttb from '@/components/bttb.vue'
 export default {
   name: 'App',
@@ -105,7 +105,7 @@ export default {
       }
     },
   components: {
-    Home,bttb
+    bttb
   }
 }
 </script>

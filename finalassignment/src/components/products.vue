@@ -16,6 +16,9 @@
 
     
      <hr>
+     <div id="left">
+
+    
      <h2>Categories</h2>
      
      <br>
@@ -29,6 +32,8 @@
         
      <br>
      <h3>Jewelery</h3>
+      </div>
+      <div id="right">
 <div id="prod">
      <!-- {{items}} -->
      
@@ -52,7 +57,7 @@
           <i>{{item.rating.rate}}</i>/5(person rated :{{item.rating.count}})
           <br>
       </div>
-      
+      </div>
       </div>
 </template>
 
@@ -101,20 +106,31 @@ size:0,
 </script>
 
 <style scoped>
+#left{
+  width: 30%;
+  /* display: inline-block; */
+  float: left;
+}
+
+#right{
+  display: inline-block;
+  width: 50%;
+}
 h3{
   align-content: flex-start;
 }
 #prod{
-    margin-left: 200px;
+    /* margin-left: 200px; */
     margin-top:0%;
     /* border:2px solid black; */
     display:flex;
+    
     flex-wrap: wrap;
     /* border:2px solid black; */
 }
 #titl{
        border:1px solid black;
-       width: 20%;
+       width: 35%;
        padding: 10px;
        margin-right: 2px;
 }

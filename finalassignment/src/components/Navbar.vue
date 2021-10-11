@@ -1,7 +1,7 @@
 <template>
     
 <div>
- <!-- <img src= 'https://kristofers.dev/vsf.159f25d5.png'> -->
+ 
 
 <ul>
   <router-link to="/"> <img id="logo" src= 'https://kristofers.dev/vsf.159f25d5.png'>
@@ -32,23 +32,26 @@
       <li>
         <input type="text" placeholder="Type what you are looking for...">
       </li>
-    <router-link to="">  <li><img id="logo_per" src="https://th.bing.com/th/id/OIP.EiQFO53l9iKsj-UqggtspwHaHv?w=191&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li></router-link>
-      <li><img id="logo_per" src="https://th.bing.com/th/id/OIP.dvYM-Hh9XdaVPthO2PfEzQHaGe?pid=ImgDet&rs=1"></li>
+ <li><a href="" @click.prevent="userInfo"> <img id="logo_per" src="https://th.bing.com/th/id/OIP.EiQFO53l9iKsj-UqggtspwHaHv?w=191&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7"></a></li>
+      <li><img id="logo_per" src='https://th.bing.com/th/id/OIP.dvYM-Hh9XdaVPthO2PfEzQHaGe?pid=ImgDet&rs=1'></li>
     </ul>
    
 </div>
+
+
 </template>
 <script>
 
 
 export default {
     name:"navbar",
-    data(){
-      return{
-           men: "men's clothing",
-      women: "women's clothing"
-      }
-    }
+     data(){
+        return {
+            men: "men's clothing",
+            women: "women's clothing",
+        }
+     },
+ 
 }
 </script>
 

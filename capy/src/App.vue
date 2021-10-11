@@ -2,6 +2,7 @@
   <div >
 <!-- <Home/> -->
 <Navbar/>
+<!-- <Card/> -->
 <Topbutton>
      <i class="fa fa-arrow-circle-up" style="font-size:48px;color:green"></i>
   </Topbutton>
@@ -20,13 +21,15 @@
 import Navbar from '@/components/Home/Navbar.vue'
 import Topbutton from '@/components/Home/Topbutton.vue'
 import Footer from '@/components/Home/Footer.vue'
+// import Card from '@/components/Home/Card.vue'
+
 
 
 
 // import Home from "@/views/Home.vue"
 export default {
   components:{
-    Navbar,Topbutton,Footer
+    Navbar,Topbutton,Footer,
   }
   
 }

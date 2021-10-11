@@ -1,26 +1,49 @@
 <template>
+<div>
   <div class="container">
     <div class="image">
       <img :src="product.image" alt="" />
     </div>
     <div class="details">
       <h2>{{ product.title }}</h2>
-      <h3>Price: {{ product.price }}</h3>
+      <h3>$ {{ product.price }}</h3>
       <!-- {{ $n(product.price, "currency") }} -->
-      <p>{{ product.description }}</p>
+      <p align="left">{{ product.description }}</p>
       <!-- <i18n-n :value="product.price" format="currency"></i18n-n> -->
       <!-- <p>{{ $n(product.price, "currency") }}</p> -->
     </div>
+  
+    
+    </div>
+    <div>
+      <button @click="addToCart()" >Buy Now {{product.price}}</button></div>
+    <span class="padding">
+    <BannerSubscribe /></span>
+    <BannerSubscribe />
+    <Imagegrid/>
   </div>
+
 </template>
 <script>
+import Imagegrid from '@/components/Home/Image-grid.vue'
+import BannerSubscribe from '@/components/Home/BannerSubscribe.vue'
+
+
 import axios from "axios";
 export default {
   props: ["id"],
+  components:{Imagegrid,BannerSubscribe },
   data() {
     return {
       product: {},
     };
+  },methods: {
+    addToCart(){
+      this.$store.dispatch('addProductToCart',{
+        product:this.product,
+        quantity:1
+      })
+    }
   },
   mounted() {
     axios
@@ -37,22 +60,30 @@ export default {
 };
 </script>
 <style scoped>
+.padding{
+    margin:10px
+}
 .container {
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 40%);
-  padding: 40px;
-  margin: 60px auto;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 30px;
-  width: 60%;
+ 
+ 
 }
-.image,
+
 .details {
-  margin: 20px;
+    border: 2px solid black;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+
 }
 img {
-  height: 300px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
 }
 </style>

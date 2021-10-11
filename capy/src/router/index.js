@@ -15,7 +15,12 @@ const routes = [
     name: "product",
     component: Category,
     props: true,
-  } 
+  } ,{
+    path: "/category/:category/:id",
+    name: "singleproduct",
+    component: Categorydetail,
+    props: true,
+  },
   // {
   //   path: '/about',
   //   name: 'About',

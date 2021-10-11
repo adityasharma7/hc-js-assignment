@@ -3,7 +3,8 @@
   <span class="filter">
     
   <div class="dropdown">
-    <p>{{category}}</p>
+    <router-link to="/" class="Home">Home </router-link>
+    <p> | {{category}}</p>
     <span class="span"><p @click="sortbyr">Sort By:</p>
   <button class="dropbtn">Filter <i class="fa fa-angle-down" style="font-size:24px"></i>
 </button></span> 
@@ -26,17 +27,18 @@
          <router-link  class="category" to="/electronics">GREAR</router-link>
            <router-link  class="category" to="/jewelery">TRAINING</router-link>
    </div>
- <div v-for="item in items" :key="item"  >
+   <div class="box">
+ <div v-for="item in items" :key="item" id="col" >
   
 <div class="card">
-  <img :src="item.image" alt="Denim Jeans" style="width:200px; height:300px">
-    <router-link :to="{ name: 'product', params: { id: item.id } }"
-        ><p>
+  <router-link :to="{ name: 'singleproduct', params: { id: item.id } }"
+        >
+  <img :src="item.image" alt="Denim Jeans" style="width:150px; height:200px">
+    <p>
           <b>{{ item.title }}</b>
-        </p></router-link
-      >
+        </p>
 
-  <p class="price">${{item.price}}</p>
+  <h4 class="price">${{item.price}}</h4></router-link>
   <!-- <p>Some text about the jeans..</p> -->
   <div class="star">
   <span class="fa fa-star checked"></span>
@@ -44,6 +46,8 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
+</div>
+      
 
 <!-- <span class="fa fa-star"></span>
 <span class="fa fa-star"></span> -->
@@ -52,13 +56,9 @@
 </div>
 
 
+
  </div>
-    <!-- <button class="b1" :class="highToLowClass" @click="highToLow">
-      Price: High to Low
-    </button>
-    <button class="b2" :class="lowToHighClass" @click="lowToHigh">
-      Price: Low to High
-    </button> -->
+   
 </div>
 </div>
 </template>
@@ -133,7 +133,7 @@ align-items: center;
 }
 p{
   float: right;
-  /* margin-top: -15px; */
+  margin-top: 7px;
   /* margin-right: 15px; */
    font-weight: 300;
     font-size: 18px;
@@ -183,7 +183,7 @@ margin: 10px;
   /* padding: 16px; */
   width: 80px;
   font-size: 19px;
-  margin-top: -10px;
+  margin-top: -1px;
   padding-left:10px; 
   border: none;
   cursor: pointer;
@@ -200,16 +200,23 @@ margin: 10px;
   justify-content: space-around;
 
 }
-
+.Home{
+  color: #454645;
+  font-size: 18px;
+  padding-top:-22px;
+   font-weight: 300;
+    /* font-size: 18px; */
+  
+}
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(97, 94, 94, 0.2);
   margin-top:30px;
   z-index: 1;
-  margin-left: 280px;
+  margin-left: 400px;
   margin-top:100px;
   cursor: pointer;
 }
@@ -231,6 +238,29 @@ margin: 10px;
 .dropdown:hover .dropbtn {
   /* background-color: #3e8e41; */
 }
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: center;
+  padding-left: 100px;
+  width:100%;
+  margin-top:15px;
+  
+}
+#col{
+  width: 30%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid black; */
+  /* height: 800px; */
+  box-shadow: 1px 1px 1px 2px gainsboro;
+  
 
-
+}
 </style>

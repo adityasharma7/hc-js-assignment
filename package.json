@@ -1,0 +1,21 @@
+{
+  "name": "hc-js-assignment-phase1-evaluation-assignment-vue3",
+  "version": "0.1.0",
+  "description": "New theme",
+ 
+  "scripts": {
+    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve",
+    "test:unit": "echo \"No test specified yet\" && exit 0",
+    "lint": "vue-cli-service lint"
+    
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0"
+  }
+  
+}

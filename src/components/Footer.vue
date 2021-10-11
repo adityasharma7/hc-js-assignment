@@ -57,7 +57,7 @@ export default {
 } */
 
 #footer{
-    margin-top: 200px;
+    margin-top: 100px;
     width: 98%;
     margin-left: auto;
     margin-right: auto;

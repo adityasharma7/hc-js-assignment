@@ -74,6 +74,10 @@ export default {
     name:'HomePage',
     components:{
       PhotoSlider
+    },
+    mounted(){
+      localStorage.setItem('user1','Bashu Tiwari')
+      localStorage.setItem('user2','Mridul Mishra')
     }
 }
 </script>
@@ -167,6 +171,7 @@ export default {
   align-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 #best div{

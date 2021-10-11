@@ -1,24 +1,29 @@
 <template>
  
   <Navbar />
-   <HomePage />
+   <!-- <HomePage /> -->
+   <router-view :key="$route.path"></router-view>
    <Footer />
+   <!-- <Modal /> -->
+
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
+// import HomePage from './components/HomePage.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 // import PhotoSlider from './components/PhotoSlider.vue'
+// import Modal from './components/Modal.vue'
 
 
 export default {
   name: 'App',
   components: {
-    HomePage,
+    // HomePage,
     Navbar,
     // PhotoSlider,
-    Footer
+    Footer,
+    // Modal
   }
 }
 </script>
@@ -29,7 +34,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 10px;
-  width: 95vw;
+  width: 93vw;
   margin-left: auto;
   margin-right: auto;
 }

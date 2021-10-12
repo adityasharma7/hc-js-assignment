@@ -34,10 +34,10 @@
           </li>
         </ul>
       </div>
-      <label for="show-search" class="search-icon"> <router-link class="desktop-link category" :to="{ name: 'products', params: { category: message}}" ><img src="@/assets/Search_Icon.svg" style="height:30px; width:30px;"></router-link></label>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
       <form action="#" class="search-box">
         <input  v-model="message" type="text" placeholder="Type what you are looking for..." required>
-        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        <router-link class="desktop-link category" :to="{ name: 'products', params: { category: message}}" ><button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button></router-link>
       </form>
     </nav>
   </div>

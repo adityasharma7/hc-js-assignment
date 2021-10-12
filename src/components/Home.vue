@@ -52,7 +52,7 @@
 <div class="photos">
   <div class="heading">
     <h1>Share Your Look</h1>
-    <p>#YOURLOOK</p>
+    <h6>#YOURLOOK</h6>
   </div>
 <div class="photo">
  <div class="photo-item"> <img src="../assets/ig/webp/ig01.webp" style="height:400px; width:400px;"></div>

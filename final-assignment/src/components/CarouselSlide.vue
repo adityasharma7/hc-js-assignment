@@ -28,6 +28,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <p class="text1">Colour summer dresses are already in store</p>
         <img
           src="../assets/full_width_banner.png"
           class="d-block w-100"
@@ -35,8 +36,9 @@
         />
       </div>
       <div class="carousel-item">
+        <p class="text2">Find clothing that expresses your individuality</p>
         <img
-          src="../assets/full_width_banner.png"
+          src="../assets/full_width_banner2.png"
           class="d-block w-100"
           alt="..."
         />
@@ -70,6 +72,22 @@ img {
 }
 .carousel {
   margin: 0px 50px;
+}
+.text1 {
+  position: absolute;
+  font-size: 30px;
+  width: 40%;
+  font-weight: 900;
+  top: 130px;
+  left: 60px;
+}
+.text2 {
+  position: absolute;
+  font-size: 30px;
+  width: 40%;
+  font-weight: 900;
+  top: 130px;
+  right: 60px;
 }
 </style>
 <script>

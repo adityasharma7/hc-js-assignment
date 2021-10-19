@@ -1,4 +1,4 @@
-const Prime = (num) => {
+const prime = (num) => {
   for (let i = 2; i < num; i++) if (num % i === 0) return false;
   return num > 1;
 };
@@ -7,7 +7,7 @@ const segregateEvenOdd = (arr) => {
   var n = arr.length;
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] % 2 == 0) even.push(arr[i]);
-    if (arr[i] % 2 != 0) odd.push(arr[i]);
+    else if (arr[i] % 2 != 0) odd.push(arr[i]);
     if (Prime(arr[i])) prime.push(arr[i]);
   }
 };

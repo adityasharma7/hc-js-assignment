@@ -11,7 +11,6 @@ function save() {
   } else document.getElementById("savedText").innerHTML = "";
 }
 
-console.log("Event Hitted");
 window.onbeforeunload = function (event) {
   if (text != "") {
     return "Please Save first";

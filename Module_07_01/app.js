@@ -1,21 +1,19 @@
-var storedItem = localStorage.getItem("storedItem");
-
-var flag = false;
+let text = "";
+document.addEventListener("keypress", (event) => {
+  text += event.key;
+});
 
 function save() {
-  var Item = document.getElementById("input").value;
-  if (Item !== "") {
-    localStorage.setItem("storedItem", Item);
-    document.getElementById("savedText").innerHTML = Item + " -- SAVED...";
+  console.log(text);
+  if (text != "") {
+    document.getElementById("savedText").innerHTML = text + " -- SAVED...";
+    text = "";
   } else document.getElementById("savedText").innerHTML = "";
 }
 
-function exit() {
-  var Item = document.getElementById("input").value;
-  if (Item === "") alert("Please write Something inside textArea");
-  else if (localStorage.getItem("storedItem") == null) {
-    alert("Please Save Data First");
+console.log("Event Hitted");
+window.onbeforeunload = function (event) {
+  if (text != "") {
+    return "Please Save first";
   }
-  localStorage.clear("storedItem");
-  location.reload();
-}
+};

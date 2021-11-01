@@ -4,7 +4,6 @@ document.addEventListener("keypress", (event) => {
 });
 
 function save() {
-  console.log(text);
   if (text != "") {
     document.getElementById("savedText").innerHTML = text + " -- SAVED...";
     text = "";

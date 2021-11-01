@@ -1,4 +1,4 @@
-var Table = document.getElementsByTagName("table")[0];
+var table = document.getElementsByTagName("table")[0];
 
 Table.onclick = (eve) => {
   var flag;

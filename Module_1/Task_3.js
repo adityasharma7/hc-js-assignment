@@ -7,7 +7,7 @@ const segregateEvenOdd = (arr) => {
   var n = arr.length;
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] % 2 == 0) even.push(arr[i]);
-    else if (arr[i] % 2 != 0) odd.push(arr[i]);
+    else (arr[i] % 2 != 0) odd.push(arr[i]);
     if (primeNumber(arr[i])) prime.push(arr[i]);
   }
 };

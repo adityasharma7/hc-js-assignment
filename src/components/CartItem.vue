@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "CartItem",
   props: {
@@ -28,6 +30,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['changeCart']),
     getItemTotal(item) {
       return item.quantity * item.product.price;
     },
@@ -46,7 +49,7 @@ export default {
       this.updateCart();
     },
     updateCart() {
-      localStorage.setItem("cart", JSON.stringify(this.$store.state.cart));
+      changeCart;
     },
     removeFromCart(item) {
       this.$emit("removeFromCart", item);

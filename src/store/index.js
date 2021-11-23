@@ -46,6 +46,9 @@ export default createStore({
     clearCart(state) {
       state.cart = { items: [] };
     },
+    changeCart(state){
+      localStorage.setItem("cart", JSON.stringify(this.$store.state.cart));
+    }
   },
   actions: {
     checkAuth(context) {
@@ -57,6 +60,10 @@ export default createStore({
           context.commit("setAuth", false);
         }
       });
+    },
+
+    changeCart(context){
+      context.commit("changeCart")
     },
 
     logout() {

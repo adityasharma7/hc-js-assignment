@@ -83,12 +83,10 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["isAuthenticated"]),
+    ...mapGetters(["isAuthenticated", "cartCount"]),
 
     cartTotalLength() {
-      return this.cart.items.reduce((acc, curVal) => {
-        return (acc += curVal.quantity);
-      }, 0);
+      return cartCount;
     },
     cartTotalPrice() {
       return this.cart.items.reduce((acc, curVal) => {

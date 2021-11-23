@@ -21,6 +21,9 @@ export default createStore({
     },
     isAuthenticated: (state) => state.isAuthenticated,
     cartItems: (state) => state.cart,
+    cartCount: (state) => {
+      state.cart.items.length
+    }
   },
   mutations: {
     setAuth(state, payload) {

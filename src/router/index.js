@@ -36,10 +36,7 @@ const routes = [
   {
     path: "/cart/checkout",
     name: "Checkout",
-    component: () => import("@/views/checkout.vue"),
-    meta: {
-      requireLogin: true,
-    },
+    component: () => import("@/views/checkout.vue")
   },
   {
     path: "/:catchAll(.*)",

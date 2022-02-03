@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="indexstyle.css">
+
+  <title>MyFashion site</title>
+</head>
+
+<body>
+
+  <section>
+    <nav class="white ">
+      <div class="nav-wrapper white container">
+        <a href="#!" class="brand-logo"><b>MY</b> STORE</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html" class="visited">Home</a></li>
+          <li><a href="badges.html">Shop</a></li>
+          <li><a href="collapsible.html">Features</a></li>
+          <li><a href="mobile.html">Blog</a></li>
+          <li><a href="mobile.html">About</a></li>
+          <li><a href="mobile.html">Contact</a></li>
+          <div style="display:inline" class="col-3">
+            <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+            <li><a href="sass.html"><i class="material-icons">shopping_cart</i></a></li>
+            <li><a href="sass.html"><i class="material-icons">favorite_border</i></a></li>
+          </div>
+        </ul>
+
+
+        </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html" class="visited">Home</a></li>
+      <li><a href="badges.html">Shop</a></li>
+      <li><a href="collapsible.html">Features</a></li>
+      <li><a href="mobile.html">Blog</a></li>
+      <li><a href="mobile.html">About</a></li>
+      <li><a href="mobile.html">Contact</a></li>
+      <li><a href="mobile.html">Search</a></li>
+      <li><a href="mobile.html">Your Cart</a></li>
+      <li><a href="mobile.html">Favorite</a></li>
+    </ul>
+  </section>
+  <!--carousal-->
+  <section>
+    <div class="row caro ">
+      <div class="carousel carousel-slider " id="cimg">
+        <div class="carousel-fixed-item col s12 m12 l12 mcen">
+          <div class="btbox">
+            <h3 id="cn1">New-Season Collection</h3>
+          </div>
+          <div class="btbox">
+            <h1 id="cn2">New arrives</h1>
+          </div>
+          <div class="btbox"><a class="btn btnfirst white-text">Shop Now</a></div>
+
+        </div>
+        <a class="carousel-item" href="#one!"><img class="responsive-img" id="m1" src="images/mancloth.png"></a>
+        <a class="carousel-item" href="#two!"><img class="responsive-img" id="m2" src="images/manseason.png"></a>
+        <a class="carousel-item" href="#three!"><img class="responsive-img" id="w" src="images/women1.jpg"></a>
+      </div>
+    </div>
+  </section>
+  <!--Middle portion-->
+
+  <section id="mdsection">
+    <br><br><br><br>
+    <div class="row container">
+      <div class="col s12 m6 l4">
+        <div class="card" id="show1">
+          <div class="card-image" style="font-size:small; font-weight:bolder;">
+            <img src="images/girlbanner.jpg" class="ban">
+            <span class="card-title black-text" style="font-size:large; font-weight:bolder;">Women<br><span
+                class="cont">
+                Spring<br> 2018
+              </span></span>
+          </div>
+          <div class="card-action" id="hide1">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card" id="show2">
+          <div class="card-image" style="font-size:small; font-weight:bolder;">
+            <img src="images/manbanner.jpg" class="ban">
+            <span class="card-title black-text" style="font-size:large; font-weight:bolder;">Men<br><span class="cont ">
+                Spring 2018
+              </span></span>
+          </div>
+
+          <div class="card-action" id="hide2">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4" style="box-sizing:border-box">
+        <div class="card" id="show3">
+          <div class="card-image" style="font-size:small; font-weight:bolder;">
+            <img src="images/cap.jpg" class="ban">
+            <span class="card-title black-text" style="font-size:large; font-weight:bolder;">Accesories<span
+                class="cont">
+                New-Season
+              </span></span>
+          </div>
+          <div class="card-action" id="hide3">
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Cart-->
+
+  <section>
+    <div class="row container">
+      <h2>Product Overview</h2>
+      <nav class="nav-extended white" id="nav2">
+
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+        </ul>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#">All Product</a></li>
+            <li class="tab"><a href="#">Women</a></li>
+            <li class="tab"><a href="#">Men</a></li>
+            <li class="tab"><a href="#">Bag</a></li>
+            <li class="tab"><a href="#">Shoes</a></li>
+            <li class="tab"><a href="#">Watches</a></li>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filter<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+              <li>
+                <form>
+                  <div class="input-field">
+                    <input id="search" size="8" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+    <div class="row container ">
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem2.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/man1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem3.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem4.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/watch1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem5.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem6.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/shoe1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem7.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/man2.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/belt1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem8.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/tshirt1.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/watch2.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3 l3 imgs">
+        <div class="card">
+          <div class="card-image it items">
+            <img src="images/fem9.webp">
+            <div class="center-align bt"><a href="#"><input type="button" value="Quick View" class="btlink"></a></div>
+          </div>
+          <div class="card-action font-size smaller ">
+            <a href="#" style="margin-left:0px;">Esprit Ruffle shirt</a>
+            <p class="price" style="margin-left:0px;">$16.64</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container" id="lbtn"><a href="#"><input type="button" id="lastbtn" value="LOAD MORE"></a></div>
+  </section>
+  <!--Footer-->
+  <section>
+    <footer class="page-footer black white-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s3 m3 l3">
+            <h5 class="white-text"><b>CATEGORIES</b></h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Women</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Men</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Shoes</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Watches</a></li>
+            </ul>
+
+          </div>
+          <div class="col s3 m3 l3">
+            <h5 class="white-text"><b>HELP</b></h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Track Order</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Returns</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Shepping</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col s3 m3 l3">
+            <h5 class="white-text"><b>GET IN TOUCH</b></h5>
+            <p class="grey-text text-lighten-4 ">Any questions? Let us know in store at 8th
+              floor,379 Hudson St, New York, NY10018 or call us on (+1) 967166879
+            </p>
+            <div>
+              <i class="fa fa-facebook-f" style="font-size:24px;margin: 5px;color:gray"></i>
+              <i class="fa fa-instagram" style="font-size:24px; margin: 5px;color:gray"></i>
+              <i class="fa fa-pinterest" style="font-size:24px; margin: 5px;color:gray"></i>
+            </div>
+
+          </div>
+          <div class="col s3 m3 l3">
+            <h5 class="white-text">NEWSLETTER</h5>
+            <form class="grey-text text-lighten-4">
+              <div>
+                <div class="row">
+                  <div class="input-field col s12 grey-text">
+                    <input id="email" placeholder="email@example.com" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <button class="fbtn left-align" type="submit" name="action">Subcribe
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container ">
+          <p class="center-align">
+            Copyright ©
+            2022 All rights reserved
+            <a href="#" class="li">Mystore.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+
+
+      $("a").addClass("black-text");
+      $(".dropdown-trigger").dropdown();
+    });
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: true
+
+    });
+
+  </script>
+</body>
+
+</html>

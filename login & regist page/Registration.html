@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        div {
+            background-color: wheat;
+            height: 500px;
+            width: 250px;
+            position: relative;
+            align-items: center;
+            left: 15%;
+            top: 40px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <H1>
+                <center>Registration Form</center>
+            </H1>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+
+            <lable for="Gender">Gender:</lable><br>
+            <input type="radio" name="male" />Male<br>
+            <input type="radio" name="other" />Female<br>
+            <input type="radio" name="other" />Other<br>
+
+            <label for="email">Enter your Email address:</label><br>
+            <input type="email" id="Eid" name="Email" value=""><br>
+
+            <label for="contact"> Contact No.: </label><br>
+            <input type="text" id="contact" name="Contact No." value=""><br>
+            <br>
+            <lable for="myfile">Upload Photo</lable><br>
+            <input type="file" id="myfile" name="myfile"><br>
+            <br>
+            <center>
+                <button type="submit" style="background-color: rgb(100, 100, 241);" class="btn">submit</button>
+            </center>
+        </div>
+    </form>
+</body>
+
+</html>

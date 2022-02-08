@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" type="text/css" href="registrationstyle.css">
+</head>
+
+<body style="background-color: azure;">
+
+    <div id="registration">
+        <h1>Ecommerce Registration</h1>
+        <form action="">
+            <label for="Region"><span style="color: red;">*</span>Country/Region: </label>
+            <input list="Region">
+            <datalist name="Region" id="Region">
+                <option value="India">India</option>
+                <option value="Hong Kong"></option>
+                <option value="South Korea"></option>
+                <option value="United States of America"></option>
+                <option value="Japan"></option>
+                <option value="Austria"></option>
+                <option value="Australia"></option>
+                <option value="Singapure"></option>
+                <option value="Indonesia"></option>
+                <option value="France"></option>
+                <option value="Germany"></option>
+                <option value="Italy"></option>
+                <option value="Russia"></option>
+                <option value="New Zealand"></option>
+            </datalist><br>
+            <p style="display: inline;"><span style="color:red">*</span>Select trade role:</p>
+            <input type="radio" name="trade" id="Buyer" value="Buyer">
+            <label for="Buyer">Buyer</label>
+            <input type="radio" name="trade" id="Seller" value="Seller">
+            <label for="Seller">Seller</label>
+            <input type="radio" name="trade" id="Both" value="Both">
+            <label for="Both">Both</label><br>
+            <label for="Email"><span style="color: red;">*</span>Email Address: </label>
+            <input type="email" name="Email" id="Email" placeholder="Please set the email as the login name"><br>
+            <label for="password"><span style="color: red;">*</span>Login Password: </label>
+            <input type="password" name="password" placeholder="Please set the login password" id="password"><br>
+            <label for="Confpass"><span style="color: red;">*</span>Confirm Password: </label>
+            <input type="password" name="Confpass" placeholder="Please enter the login password again" id="Confpass"><br>
+            <label for="mob"><span style="color: red;">*</span>Mobile Number: </label>
+            <input type="tel" name="mob" id="mob"><br>
+            <label for="compname"><span style="color: red;">*</span>Company Name: </label>
+            <input type="text" name="compname" id="commpname" placehoder="Must  be a legally registred company"><br>
+            <label for="name"><span style="color: red;">*</span>Full name: </label>
+            <input type="text" name="fname" placeholder="Please enter your first name" size="10" id="name">
+            <input type="text" name="lname" size="10" id="lname" placeholder="Please enter your last name"><br>
+            <label for="verify"><span style="color: red;">*</span>Verification: </label>
+            <input type="range" name="verify" min="0" max="2" id="verify"><br>
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">While creating a website account: I agree to abide by the Ecommerce Membership Agreement-
+                willing to receive emails from Ecommerce members and services</label><br>
+            <div id="submitbtndiv"><input type="submit" name="submit" id="submit" value="Agree and Registered"></div>
+        </form>
+    </div>
+
+</body>
+
+</html>

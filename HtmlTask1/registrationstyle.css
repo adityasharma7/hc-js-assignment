@@ -1,0 +1,36 @@
+h1 {
+    margin-bottom: 40px;
+}
+
+input {
+    margin: 10px;
+    margin-left: 8px;
+    padding: 3px;
+}
+
+label {
+    margin-top: 20px;
+}
+
+#submitbtndiv {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+#submit {
+    background-color: rgb(247, 81, 21);
+    border: 1px solid rgb(194, 8, 8);
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+}
+
+#registration {
+    margin-left: 40%;
+    height: 600px;
+    margin-top: 80px;
+    width: 400px;
+    content: auto-fit;
+}

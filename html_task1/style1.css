@@ -1,0 +1,19 @@
+.alignment2{
+    margin-right: 520px;
+}
+
+.alignment{
+  text-align: center;
+margin-top: 200px;
+}
+.alignment3{
+    margin-right: 500px;
+}
+input[type=text], input[type=password],input[type=number] {
+    width: 40%;
+    padding: 5px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }

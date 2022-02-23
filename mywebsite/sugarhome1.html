@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sugar cosmetics</title>
+    <link rel="stylesheet" href="sugarcos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>
+           <img src="images/sugarlogo.png" width="200" height="100">
+        </div>
+        <div>
+            <form class="example" action="/action_page.php">
+                <input type="text" id="search" placeholder="Search.." name="search">
+                <button type="submit" style="background-color: rgb(179, 45, 45);"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div>
+            <form action="login.html" top="0" ;left="1000px" ; width="400px" ; height="20px">
+                <input type="submit" value="Login/Registration"
+                    style="background-color: rgb(226, 126, 126); height: 30px; width: 200px;" />
+            </form>
+        </div>
+    </div>
+
+    <div class="topnav">
+        <a class="active" href="#Makeup">Makeup</a>
+        <a href="#Brushes">Brushes</a>
+        <a href="#skincare">Skincare</a>
+        <a href="Trending">Trending</a>
+        <div class="search-container">
+            <form action="/action_page.js">
+                <input type="text" placeholder="search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+           <img src="images/slider1.jpg" style="width:100%">
+            <div class="text"><button class="btn">shop now</button></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+           <img src="images/slider2.jpg" style="width:100%">
+            <div class="text"><button class="btn">shop now</button></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+           <img src="images/slider3.jpg" style="width:100%">
+            <div class="text"><button class="btn">shop now</button></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <h2>
+        <center>BESTSELLERS</center>
+    </h2>
+    <br>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+               <img src="images/crayonlipstick.jpg" alt="crayon" style="width:100%">
+                <div class="container">
+                    <h2>Matte As Hell Crayon Lipstick</h2>
+                    <p>
+                        <center>₹799</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+               <img src="images/kajol.jpg" alt="Kajol" style="width:100%">
+                <div class="container">
+                    <h2>Kohl of Honour Intense Kajal</h2>
+                    <p>
+                        <center>₹249</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+               <img src="images/lipbalm.jpeg" alt="lipbalm" style="width:100%">
+                <div class="container">
+                    <h2>Tipsy Lips Moisturizing Balm</h2>
+                    <p>
+                        <center>₹199</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+               <img src="images/platter.jpeg" alt="platter" style="width:100%">
+                <div class="container">
+                    <h2>Contour De Force Face Palette</h2>
+                    <p>
+                        <center>₹199</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+               <img src="images/ics power play.jpg" alt=" power play" style="width:100%">
+                <div class="container">
+                    <h2>Powder play Compact</h2>
+                    <p>
+                        <center>₹199</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+               <img src="images/spf power play.jpg" alt=" power play" style="width:100%">
+                <div class="container">
+                    <h2>Power Clay SPF20 BB Cushion</h2>
+                    <p>
+                        <center>₹699</center>
+                    </p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <div class="main">
+
+        <h2>MakeUp</h2>
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('lipsticks')"> Lipsticks</button>
+            <button class="btn" onclick="filterSelection('eye')"> Eye linears</button>
+            <button class="btn" onclick="filterSelection('skin')">SkinCare </button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+            <div class="column lipsticks">
+                <div class="content">
+                   <img src="images/lipstic combo.jpg" alt="lipsticks" style="width:100%">
+                    <h4>lipstick combo</h4>
+                    <p>Smudge Me Not Liquid Lipstick Minis Set</p>
+                    <p>₹659</p>
+                    <p><button class="button">Add TO Cart</button></p>
+                </div>
+            </div>
+            <div class="column lipsticks">
+                <div class="content">
+                   <img src="images/lipstic.jpg" alt="Lipstick" style="width:100%">
+                    <h4>Lipstick</h4>
+                    <p>Nothing Else Matter Longwear Lipstick</p>
+                    <p>₹499</p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+            <div class="column lipsticks">
+                <div class="content">
+                   <img src="images/liquid lipstick.jpg" alt="Nature" style="width:100%">
+                    <h4>Liquid Lipstick</h4>
+                    <p>Mettle Liquid Lipstick</p>
+                    <p>₹599</p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+
+            <div class="column eye">
+                <div class="content">
+                   <img src="images/fade proof kajal.jpg" alt="eye" style="width:100%">
+                    <h4>Kajol</h4>
+                    <p>Kohl of Honour Intense kajal</p>
+                    <p>₹249</p>
+                    <p><button class="button">Add To Cart</button></p>
+                </div>
+            </div>
+            <div class="column eye">
+                <div class="content">
+                   <img src="images/eyeliner.jpg" alt="eye" style="width:100%">
+                    <h4>Eye linears</h4>
+                    <p>Double Matte Eyeliner-01 Black swan </p>
+                    <p>₹699</p>
+                    <p><button class="button">Select Shade</button></p>
+                </div>
+            </div>
+            <div class="column eye">
+                <div class="content">
+                   <img src="images/mascara.jpg" alt="eye" style="width:100%">
+                    <h4>mascara</h4>
+                    <p>Lash Mob Limitless Mascara-01 Black</p>
+                    <p>₹799</p>
+                    <p><button class="button">Add To Cart</button></p>
+                </div>
+            </div>
+
+            <div class="column skin">
+                <div class="content">
+                   <img src="images/lip scrub.jpg" alt="skin" style="width:100%">
+                    <h4>Lip-scrub</h4>
+                    <p>Coffee Culture Lip Scrub</p>
+                    <p>₹299</p>
+                    <p><button class="button">Add to Cart</button></p>
+                </div>
+            </div>
+            <div class="column skin">
+                <div class="content">
+                   <img src="images/sunscreen.jpg" alt="skin" style="width:100%">
+                    <h4>Suncreen</h4>
+                    <p>Citrus Got Real SPF30 Sunscreen</p>
+                    <p>₹499</p>
+                    <p><button class="button">Add To Cart</button></p>
+                </div>
+            </div>
+            <div class="column skin">
+                <div class="content">
+                   <img src="images/hand rub.jpg" alt="Car" style="width:100%">
+                    <h4>Hand Rub</h4>
+                    <p>Swipe Right Hand RUb</p>
+                    <p>₹89</p>
+                    <p><button class="button">Add To Cart</button></p>
+                </div>
+            </div>
+            <!-- END GRID -->
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <section>
+
+        <footer class="page-footer black white-text">
+            <div class="grid-container">
+                <div>
+                    <p style="color:#000">INFORMATION</p>
+                    <ul>
+                        <li>Contact Us</li>
+                        <li>Terms & Conditions</li>
+                        <li>Returns</li>
+                        <li>FAQs</li>
+                        <li>About US</li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="color:#000">GET IN TOUCH</p>
+                    <ul>
+                        <li>Call Us At
+                            <br>
+                            022-2847-5555<br>
+                            033-6709-8009
+                        </li>
+                        <li>Support
+                            <br>
+                            hello@sugarcosmetics.com
+                        </li>
+                        <li>
+                            Work With US
+                            <br>
+                            career@sugarcosmetics.com
+                        </li>
+                        <li>
+                            Press & Media<br>
+                            pr@sugarcosmetics.com
+                        </li>
+                        <li>Influencer Collab <br>
+                            Join US</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column5 s3 m3 l3">
+                <h5 class="white-text"> SUBSCRIBE TO OUR NEWSLETTER</h5>
+                <form class="grey-text text-lighten-4">
+                    <div>
+                        <div class="row">
+                            <div class="input-field col s12 grey-text">
+                                <input id="email" placeholder="email@example.com" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <button class="fbtn left-align" type="submit" style="background-color: rgb(190, 78, 78);"
+                            name="action">Subcribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container ">
+                    <p class="center-align">
+                        Copyright ©
+                        2022 Sugar Cosmetics. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>

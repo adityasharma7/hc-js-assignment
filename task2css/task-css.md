@@ -2,7 +2,8 @@ Task 2- 2. Assume that both layouts were created using a similar CSS grid. What 
 
 If you did not position “Next Day Shipping” absolutely to the right, why not? 
 
-Ans- In CSS grid to a particular grid item change the name and at that specific item set the alignment. Write a seperate css for the item.
+Ans- In CSS grid to a particular grid item change the name and at that specific item set the alignment. Write a seperate css for the item. 
+In a Grid container to the third div, which is (class="grid-item2) in which "Next Day shipping" is there, we applied style for grid-item2 --"text-align: right;" to make layout b look like a.
 
 Task3-css
 3. What is the difference between how Flexbox and CSS Grid calculate item/container size?
@@ -27,6 +28,7 @@ Que-4. You are writing a responsive layout for a website that has dramatically d
 
 Ans- We use the mobile first approach to simplify the code. The Mobile-first approach helps to make the website more responsive. Media query always designs first for mobile, when it works for smart devices it is much faster, and displays the page as fast as possible.
 We have to use both the media query to set the different layouts for mobile and desktop views. And for targeting large devices like tablets and laptops we use different media queries according to the typical device breakpoint.
+We use @media (min-width: ...) media query is best to support mobile first layout.
 
 @media(min-width: X px)- This style will be applied for browser’s viewport width equal to or wider than x px.
 @media(max-width: X px)- this style will be applied for the browser’s viewport width equal to or narrow than x px.

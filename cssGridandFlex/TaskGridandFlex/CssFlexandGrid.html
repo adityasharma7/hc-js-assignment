@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FlexandGrid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Flex & Grid Layout</title>
+</head>
+
+<body>
+    <!--Header-->
+    <section class="sec">
+        <div class="head card ">
+            <ul id="nav">
+                <li class="btnnav item paddingl">Home</li>
+                <li class="btnnav item paddingl">Feature</li>
+                <li class="btnnav item paddingl">About</li>
+                <li class="btnnav item paddingl">Contact</li>
+                <div class="dropdown-hover hide-small">
+                    <li class="btnnav item "><button class="btnnav paddingl" title="More">MORE <i class="fa fa-caret-down"></i></button></li>
+                    <div class="dropdown-content card">
+                        <a href="#" class="item btnnav">Merchandise</a>
+                        <a href="#" class="item btnnav">Extras</a>
+                        <a href="#" class="item btnnav">Media</a>
+                    </div>
+                </div>
+
+
+            </ul>
+        </div>
+
+    </section>
+
+    <!--middle portion-->
+
+    <section>
+        <div class="titleImg">
+            <img src="images/davide.jpg" id="Img1" title="image" alt="Title Image">
+            <div class="content">
+                <h1>My Website</h1>
+                <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h6>
+            </div>
+        </div>
+    </section>
+    <!--Feature-->
+    <section>
+        <div style="max-width:60%" id="feature">
+            <h2 class="wide">Features</h2>
+            <p class="opacity"><i>We love web designing</i></p>
+            <p class="pcontent">We have created a website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="gridview">
+                <div class="third">
+                    <p>Name</p>
+                    <img src="images/feature.jpg" class="imgborder" alt="Random Name" style="width:90%">
+                </div>
+                <div class="third">
+                    <p>Name</p>
+                    <img src="images/feature.jpg" class="imgborder" alt="Random Name" style="width:90%">
+                </div>
+                <div class="third">
+                    <p>Name</p>
+                    <img src="images/feature.jpg" class="imgborder" alt="Random Name" style="width:90%">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--About-->
+    <section id="aboutsec">
+        <div class="about" id="about">
+            <h2 class="abouth2">My Name</h2>
+            <hr style="width:200px" class="line">
+            <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <h3 class="aboutskills">My Skills</h3>
+            <p class="wid">Photography</p>
+            <div class="white">
+                <div class="dark-grey" style="height:28px;width:95%"></div>
+            </div>
+            <p class="wid">Web Design</p>
+            <div class="white">
+                <div class="dark-grey" style="height:28px;width:85%"></div>
+            </div>
+            <p class="wid">Photoshop</p>
+            <div class="white">
+                <div class="dark-grey" style="height:28px;width:80%"></div>
+            </div><br>
+
+            <div class="aboutinfo">
+                <div class="aboutcont">
+                    <span class="aboutsize">11+</span><br> Partners
+                </div>
+                <div class="aboutcont">
+                    <span class="aboutsize">55+</span><br> Projects Done
+                </div>
+                <div class="aboutcont">
+                    <span class="aboutsize">89+</span><br> Happy Clients
+                </div>
+                <div class="aboutcont">
+                    <span class="aboutsize">150+</span><br> Meetings
+                </div>
+            </div>
+
+            <button class="downloadbtn">
+              <i class="fa fa-download"></i> Download Resume
+            </button>
+
+        </div>
+    </section>
+    <!--contact-->
+    <section>
+        <div class="contact" style="max-width:800px" id="contact">
+            <h2 class="contacth2">CONTACT</h2>
+            <p class="contactp"><i>Fan? Drop a note!</i></p>
+            <div class="contact-content">
+                <div class="contactinfo">
+                    <i class="fa fa-map-marker" style="width:30px"></i> Indore (M.P.), India<br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9515154542<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+                </div>
+                <div class="contactinfo">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="contactinput" style="margin:0 -16px 8px -16px">
+                            <div class="half">
+                                <input class="contactinp" type="text" placeholder="Name" required="" name="Name">
+                            </div>
+                            <div class="half">
+                                <input class="contactinp" type="text" placeholder="Email" required="" name="Email">
+                            </div>
+                        </div>
+                        <input class="contactinp" type="text" placeholder="Message" required="" name="Message">
+                        <button class="send" type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <section>
+        <footer class="black-text">
+            <div class="container">
+                <div class="row" id="footer" class="colo">
+                    <div>
+                        <h5 class="black-text"><b>CATEGORIES</b></h5>
+                        <ul>
+                            <li>
+                                <a class="text " href="#!">Web Development</a>
+                            </li>
+                            <li>
+                                <a class="text " href="#!">Photography</a></li>
+                            <li><a class="text " href="#!">Photoshop</a></li>
+                            <li><a class="text " href="#!">Resume</a></li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <h5 class="black-text"><b>HELP</b></h5>
+                        <ul>
+                            <li><a class="text" href="#!">Java-Script</a></li>
+                            <li><a class="text" href="#!">CSS</a></li>
+                            <li><a class="text" href="#!">HTML</a></li>
+                            <li><a class="text" href="#!">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="black-text"><b>GET IN TOUCH</b></h5>
+                        <p class="text text-lighten-4 ">Any questions? Let us know in store at 8th floor,<br>379 Vijay Nagar, Indore, India or call us on (+91) 9671668790
+                        </p>
+                        <div>
+                            <i class="fa fa-facebook-f" style="font-size:24px;margin: 5px;color:gray"></i>
+                            <i class="fa fa-instagram" style="font-size:24px; margin: 5px;color:gray"></i>
+                            <i class="fa fa-pinterest" style="font-size:24px; margin: 5px;color:gray"></i>
+                        </div>
+
+                    </div>
+                    <div>
+                        <h5 class="black-text">NEWSLETTER</h5>
+                        <form class="text ">
+                            <div>
+                                <div class="row">
+                                    <div class="input-field  text">
+                                        <label for="email"><strong>Email:</strong></label><br>
+
+                                        <input id="email" class="contactinp" placeholder="email@example.com" type="email" class="validate">
+
+                                    </div>
+                                </div>
+                                <button class="downloadbtn" type="submit" name="action">Subcribe
+                    </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="footer-copyright">
+                <div class="container ">
+                    <p class="center-align">
+                        Copyright © 2022 All rights reserved
+                        <a href="#" class="li">Mywebsite.com</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+
+.title {
+    text-align: center;
+}
+
+.table-style {
+    width: 100%;
+}
+
+tr {
+    text-align: center;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+

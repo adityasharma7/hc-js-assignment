@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twice and Half</title>
+</head>
+<h2>To print the list of half of all elements and twice of elements.</h2>
+<body>
+    <script>
+    var array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+
+    function twice(array) {
+        twice = [];
+        for (let i = 0; i < array.length; i++) {
+            twice[i] = array[i] * 2;
+        }
+        return twice;
+    }
+    console.log("The twice elements are: ");
+    console.log(twice(array));
+    
+    function half(array) {
+        var half = [];
+        for (let i = 0; i < array.length; i++) {
+            half[i] = array[i] / 2;
+        }
+        return half;
+    }
+    
+    console.log("The half elements are: ");
+    console.log(half(array)); 
+</script>
+</body>
+</html>

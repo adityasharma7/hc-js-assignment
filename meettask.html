@@ -1,0 +1,28 @@
+<! -- take user from input in a string and take only numbers and don't let the user type alphabets as an input-- >
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Allow User to Enter Only Numbers</title>
+
+</head>
+
+<body>
+
+    <input type="text" onkeypress="isInputNumber(event)">
+
+    <script>
+        function isInputNumber(evt) {
+
+            var ch = String.fromCharCode(evt.which);
+
+            if (!(/[0-9]/.test(ch))) {
+                evt.preventDefault();
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

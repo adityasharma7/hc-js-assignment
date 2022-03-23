@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <h2>To remove duplicate values from the array</h2>
+
+    <script>
+    var arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+  
+    function removeDuplicates(arr) {
+        return arr.filter((item, 
+            index) => arr.indexOf(item) === index);
+    }
+  
+    console.log(removeDuplicates(arr));
+</script>
+    
+</body>
+</html>

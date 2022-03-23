@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <H2>JS Array</H2>
+    <p>array for odd, even numbers and prime numbers.</p>
+    <p id="EP"></p>
+    <p id="OP"></p>
+    <p id="prime"></p>
+    <script>
+        const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const even = numbers.filter(x=> x % 2 === 0);
+        const odd = numbers.filter(x=> x % 2 === 1);
+       const isPrime = num => {
+        for (let i = 2; i < num; i++) {
+         if (num % i === 0) return false;
+        }
+       return num !== 1;
+    };
+
+const myPrimeArray = numbers.filter(element => isPrime(element));
+
+        //even numbers:
+        document.getElementById("EP").innerHTML= even;
+        //odd numbers:
+        document.getElementById("OP").innerHTML= odd;
+        //prime numbers:
+        document.getElementById("prime").innerHTML= myPrimeArray;
+    </script>
+</body>
+</html>

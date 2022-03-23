@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script module3</title>
+</head>
+
+<body>
+  <h2>The JS program to find the following:</h2>
+    <script>
+        const arr = [
+        {id: 1, name: "Amit Kumar", age: 25},
+        {id: 2, name: "Rahul Dixit", age: 20},
+        {id: 3, name: "Ravi Joshi", age: 55},
+        {id: 4, name: "Rohit Verma", age: 35},
+        {id: 5, name: "Ajay Jain", age: 17},
+        ]
+
+        // a. Print id and name of the youngest and oldest person
+    
+      const youngestPerson = () => {
+        const youngest = arr.sort((p1, p2) => p1.age - p2.age);
+          return `youngest person's [ id: ${youngest[0].id} , Name: ${youngest[0].name} ]`
+        };
+
+      console.log(youngestPerson());
+
+      const oldestPerson = () => {
+        const oldest = arr.sort((p1, p2) => p2.age - p1.age);
+          return `oldest person's [ id: ${oldest[0].id} , Name: ${oldest[0].name} ]`
+      };
+
+      console.log(oldestPerson());
+
+
+       // b. Create another list having id and name of all the person above 18 years
+
+      const adult = arr.filter((x)=>x.age > 18).map((x)=> x.id + " " + x.name);
+      console.log("List of person age above 18:", adult);
+
+
+       // c. Find the average age
+      const avgAge = arr.reduce((sum, curr) => (sum + curr.age), 0) / arr.length;
+      console.log(`Average Age is ${avgAge}`);
+
+       // d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively
+
+      console.log("list of names starting with 'A' ", Astartname = arr.filter((x) => x.name[0] == 'A'));
+      console.log("list of names starting with 'R' ", Rstartname = arr.filter((x) => x.name[0] == 'R'));
+
+    </script>
+</body>
+</html>

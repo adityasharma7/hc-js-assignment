@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum, min, max</title>
+</head>
+<h2>To find the sum, min, max of array elements</h2>
+
+<body>
+    <script>
+        var arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+        var sum = 0;
+        var max = 0;
+        var min = 0;
+        arr.map(ele => {
+            sum += ele
+        })
+
+        var min = arr => arr.reduce((x, y) => Math.min(x, y));
+        var max = arr => arr.reduce((x, y) => Math.max(x, y));
+
+        console.log("Min:", min(arr));
+        console.log("Max:", max(arr));
+        console.log("sum:", sum);
+
+    </script>
+</body>
+</html>

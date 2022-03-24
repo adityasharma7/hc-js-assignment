@@ -1,0 +1,28 @@
+.change-background {
+    background-color: red;
+}
+
+.change-text-color {
+    color: white;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    align-items: center;
+}
+
+th {
+    height: 70%;
+}

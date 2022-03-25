@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script module-6 task-1</title>
+</head>
+<h2>To change the background color of the second column of a table using querySelector.</h2>
+<body>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+    }
+    </style>
+    <body style="background-color:rgb(193, 207, 209);">
+    <h2> Customer List</h2>
+    <table style="width: 100%">
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Gender</th>
+            <th>Email add</th>
+            <th>Contact no.</th>
+        </tr>
+
+        <tr>
+            <th>Ayushi</th>
+            <th>A11</th>
+            <th>Female</th>
+            <th>Ayu@gmail.com</th>
+            <th>9755436282</th>
+        </tr>
+
+         <tr>
+            <th>Ankit</th>
+            <th>A12</th>
+            <th>Male</th>
+            <th>anki@gmail.com</th>
+            <th>9955423821</th>
+        </tr>
+
+        <tr>
+            <th>Shweta</th>
+            <th>Sh13</th>
+            <th>Female</th>
+            <th>shwt@gmail.com</th>
+            <th>9827834947</th>
+        </tr> 
+
+        <tr>
+            <th>Kewal</th>
+            <th>kew14</th>
+            <th>Male</th>
+            <th>anki@gmail.com</th>
+            <th>9955423821</th>
+        </tr>   
+
+        <tr>
+            <th>Ashutosh</th>
+            <th>ashu15</th>
+            <th>male</th>
+            <th>ashu@gmail.com</th>
+            <th>9955423897</th>
+        </tr>   
+</body>
+<script>
+    let x = document.querySelectorAll('tr>th:nth-child(1),td:nth-child(1)');
+      for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener("click", () => {
+          for (let j = 0; j < x.length; j++) {
+            x[j].style.backgroundColor = 'Pink';
+          }
+        });
+    }
+    
+</script>
+</html>

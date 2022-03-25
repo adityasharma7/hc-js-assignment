@@ -24,7 +24,7 @@ console.log(oldestPerson());
 //b. Create another list having id and name of all the person above 18 years
 //finding out people above the age of 18 years
 
-const above18 = array.filter((p) => p.age > 18);
+const above18 = persons.filter((p) => p.age > 18);
 console.log("above 18");
 above18.map(function(p) {
     console.log(`Id: ${p.id},`, `Name: ${p.name}`)
@@ -32,9 +32,9 @@ above18.map(function(p) {
 
 
 //c. Find the average age
-const avgAge = array.reduce((sum, curr) => (sum + curr.age), 0) / array.length;
+const avgAge = persons.reduce((sum, curr) => (sum + curr.age), 0) / persons.length;
 console.log(`Average Age is ${avgAge}`);
 
 //d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively
-console.log("list of names starting with 'A' ", Astartname = array.filter((x) => x.name[0] == 'A'));
-console.log("list of names starting with 'R' ", Rstartname = array.filter((x) => x.name[0] == 'R'));
+console.log("list of names starting with 'A' ", Astartname = persons.filter((x) => x.name[0] == 'A'));
+console.log("list of names starting with 'R' ", Rstartname = persons.filter((x) => x.name[0] == 'R'));

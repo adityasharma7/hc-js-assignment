@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script module7</title>
+</head>
+<style>
+  table, th, td{
+      border: 1px solid black;
+}
+</style>
+
+  <body style="background-color:rgb(193, 207, 209);">
+    <h2> Customer List</h2>
+    <table style="width: 100%">
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Gender</th>
+            <th>Email add</th>
+            <th>Contact no.</th>
+        </tr>
+
+        <tr>
+            <th>Ayushi</th>
+            <th>A11</th>
+            <th>Female</th>
+            <th>Ayu@gmail.com</th>
+            <th>9755436282</th>
+        </tr>
+
+         <tr>
+            <th>Ankit</th>
+            <th>A12</th>
+            <th>Male</th>
+            <th>anki@gmail.com</th>
+            <th>9955423821</th>
+        </tr>
+
+        <tr>
+            <th>Shweta</th>
+            <th>Sh13</th>
+            <th>Female</th>
+            <th>shwt@gmail.com</th>
+            <th>9827834947</th>
+        </tr> 
+
+        <tr>
+            <th>Kewal</th>
+            <th>kew14</th>
+            <th>Male</th>
+            <th>kew@gmail.com</th>
+            <th>9754638790</th>
+        </tr>   
+
+        <tr>
+            <th>Ashutosh</th>
+            <th>ashu15</th>
+            <th>male</th>
+            <th>ashu@gmail.com</th>
+            <th>9955423897</th>
+        </tr>   
+</body>
+
+<script>
+    let cell = document.querySelectorAll("tr>th,td");
+      for (let i = 0; i < cell.length; i++) {
+        cell[i].addEventListener("click", (e) => {
+         if (!(cell[i].style.backgroundColor == "pink")) {
+          cell[i].style.backgroundColor = 'pink';
+          }
+         else {
+          cell[i].style.backgroundColor = "";
+        }
+    });
+}
+
+</script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script module7</title>
+</head>
+<body>
+    <h1 id="heading">Your Working Space</h1>
+    <div id="usertext">
+        <form action="" id="userform" onsubmit="return true">
+            <label for="txtarea">
+                <h1>Please Enter Information</h1>
+            </label><br>
+            <textarea name="txtarea" id="txtarea" cols="40" rows="15">Enter your text here and save it before leave.</textarea><br><br>
+            <div id="savebtn">
+                <input type="submit" id="btn" onclick="saveFile()" value="Save">
+            </div>
+        </form>
+    </div>
+    <script>
+        window.onbeforeunload = () => {
+            return false;
+        };
+        let saveFile = () => {
+
+            const userdata = document.getElementById('txtarea');
+
+            let data = 'User Data ' + userdata.value;
+
+            const textToBLOB = new Blob([data], { type: 'text/plain' });
+            const sFileName = 'formData.txt';
+
+            let newLink = document.createElement("a");
+            newLink.download = sFileName;
+
+            if (window.URL != null) {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+            }
+            else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+        }
+    </script>
+<style>
+  #txtarea{
+    background-color: beige;
+  }
+  #usertext{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  #savebtn{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+  #btn{
+    height:40px;
+    width: 150px;
+    font-size: x-large;
+    background-color: rgb(169, 115, 219);
+    border-radius: 5%;
+    border: 1px solid blue;
+  }
+  body{
+    background-image: url('bimg.jpeg');
+  }
+  #usertext{
+    background-image: linear-gradient(to left, rgb(101, 174, 199),rgb(191, 248, 221)) ; 
+    width:auto;
+    margin-left:30%;
+    margin-right:30%;
+    height: 400px;
+    box-shadow: 1px slategrey;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  #heading{
+    text-align: center;
+    margin-top:80px;
+    margin-bottom:-90px;
+  } 
+</style>
+</body>
+</html>

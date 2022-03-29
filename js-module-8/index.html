@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Module 8 | Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <nav class="card-shadow">
+            <h1>JS Module 8</h1>
+            <p>Task 1</p>
+            <button>Change Image on Runtime</button>
+        </nav>
+    </header>
+
+    <section class="random">
+        <div class="container card-shadow">
+            <img src="assets/hero.jpeg" onerror="isError()" onload="isSuccess()" alt="img">
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with <i class="fa-solid fa-heart red"></i> by rvutd</p>
+    </footer>
+    <script>
+
+        const img = document.querySelector('.container>img');
+
+        function isSuccess() {
+            console.log('successfully loaded');
+        }
+
+        function isError() {
+            img.src = 'assets/imgs/hero.jpeg';
+        }
+    </script>
+</body>
+</html>

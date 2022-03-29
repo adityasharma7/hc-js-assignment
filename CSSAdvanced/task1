@@ -1,0 +1,17 @@
+QUESTION
+You are writing a responsive layout for a website that has dramatically different layouts for mobile and desktop. Which of the following media queries would you use and why?
+@media (max-width: ... @media (min-width: ...
+
+
+ANSWER
+For Mobile Devices 
+I will use @media-screen and (max-width: XXXpx)
+This is becuase max-width alllow us to set max width of the screen or we can say that if we set max-width: 728px
+& we specify some CSS inside it, it will apply that CSS if and only if max-width of screen is less than equal to 728px
+so by this we can set some CSS for Mobile Devices or Tablet Devices
+
+For Desktop Devices
+I will use min-width as it will set some min-width i.e if we specify some CSS inside min-width, that CSS will get applied 
+if any only if screen size is greater or equal to that width.
+As we know desktop screens are bigger so we can specify some min-width of screen and give some CSS so if min-width of screen is greater than that width,
+apply that CSS.

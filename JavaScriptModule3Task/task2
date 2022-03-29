@@ -1,0 +1,7 @@
+Program 1
+a will be hoisted because in JavaScript var and functions are hoisted globally but we will get warning 
+a is undefined
+
+Program 2
+a will not be hoisted because in JavaScript let & const are not hoisted globally and we will get error
+cannot access a before initialization

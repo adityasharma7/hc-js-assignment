@@ -10,7 +10,7 @@
 // Note: Use map(), filter(), reduce, some() and every() methods for above problems
 
 //a.Print id and name of the youngest and oldest person
-
+"use strict"
 const list = [
     { id: 1, name: "Amit Kumar", age: 25 },
     { id: 2, name: "Rahul Dixit", age: 20 },
@@ -20,7 +20,7 @@ const list = [
 ];
 
 //Yongest
-var youngest = list.reduce((young, person) => {
+let youngest = list.reduce((young, person) => {
 
     if (young.age > person.age) {
         young = person;
@@ -30,7 +30,7 @@ var youngest = list.reduce((young, person) => {
 console.log(`The Youngest Person is: Id: ${youngest.id} Name: ${youngest.name} `);
 
 //Oldest
-var oldest = list.reduce((old, person2) => {
+let oldest = list.reduce((old, person2) => {
     if (old.age < person2.age) {
         old = person2;
     }
@@ -40,7 +40,7 @@ var oldest = list.reduce((old, person2) => {
 console.log(`The Oldest Person is:   Id: ${oldest.id} Name: ${oldest.name} \n`);
 
 //b. Create another list having id and name of all the person above 18
-var above18 = list.filter(person => person.age > 18).map(person => {
+let above18 = list.filter(person => person.age > 18).map(person => {
     let anotherlist = {
         id: person.id,
         name: person.name
@@ -51,7 +51,7 @@ console.log('The list of all person above 18:\n', above18);
 
 
 // c. Find the average age 
-var average = (list.reduce((sum, person) => sum + person.age, 0)) / list.length;
+let average = (list.reduce((sum, person) => sum + person.age, 0)) / list.length;
 console.log(`\nThe Average age of person in the list is: ${average}\n`);
 
 // d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively

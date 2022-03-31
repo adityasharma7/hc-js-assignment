@@ -1,27 +1,28 @@
 // Provided the following  array:
 //     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //    Filter out odd, even, and prime numbers and print them
-var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+"use strict"
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 //odd
-var odd = array.filter(function(element) {
-    return !(element % 2) == 0;
+let odd = array.filter(function(element) {
+    return !((element % 2) === 0);
 });
 console.log("Odd numbers: ");
 console.log(odd);
 
 //even 
-var even = array.filter(function(element) {
-    return element % 2 == 0;
+let even = array.filter(function(element) {
+    return element % 2 === 0;
 });
 console.log("Even numbers: ");
 console.log(even);
 
 //prime
-var prime = array.filter(function(number) {
+let prime = array.filter(function(number) {
     if (number > 1) {
         for (let i = 2; i < number; i++) {
-            if (number % i == 0) {
+            if (number % i === 0) {
                 return false;
             }
         }

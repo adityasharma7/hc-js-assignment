@@ -1,12 +1,13 @@
-var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+"use strict"
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 //Method for odd 
-function oddfilter(array) {
-    var odd = [];
-    for (let index = 0; index < array.length; index++) {
-        if (!(array[index] % 2 == 0)) {
-            odd = array[index];
-            console.log(odd);
+function oddfilter(list) {
+    const odd = [];
+    for (let index = 0; index < list.length; index++) {
+        if (!(list[index] % 2 === 0)) {
+            odd[index] = list[index];
+            console.log(odd[index]);
         }
 
     }
@@ -15,12 +16,12 @@ function oddfilter(array) {
 
 
 //Method for even 
-function evenfilter(array) {
-    var even = [];
-    for (let index2 = 0; index2 < array.length; index2++) {
-        if (array[index2] % 2 == 0) {
-            even = array[index2];
-            console.log(even);
+function evenfilter(list) {
+    const even = [];
+    for (let index2 = 0; index2 < list.length; index2++) {
+        if (list[index2] % 2 === 0) {
+            even[index2] = list[index2];
+            console.log(even[index2]);
         }
 
     }
@@ -35,7 +36,7 @@ function primefilter(number) {
         return false;
     } else {
         for (let i = 2; i < number; i++) {
-            if (number % i == 0) {
+            if (number % i === 0) {
                 return false;
             }
         }
@@ -53,7 +54,7 @@ evenfilter(array)
 
 console.log("Prime array elements: ");
 for (let i = 0; i < array.length; i++) {
-    var prime = primefilter(array[i]);
+    let prime = primefilter(array[i]);
     if (prime) {
         console.log(array[i])
     }

@@ -1,25 +1,26 @@
 // Provided the following array: [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
-var array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+"use strict"
+const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 // a.Find the sum, min, and max
 
 function findSumMinMax(list) {
     //sum
     let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i];
+    for (let i = 0; i < list.length; i++) {
+        sum += list[i];
 
     }
     console.log("The sum of the all elements: " + sum);
 
     //min and max
-    let min = array[0];
-    let max = array[0];
-    for (let j = 0; j < array.length; j++) {
-        if (min > array[j]) {
-            min = array[j];
+    let min = list[0];
+    let max = list[0];
+    for (let j = 0; j < list.length; j++) {
+        if (min > list[j]) {
+            min = list[j];
         }
-        if (max < array[j]) {
-            max = array[j];
+        if (max < list[j]) {
+            max = list[j];
         }
 
     }
@@ -32,24 +33,24 @@ findSumMinMax(array);
 // b.Print“ List is full of prime no”
 // if every element is prime
 function primeCheckList(list) {
-    var flag = false;
+    let flag = false;
     upperLoop:
-        for (let k = 0; k < array.length; k++) {
-            let number = array[k];
+    for (let k = 0; k < list.length; k++) {
+        let number = list[k];
 
-            if (number <= 1) {
-                flag = false;
-            } else {
-                for (let i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        flag = false;
-                        break upperLoop;
+        if (number <= 1) {
+            flag = false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false;
+                    break upperLoop;
 
-                    }
                 }
-                flag = true;
             }
+            flag = true;
         }
+    }
     if (flag) {
         console.log("List is full of prime no");
     } else {
@@ -64,24 +65,24 @@ primeCheckList(array);
 // c.Print“ List has a prime no”
 // if there is a prime no in it
 function ListHasAprime(list) {
-    var flag = false;
+    let flag = false;
     upperLoop:
-        for (let k = 0; k < array.length; k++) {
-            let number = array[k];
+    for (let k = 0; k < list.length; k++) {
+        let number = list[k];
 
-            if (number <= 1) {
-                flag = false;
-            } else {
-                for (let i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        flag = false;
+        if (number <= 1) {
+            flag = false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false;
 
-                    }
                 }
-                flag = true;
-                break upperLoop;
             }
+            flag = true;
+            break upperLoop;
         }
+    }
     if (flag) {
         console.log("List has a prime no");
     } else {
@@ -98,7 +99,7 @@ ListHasAprime(array);
 function list(list) {
     let ind2 = 0,
         temp = [];
-    var key, j;
+    let key = 0, j = 0;
     for (let i = 1; i < list.length; i++) {
         key = list[i];
         j = i - 1;
@@ -110,7 +111,7 @@ function list(list) {
     }
     console.log("Before Removing duplicate values from the list we sort the list:\n" + list);
     for (let index = 0; index < list.length; index++) {
-        if (list[index] != list[index + 1]) {
+        if (list[index] !== list[index + 1]) {
             temp[ind2++] = list[index];
         }
 

@@ -1,0 +1,55 @@
+<!-- Change the color of the cell to red when the user clicks on a cell and revert when the user again clicks. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="2" cellpadding="8" cellspacing="2" id="table">
+        <tr>
+            <td>AA</td>
+            <td>AKs</td>
+            <td>AQs</td>
+            <td>AJs</td>
+            <td>ATs</td>
+            <td>A9s</td>
+            <td>A8s</td>
+            <td>A7s</td>
+            <td>A6s</td>
+            <td>A5s</td>
+            <td>A4s</td>
+            <td>A3s</td>
+            <td>A2s</td>
+        </tr>
+        <tr>
+
+</body>
+
+<script>
+    'use strict '
+
+    let table = document.querySelector('#table')
+
+    table.addEventListener('click', function(e) {
+        let td = e.target
+
+        if (td.tagName !== 'TD') {
+            return
+        }
+
+
+        td.classList.toggle('selected')
+    })
+</script>
+
+</html>

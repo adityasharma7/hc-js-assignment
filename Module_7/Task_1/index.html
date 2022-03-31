@@ -1,0 +1,47 @@
+<!-- To create a textarea and if a user makes changes to it without saving then show an alert that data is not saved -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <div>
+        <form style="text-align: center;" action="/action_page.php">
+            <textarea id="TextBox1" name="w3review" rows="4" cols="50" onkeyup="hasPendingChanges()">
+          
+          </textarea>
+            <br><br>
+            <input type="submit" value="save" id="Button1" onClick="onSaveButtonClick()">
+        </form>
+    </div>
+
+</body>
+<script>
+    'use strict'
+    var changesSaved = false;
+
+    function onSaveButtonClick() {
+        changesSaved = true;
+    }
+
+    function hasPendingChanges() {
+        changesSaved = document.getElementById('TextBox1').value.length == 0;
+        document.getElementById('Button1 ').disabled = changesSaved;
+    }
+    window.onbeforeunload = function() {
+        if (!changesSaved) {
+            return "You haven't saved your changes ";
+        }
+    };
+</script>
+
+</html>

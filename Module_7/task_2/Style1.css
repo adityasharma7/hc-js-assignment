@@ -1,0 +1,16 @@
+table {
+    cursor: text;
+}
+
+tr {
+    background-color: white;
+}
+
+td {
+    font-size: 14;
+    cursor: default;
+}
+
+td.selected {
+    background-color: red;
+}

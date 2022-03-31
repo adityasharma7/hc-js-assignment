@@ -13,18 +13,27 @@
             <label for="txtarea">
                 <h1>Please Enter Information</h1>
             </label><br>
-            <textarea name="txtarea" id="txtarea" cols="40" rows="15">Enter your text here and save it before leave.</textarea><br><br>
+            <textarea name="txtarea" name="txtarea" id="txtarea" cols="40" rows="15" placeholder="Enter your text here and save it before leave."></textarea><br><br>
             <div id="savebtn">
-                <input type="submit" id="btn" onclick="saveFile()" value="Save">
+                <input type="button" id="btn" onclick="saveFile()" value="Save">
             </div>
         </form>
     </div>
     <script>
-        window.onbeforeunload = () => {
+      
+        window.onload = () => {
+       
+          window.onbeforeunload = () => {
+            if ( document.forms.userform.txtarea.value == ''){
+              return undefined
+          }
             return false;
-        };
-        let saveFile = () => {
+          };
+        }
 
+let change = false;
+        let saveFile = () => {
+            change =true;
             const userdata = document.getElementById('txtarea');
 
             let data = 'User Data ' + userdata.value;
@@ -43,6 +52,9 @@
                 newLink.style.display = "none";
                 document.body.appendChild(newLink);
             }
+            
+            alert("Your file will be downloaded click okay")
+            document.forms.userform.txtarea.value = '';
 
             newLink.click();
         }

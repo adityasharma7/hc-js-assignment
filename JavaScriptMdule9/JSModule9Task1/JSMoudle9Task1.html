@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSModule9</title>
+</head>
+
+<body>
+    <form action="" id="user">
+        <input type="text" id="userdata" value="Ram">
+        <input type="submit" id="subbtn">
+    </form>
+    <div id="container">
+        <h1 id="response"></h1>
+    </div>
+    <script>
+        "use strict"
+        user.onsubmit = () => {
+            let mypromise = new Promise(function (resolve, reject) {
+                let data = document.getElementById('userdata').value;
+                console.log(data)
+                if (data === "Ram") {
+
+                    resolve("This a valid User Name");
+                }
+                else {
+                    reject("This is not a valid User.");
+                }
+            });
+
+            mypromise.then(function (value) {
+                alert(value);
+            }, function (value) {
+                alert(value);
+            });
+        }
+    </script>
+</body>
+
+</html>

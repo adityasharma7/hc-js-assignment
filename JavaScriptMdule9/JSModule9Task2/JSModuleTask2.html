@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSModule9</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="response"></h1>
+    </div>
+    <script>
+        async function getusersdata() {
+            let product1 = await fetch("https://fakestoreapi.com/products/1").then(res => res.json());
+            let product2 = await fetch("https://fakestoreapi.com/products/2").then(res => res.json());
+            let product3 = await fetch("https://fakestoreapi.com/products/3").then(res => res.json());
+            let product4 = await fetch("https://fakestoreapi.com/products/4").then(res => res.json());
+            let product5 = await fetch("https://fakestoreapi.com/products/5").then(res => res.json());
+            let products = await Promise.allSettled([product1, product2, product3, product4, product5])
+                .then(results => results.forEach((element) => {
+                    let h = document.createElement('h3');
+                    console.log(element);
+                    h.innerHTML = "Id: " + element.value.id + "<br>Product Name: " + element.value.title +
+                        "<br>Price: " + element.value.price + "<br>Category: " + element.value.category;
+                    let image = document.createElement('img');
+                    image.src = `${element.value.image}`;
+                    image.name = "image";
+                    image.style.width = "200px";
+                    image.style.height = "200px";
+                    document.getElementById('container').appendChild(h);
+                    document.getElementById('container').appendChild(image);
+
+                }));
+
+        }
+        getusersdata();
+    </script>
+</body>
+
+</html>

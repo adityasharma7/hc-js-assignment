@@ -1,0 +1,39 @@
+<!--Change image on runtime when it is not available on the specified path while loading the page.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSModule8</title>
+    <style>
+        div {
+            margin: 4% 10%;
+            height: max-content;
+            width: max-content;
+        }
+
+        body {
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="image" src="davide.jpg" width="100%" height="800px" alt="Image not Found">
+    </div>
+
+    <script>
+        "use strict"
+        image.onload = () => {
+            alert("Image is loaded successfully.");
+        }
+        image.onerror = () => {
+            image.src = "girl.jpg";
+        }
+    </script>
+</body>
+
+</html>

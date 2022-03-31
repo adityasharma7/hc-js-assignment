@@ -1,3 +1,4 @@
+"use strict"
 
 let x = document.querySelectorAll('tr>th:nth-child(2),td:nth-child(2)');
 for (let i = 0; i < x.length; i++) {

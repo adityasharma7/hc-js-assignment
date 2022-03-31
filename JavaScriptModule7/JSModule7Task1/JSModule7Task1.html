@@ -18,7 +18,8 @@
             <label for="txtarea">
                 <h1>Enter some Text</h1>
             </label><br>
-            <textarea name="txtarea" id="txtarea" cols="30" rows="10">Enter your text here and save it before leave.</textarea><br><br>
+            <textarea name="txtarea" id="txtarea" cols="30" placeholder="Enter your text here and save it before leave."
+                rows="10"></textarea><br><br>
             <div id="savebtn">
                 <input type="submit" id="btn" onclick="saveFile()" value="Save">
             </div>
@@ -26,20 +27,24 @@
     </div>
     <script>
         "use strict"
-        window.onbeforeunload = () => {
-            return false;
-        };
+        window.onload = () => {
+            window.onbeforeunload = () => {
+                let data = document.getElementById('txtarea').value;
+                if (data === '') {
+                    return undefined;
+                }
+                return false;
+            };
+        }
         let saveFile = () => {
-
             const userdata = document.getElementById('txtarea');
 
             let data = 'User Data ' + userdata.value;
 
             const textToBLOB = new Blob([data], { type: 'text/plain' });
-            const sFileName = 'formData.txt';
 
             let newLink = document.createElement("a");
-            newLink.download = sFileName;
+            newLink.download = 'formData.txt';
 
             if (window.URL != null) {
                 newLink.href = window.URL.createObjectURL(textToBLOB);
@@ -49,9 +54,12 @@
                 newLink.style.display = "none";
                 document.body.appendChild(newLink);
             }
-
+            alert("Data is Saved.");
+            userdata.value = "";
             newLink.click();
         }
+
+
     </script>
 </body>
 

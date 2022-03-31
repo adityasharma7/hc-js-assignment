@@ -17,11 +17,12 @@
         <h1 id="response"></h1>
     </div>
     <script>
+        "use strict"
         user.onsubmit = () => {
             let mypromise = new Promise(function (resolve, reject) {
-                var data = document.getElementById('userdata').value;
+                let data = document.getElementById('userdata').value;
                 console.log(data)
-                if (data == "Ram") {
+                if (data === "Ram") {
 
                     resolve("This a valid User Name");
                 }

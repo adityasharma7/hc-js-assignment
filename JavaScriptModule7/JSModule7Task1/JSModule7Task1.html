@@ -1,0 +1,66 @@
+<!--To create a textarea and if a user makes changes to it without saving then show an alert
+     that data is not saved. (Similar to https://stackoverflow.com/questions/ask)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Module 7 Task 1</title>
+    <link rel="stylesheet" href="JSModule7Task1css.css">
+</head>
+
+<body>
+    <h1 id="heading">User's Working Area</h1>
+    <div id="usertext">
+        <form action="" id="userform" onsubmit="return true">
+            <label for="txtarea">
+                <h1>Enter some Text</h1>
+            </label><br>
+            <textarea name="txtarea" id="txtarea" cols="30" placeholder="Enter your text here and save it before leave."
+                rows="10"></textarea><br><br>
+            <div id="savebtn">
+                <input type="submit" id="btn" onclick="saveFile()" value="Save">
+            </div>
+        </form>
+    </div>
+    <script>
+        "use strict"
+        window.onload = () => {
+            window.onbeforeunload = () => {
+                let data = document.getElementById('txtarea').value;
+                if (data === '') {
+                    return undefined;
+                }
+                return false;
+            };
+        }
+        let saveFile = () => {
+            const userdata = document.getElementById('txtarea');
+
+            let data = 'User Data ' + userdata.value;
+
+            const textToBLOB = new Blob([data], { type: 'text/plain' });
+
+            let newLink = document.createElement("a");
+            newLink.download = 'formData.txt';
+
+            if (window.URL != null) {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+            }
+            else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+            alert("Data is Saved.");
+            userdata.value = "";
+            newLink.click();
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+#txtarea{
+    background-color: beige;
+}
+#usertext{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+#savebtn{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+#btn{
+    height:40px;
+    width: 150px;
+    font-size: x-large;
+    background-color: rgb(169, 115, 219);
+    border-radius: 5%;
+    border: 1px solid blue;
+}
+body{
+    background-image: linear-gradient(to right, lightgreen,rgb(156, 232, 235)) ;
+}
+#usertext{
+    background-image: linear-gradient(to left, rgb(101, 174, 199),rgb(191, 248, 221)) ; 
+    width:auto;
+    margin-left:30%;
+    margin-right:30%;
+    height: 400px;
+    box-shadow: 1px slategrey;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+#heading{
+    text-align: center;
+    margin-top:80px;
+    margin-bottom:-90px;
+}

@@ -1,0 +1,36 @@
+<!-- To create a textarea and if a user makes changes to it without saving then show an alert that data is not saved.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save Data Before Leave</title>
+
+    <style>
+        body {
+            background-color: darkkhaki;
+        }
+        
+        #tank {
+            display: flex;
+            justify-content: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tank">
+        <form name="myform">
+            <textarea id="TextBox1" name="mytxt" rows="5" cols="70" placeholder="Enter your Data Here"></textarea>
+            <hr/>
+            <a id="save-btn"><input type="button" value="save" onClick="Savebtn()" /></a>
+        </form>
+    </div>
+</body>
+
+<script src="Js-module7_task1.js"></script>
+
+</html>

@@ -14,7 +14,8 @@
   <div id="img"></div>
 
   <script>
-    async function asfun() {
+    "use strict";
+    async function asyncfunction() {
 
       const result = await Promise.allSettled([
         fetch("https://fakestoreapi.com/products/1").then((response) => response.json()),
@@ -25,7 +26,7 @@
       ]);
       console.log(result[1].value.id)
       function myhead() {
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
           let head = document.createElement('h2');
           head.innerHTML = result[i].value.title + " " + result[i].value.id + " " + result[i].value.category + result[i].value.price;
           document.body.appendChild(head);
@@ -43,7 +44,7 @@
       myhead();
 
     }
-    asfun();
+    asyncfunction();
   </script>
 </body>
 

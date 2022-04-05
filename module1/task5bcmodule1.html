@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime or no prime</title>
+</head>
+<h2>To print prime or no prime in list.</h2>
+
+<body>
+    <script>
+        "use strict";
+        const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+
+        function primeCheckList(list) {
+            let flag = false;
+            upperLoop:
+            for (let k = 0; k < array.length; k++) {
+                let number = array[k];
+
+                if (number <= 1) {
+                    flag = false;
+                } else {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i === 0) {
+                            flag = false;
+                            break upperLoop;
+
+                        }
+                    }
+                    flag = true;
+                }
+            }
+            if (flag) {
+                console.log("List is full of prime no");
+            } else {
+                console.log("List is not full of prime no");
+            }
+        }
+        primeCheckList(array);
+
+        function ListHasAprime(list) {
+            let flag = false;
+            upperLoop:
+            for (let k = 0; k < array.length; k++) {
+                let number = array[k];
+
+                if (number <= 1) {
+                    flag = false;
+                } else {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i === 0) {
+                            flag = false;
+                        }
+                    }
+                    flag = true;
+                    break upperLoop;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

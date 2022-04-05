@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd even prime</title>
+</head>
+<h2>Print even, odd and prime numbers.</h2>
+
+<body>
+    <script>
+        "use strict";
+        const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let even = array[0];
+        let odd = array[0];
+        let prime = array[0];
+
+        function oddfilter(array) {
+            let odd = [];
+            for (let index = 0; index < array.length; index++) {
+                if (!(array[index] % 2 === 0)) {
+                    odd = array[index];
+                    console.log(odd);
+                }
+
+            }
+
+        }
+
+        function evenfilter(array) {
+            let even = [];
+            for (let index2 = 0; index2 < array.length; index2++) {
+                if (array[index2] % 2 === 0) {
+                    even = array[index2];
+                    console.log(even);
+                }
+
+            }
+
+        }
+
+        function primefilter(number) {
+            if (number <= 1) {
+                return false;
+            } else {
+                for (let i = 2; i < number; i++) {
+                    if (number % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        }
+
+        console.log("Odd array elements: ");
+        oddfilter(array)
+
+        console.log("Even array elements: ");
+        evenfilter(array)
+
+        console.log("Prime array elements: ");
+        for (let i = 0; i < array.length; i++) {
+            let prime = primefilter(array[i]);
+            if (prime) {
+                console.log(array[i])
+            }
+        } 
+    </script>
+</body>
+
+</html>

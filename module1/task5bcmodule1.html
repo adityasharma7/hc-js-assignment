@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,59 @@
     <title>Prime or no prime</title>
 </head>
 <h2>To print prime or no prime in list.</h2>
+
 <body>
-<script>
- var array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
- 
- function primeCheckList(list) {
-    var flag = false;
-    upperLoop:
-        for (let k = 0; k < array.length; k++) {
-            let number = array[k];
+    <script>
+        "use strict";
+        const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 
-            if (number <= 1) {
-                flag = false;
-            } else {
-                for (let i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        flag = false;
-                        break upperLoop;
+        function primeCheckList(list) {
+            let flag = false;
+            upperLoop:
+            for (let k = 0; k < array.length; k++) {
+                let number = array[k];
 
+                if (number <= 1) {
+                    flag = false;
+                } else {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i === 0) {
+                            flag = false;
+                            break upperLoop;
+
+                        }
                     }
+                    flag = true;
                 }
-                flag = true;
+            }
+            if (flag) {
+                console.log("List is full of prime no");
+            } else {
+                console.log("List is not full of prime no");
             }
         }
-    if (flag) {
-        console.log("List is full of prime no");
-    } else {
-        console.log("List is not full of prime no");
-    }
-}
-primeCheckList(array);
+        primeCheckList(array);
 
-function ListHasAprime(list) {
-    var flag = false;
-    upperLoop:
-        for (let k = 0; k < array.length; k++) {
-            let number = array[k];
+        function ListHasAprime(list) {
+            let flag = false;
+            upperLoop:
+            for (let k = 0; k < array.length; k++) {
+                let number = array[k];
 
-            if (number <= 1) {
-                flag = false;
-            } else {
-                for (let i = 2; i < number; i++) {
-                    if (number % i == 0) {
-                        flag = false;
+                if (number <= 1) {
+                    flag = false;
+                } else {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i === 0) {
+                            flag = false;
+                        }
                     }
+                    flag = true;
+                    break upperLoop;
                 }
-                flag = true;
-                break upperLoop;
             }
         }
-}
-</script>
+    </script>
 </body>
+
 </html>

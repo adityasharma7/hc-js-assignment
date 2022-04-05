@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,32 @@
     <title>Remove duplicate </title>
 </head>
 <h2>Remove duplicate value from the array</h2>
+
 <body>
-<script>
-// program to remove duplicate value from an array
-const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+    <script>
+        // program to remove duplicate value from an array
+        "use strict";
+        const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 
-function Uniquelist(arr){
-    
-    let uniqueArr = [];
-    
-    // loop through array
-    for(let i of arr) {
-        if(uniqueArr.indexOf(i) === -1) {
-            uniqueArr.push(i);
+        function Uniquelist(arr) {
+
+            let uniqueArr = [];
+
+            // loop through array
+            for (let i of arr) {
+                if (uniqueArr.indexOf(i) === -1) {
+                    uniqueArr.push(i);
+                }
+            }
+            console.log(uniqueArr);
         }
-    }
-    console.log(uniqueArr);
-}
 
 
-// calling the function
-// passing array argument
-Uniquelist(array);
-</script>
-    
+        // calling the function
+        // passing array argument
+        Uniquelist(array);
+    </script>
+
 </body>
+
 </html>

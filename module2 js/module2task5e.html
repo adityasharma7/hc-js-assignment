@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+</head>
+<body>
+    <h2>To remove duplicate from the array without using loop and map(), reduce(), filter(), some() and every() method.</h2>
+
+    <script>
+        "use strict";
+        const arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+      
+        function removeDuplicates(arr) {
+            return [...new Set(arr)];
+        }
+      
+        console.log(removeDuplicates(arr));
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript module-9 task-1</title>
+</head>
+
+<body>
+    <h2>Simple code to use promise</h2>
+    <script>
+        "use strict";
+        function getInfo(customer) {
+            let Candidate = { name: "Shweta", age: 25 }
+            return new Promise(function (resolve, reject) {
+
+
+                if (Candidate.age > 23) {
+                    resolve();
+
+                } else {
+                    reject();
+                }
+
+            });
+        }
+
+        getInfo().then(function () {
+            console.log("Candidate is eligible for marriage")
+        }).catch(function (error) {
+            console.log("Candidate is not eligible for marriage")
+        });
+    </script>
+</body>
+
+</html>

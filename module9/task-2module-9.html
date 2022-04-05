@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Java script module-9 task-2 </title>
+</head>
+
+<body>
+  <h2> Code to handle multiple promises to fetch information of 5 different products from API.</h2>
+  <p>List of the products from fakestore</p>
+  <div id="img"></div>
+
+  <script>
+    "use strict";
+    async function asyncfunction() {
+
+      const result = await Promise.allSettled([
+        fetch("https://fakestoreapi.com/products/1").then((response) => response.json()),
+        fetch("https://fakestoreapi.com/products/2").then((response) => response.json()),
+        fetch("https://fakestoreapi.com/products/3").then((response) => response.json()),
+        fetch("https://fakestoreapi.com/products/4").then((response) => response.json()),
+        fetch("https://fakestoreapi.com/products/5").then((response) => response.json())
+      ]);
+      console.log(result[1].value.id)
+      function myhead() {
+        for (let i = 0; i < 5; i++) {
+          let head = document.createElement('h2');
+          head.innerHTML = result[i].value.title + " " + result[i].value.id + " " + result[i].value.category + result[i].value.price;
+          document.body.appendChild(head);
+
+          let image = document.createElement('img');
+          image.src = result[i].value.image;
+          image.width = "400";
+          image.height = '400';
+          document.body.appendChild(image);
+
+          console.log(result)
+
+        }
+      }
+      myhead();
+
+    }
+    asyncfunction();
+  </script>
+</body>
+
+</html>

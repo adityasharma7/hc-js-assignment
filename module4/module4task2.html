@@ -9,13 +9,14 @@
 <h2>To implement regular expression for name with letters. </h2>
 <body>
 <script>
-    const str = "Niharika ayushi surbhi";
+    "use string";
+    const string = "Niharika ayushi surbhi";
     const Regularexp = /s/i;
 
-    const findat = str.search(Regularexp);
-    const result = Regularexp.test(str);
+    const findat = string.search(Regularexp);
+    const result = Regularexp.test(string);
 
-    console.log(str[findat]);
+    console.log(string[findat]);
     result ? console.log(`the name exists with the letter 's' at  ${findat}th index`) : console.log("the name doesn't exist with the letter 's'");
 </script> 
 

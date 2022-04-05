@@ -1,0 +1,194 @@
+<!-- 1.To change the background color of the second column of a table having “n ” rows on click by using querySelector. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2 customer list</title>
+    <link rel="stylesheet" href="Js-module6_task1.css">
+
+</head>
+
+<body style="background: linear-gradient(
+to top left,
+        #0fac9c 10%,
+        #bec025 70%,
+        #0fac9c 90%);">
+    <div class="container" style="margin: 100px">
+        <table>
+            <thead style="
+            background-color: #d30b477e;
+            color: rgb(22, 1, 1);
+            font-family: 'Lucida Sans';
+            font-weight: bold;
+          ">
+                <tr>
+                    <th>S.No</th>
+
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email Address</th>
+                    <th>contact No.</th>
+                </tr>
+            </thead>
+            <tbody style="
+            background-color: rgba(214, 206, 206, 0.159);
+            color: rgb(22, 1, 1);
+            font-family: cursive;
+          ">
+                <tr>
+                    <td>01</td>
+                    <td>56983</td>
+                    <td>priya</td>
+                    <td>female</td>
+                    <td>priya29@gmail.com</td>
+                    <td>7269348407</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>95967</td>
+                    <td>vivek</td>
+                    <td>male</td>
+                    <td>vivek45@gmail.com</td>
+                    <td>8956356795</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>68793</td>
+                    <td>nisha</td>
+                    <td>female</td>
+                    <td>nisha_87@gmail.com</td>
+                    <td>7564931589</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>796583</td>
+                    <td>bhushan</td>
+                    <td>male</td>
+                    <td>bhushan_68@gmail.com</td>
+                    <td>7968564694</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>796583</td>
+                    <td>dolly</td>
+                    <td>female</td>
+                    <td>dolly_po68@gmail.com</td>
+                    <td>7968563650</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>796583</td>
+                    <td>vihan</td>
+                    <td>male</td>
+                    <td>vihan_68@gmail.com</td>
+                    <td>7968563657</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>796583</td>
+                    <td>ronak</td>
+                    <td>male</td>
+                    <td>ronak_046@gmail.com</td>
+                    <td>7968563654</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>796583</td>
+                    <td>bhushan</td>
+                    <td>male</td>
+                    <td>bhushan_68@gmail.com</td>
+                    <td>7968563851</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>796583</td>
+                    <td>prit</td>
+                    <td>male</td>
+                    <td>prit468@gmail.com</td>
+                    <td>7946938477</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>796501</td>
+                    <td>ritik</td>
+                    <td>male</td>
+                    <td>ritik_06@gmail.com</td>
+                    <td>7956367963</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>796583</td>
+                    <td>bhavana</td>
+                    <td>female</td>
+                    <td>bhavana_68@gmail.com</td>
+                    <td>9967654688</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>796583</td>
+                    <td>bhushan</td>
+                    <td>male</td>
+                    <td>bhushan_68@gmail.com</td>
+                    <td>7585639631</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>796589</td>
+                    <td>tina</td>
+                    <td>female</td>
+                    <td>tina_01@gmail.com</td>
+                    <td>6468576910</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>796588</td>
+                    <td>shivam</td>
+                    <td>male</td>
+                    <td>shivam_79@gmail.com</td>
+                    <td>7968500015</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>796893</td>
+                    <td>kajal</td>
+                    <td>female</td>
+                    <td>kajal_78@gmail.com</td>
+                    <td>9838610063</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>796583</td>
+                    <td>bhushan</td>
+                    <td>male</td>
+                    <td>bhushan_68@gmail.com</td>
+                    <td>7968563999</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>796583</td>
+                    <td>manish</td>
+                    <td>male</td>
+                    <td>manish@gmail.com</td>
+                    <td>9668567777</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>796583</td>
+                    <td>kamal</td>
+                    <td>male</td>
+                    <td>kamal_68@gmail.com</td>
+                    <td>6968563689</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="Js-module6_task1.js"></script>
+
+</html>

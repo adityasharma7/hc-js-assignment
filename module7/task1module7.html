@@ -20,11 +20,11 @@
         </form>
     </div>
     <script>
-      
+      "use strict";
         window.onload = () => {
        
           window.onbeforeunload = () => {
-            if ( document.forms.userform.txtarea.value == ''){
+            if ( document.forms.userform.txtarea.value === ''){
               return undefined
           }
             return false;
@@ -44,7 +44,7 @@ let change = false;
             let newLink = document.createElement("a");
             newLink.download = sFileName;
 
-            if (window.URL != null) {
+            if (window.URL !== null) {
                 newLink.href = window.URL.createObjectURL(textToBLOB);
             }
             else {

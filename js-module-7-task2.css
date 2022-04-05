@@ -1,0 +1,57 @@
+/*body {
+    background-color: black;
+    background: linear-gradient( to top left, #0fac9c 10%, #bec025 70%, #0fac9c 90%);
+}
+
+#thead {
+    background-color: #d30b477e;
+    color: rgb(22, 1, 1);
+    font-family: "Lucida Sans";
+    font-weight: bold;
+}
+
+#tbody {
+    background-color: rgba(206, 213, 214, 0.705);
+    color: rgb(22, 1, 1);
+    font-family: cursive;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid;
+    text-align: left;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}*/
+
+body {
+    background-color: hsla(0, 0%, 0%, 0.445);
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid;
+    text-align: center;
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+tbody>tr>td {
+    background-color: burlywood;
+}

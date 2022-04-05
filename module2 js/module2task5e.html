@@ -10,7 +10,8 @@
     <h2>To remove duplicate from the array without using loop and map(), reduce(), filter(), some() and every() method.</h2>
 
     <script>
-        var arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+        "use strict";
+        const arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
       
         function removeDuplicates(arr) {
             return [...new Set(arr)];

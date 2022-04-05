@@ -11,16 +11,17 @@
 
 <body>
     <script>
-        var arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
-        var sum = 0;
-        var max = 0;
-        var min = 0;
+        "use strict";
+        const arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+        let sum = 0;
+        let max = 0;
+        let min = 0;
         arr.map(ele => {
             sum += ele
         })
 
-        var min = arr => arr.reduce((x, y) => Math.min(x, y));
-        var max = arr => arr.reduce((x, y) => Math.max(x, y));
+        min = arr => arr.reduce((x, y) => Math.min(x, y));
+        max = arr => arr.reduce((x, y) => Math.max(x, y));
 
         console.log("Min:", min(arr));
         console.log("Max:", max(arr));

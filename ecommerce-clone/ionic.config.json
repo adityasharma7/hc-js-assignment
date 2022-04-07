@@ -1,0 +1,7 @@
+{
+  "name": "ecommerce-clone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

@@ -1,0 +1,20 @@
+{
+    "catlog": [
+        {
+            "title": "Top Offers",
+            "img-src": "../assets/catlog/top-offers.png.webp"
+        },
+        {
+            "title": "Top Offers",
+            "img-src": "../assets/catlog/top-offers.png.webp"
+        },
+        {
+            "title": "Top Offers",
+            "img-src": "../assets/catlog/top-offers.png.webp"
+        },
+        {
+            "title": "Top Offers",
+            "img-src": "../assets/catlog/top-offers.png.webp"
+        }
+    ]
+}

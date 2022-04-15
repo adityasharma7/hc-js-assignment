@@ -5,12 +5,9 @@
       <ul>
         <p class="item"><i class="fa fa-user-circle"></i>Men's Fashion</p>
         <p class="item"><i class="fa fa-user-circle"></i>Women's Fashion</p>
-        <p class="item"><i class="fa fa-user-circle"></i>Home & Kitchen</p>
+        <p class="item"><i class="fa fa-user-circle"></i>Jewellery</p>
         <p class="item">
-          <i class="fa fa-user-circle"></i>Toys, Kid's Fashion & more
-        </p>
-        <p class="item">
-          <i class="fa fa-user-circle"></i>Beauty, Health & Daily
+          <i class="fa fa-user-circle"></i>Electronics
         </p>
       </ul>
       <p class="header">MORE CATEGORIES</p>

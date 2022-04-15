@@ -19,6 +19,7 @@
     <div class="products">
       <Product />
     </div>
+    <Categorypage/>
     <div class="btn">
       <button>Load More</button>
     </div>
@@ -34,6 +35,7 @@ import Deliverfast from "../components/Deliverfast.vue";
 import Cardslide from "@/components/Cardslide.vue";
 import Product from "@/components/Product.vue";
 import Footer from "@/components/Footer.vue";
+import Categorypage from '../components/Categorypage.vue';
 export default {
   name: "Home",
   components: {
@@ -44,6 +46,7 @@ export default {
     Cardslide,
     Product,
     Footer,
+    Categorypage,
   },
 };
 </script>

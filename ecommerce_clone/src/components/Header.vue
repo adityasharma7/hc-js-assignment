@@ -32,7 +32,7 @@
         />
       </a>
       <div>
-        <input type="search" size="99" placeholder="Search products & brand" />
+        <input type="search" placeholder="Search products & brand" />
         <button><i class="fa fa-search"></i>Search</button>
       </div>
       <div class="bord">
@@ -94,6 +94,7 @@ li {
 input {
   border: none;
   font-size: 14px;
+  width:813px;
   color: #909090;
   background: rgb(247, 244, 244);
   border-right: none;
@@ -124,5 +125,15 @@ ul {
 }
 li {
   margin: 0px 5px;
+}
+@media screen and (max-width: 1500px) {
+  input {
+    width:400px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  input {
+    width:150px !important;
+  }
 }
 </style>

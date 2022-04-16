@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h4>TRENDING PRODUCTS</h4>
+    <h4>TRENDING PRODUCTS</h4>
     <div class="carddiv flex">
       <div v-for="item in items" :key="item">
         <div class="card child" style="width: 15rem">
@@ -146,7 +146,7 @@ export default {
   margin-left: 20px;
   color: #909090;
 }
-span{
-    color: black;
+span {
+  color: black;
 }
 </style>

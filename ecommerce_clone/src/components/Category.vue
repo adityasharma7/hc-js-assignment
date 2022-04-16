@@ -3,10 +3,19 @@
     <div id="category">
       <p class="header">TOP CATEGORIES</p>
       <ul>
-        <p class="item"><i class="fa fa-user-circle"></i>Men's Fashion</p>
-        <p class="item"><i class="fa fa-user-circle"></i>Women's Fashion</p>
-        <p class="item"><i class="fa fa-user-circle"></i>Jewellery</p>
-        <p class="item">
+        <p class="item" @click="change('all')">
+          <i class="fa fa-user-circle"></i>All
+        </p>
+        <p class="item" @click="change('men\'s clothing')">
+          <i class="fa fa-user-circle"></i>Men's Fashion
+        </p>
+        <p class="item" @click="change('women\'s clothing')">
+          <i class="fa fa-user-circle"></i>Women's Fashion
+        </p>
+        <p class="item" @click="change('jewelery')">
+          <i class="fa fa-user-circle"></i>Jewellery
+        </p>
+        <p class="item" @click="change('electronics')">
           <i class="fa fa-user-circle"></i>Electronics
         </p>
       </ul>
@@ -29,8 +38,23 @@
 </template>
 <script>
 export default {
-  name: "Category"
-  
+  name: "Category",
+  data() {
+    return {
+      value: "",
+    };
+  },
+
+  methods: {
+    filter(val) {
+      console.log(val);
+      this.$emit("cateval", val);
+    },
+    change(id) {
+      this.value = id;
+      this.filter(this.value);
+    },
+  },
 };
 </script>
 <style scoped>
@@ -63,5 +87,8 @@ i {
 }
 .fa-search {
   color: #909090;
+}
+p {
+  cursor: pointer;
 }
 </style>

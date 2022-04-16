@@ -67,11 +67,21 @@ export default {
 <style scoped>
 .root{
   margin: 5px;
-  width:100%;
+  width:1030px;
 }
 img{
-  width: 100%;
+  width: 1030px;
   height:282px ;
+}
+@media screen and (max-width: 1500px) {
+  .root,img {
+    width:600px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .root,img {
+    width: 295px !important;
+  }
 }
 
 </style>

@@ -19,7 +19,7 @@
     <div class="products">
       <Product />
     </div>
-    <Categorypage :cate ="clicked" />
+    <Categorypage :cate="clicked" />
     <div class="btn">
       <button>Load More</button>
     </div>
@@ -38,15 +38,15 @@ import Footer from "@/components/Footer.vue";
 import Categorypage from "../components/Categorypage.vue";
 export default {
   name: "Home",
-  data(){
-    return{
-      clicked:""
-    }
+  data() {
+    return {
+      clicked: "",
+    };
   },
-  methods:{
-    getval(value){
-      this.clicked=value;
-    }
+  methods: {
+    getval(value) {
+      this.clicked = value;
+    },
   },
   components: {
     Header,
@@ -95,5 +95,4 @@ button {
   display: flex;
   justify-content: center;
 }
-
 </style>

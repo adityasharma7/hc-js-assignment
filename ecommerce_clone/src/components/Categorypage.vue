@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <h4>CATEGORIES FILTER</h4>
-    <div class="carddiv flex" >
+    <div class="carddiv flex">
       <div v-for="product in products" v-bind:key="product.id">
         <div class="card child" style="width: 15rem">
           <img class="card-img-top" :src="product.image" alt="Card image cap" />
@@ -21,9 +21,9 @@
 <script>
 export default {
   name: "Categorypage",
-    props: {
-      cate : String
-    },
+  props: {
+    cate: String,
+  },
   data() {
     return {
       products: [],
@@ -32,40 +32,39 @@ export default {
   methods: {
     async takeData() {
       try {
-        let url ="";
-        switch(this.cate){
+        let url = "";
+        switch (this.cate) {
           case "jewelery":
-                        url ="https://fakestoreapi.com/products/category/jewelery";
-                        break;
+            url = "https://fakestoreapi.com/products/category/jewelery";
+            break;
           case "electronics":
-                          url ="https://fakestoreapi.com/products/category/electronics";
-                          break;
+            url = "https://fakestoreapi.com/products/category/electronics";
+            break;
           case "men's clothing":
-                         url ="https://fakestoreapi.com/products/category/men's clothing";
-                         break;
+            url = "https://fakestoreapi.com/products/category/men's clothing";
+            break;
 
           case "women's clothing":
-                         url ="https://fakestoreapi.com/products/category/women's clothing";
-                         break;
+            url = "https://fakestoreapi.com/products/category/women's clothing";
+            break;
           default:
-            url ="https://fakestoreapi.com/products";
+            url = "https://fakestoreapi.com/products";
             break;
         }
 
         let response = await fetch(url);
         this.products = await response.json();
-      }catch (e) {
+      } catch (e) {
         console.log(e);
       }
-      
     },
   },
   computed: {
-    call:{
-    get: function(){
-    this.takeData();
-    }
-    }
+    call: {
+      get: function () {
+        this.takeData();
+      },
+    },
   },
 };
 </script>

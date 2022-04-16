@@ -94,7 +94,7 @@ li {
 input {
   border: none;
   font-size: 14px;
-  width:813px;
+  width: 813px;
   color: #909090;
   background: rgb(247, 244, 244);
   border-right: none;
@@ -117,7 +117,7 @@ input {
   box-sizing: border-box;
   color: white;
   width: 100%;
-  height:30px;
+  height: 30px;
 }
 ul {
   list-style: none;
@@ -128,12 +128,12 @@ li {
 }
 @media screen and (max-width: 1500px) {
   input {
-    width:400px !important;
+    width: 400px !important;
   }
 }
 @media screen and (max-width: 1000px) {
   input {
-    width:150px !important;
+    width: 150px !important;
   }
 }
 </style>

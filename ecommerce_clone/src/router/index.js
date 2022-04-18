@@ -7,7 +7,13 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  
+  {
+    path: '/Productshow/:pid',
+    name: 'Productshow',
+    component: () => import('@/views/Productshow.vue'),
+    props: true,
+  }
+
 ]
 
 const router = createRouter({
@@ -15,4 +21,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;

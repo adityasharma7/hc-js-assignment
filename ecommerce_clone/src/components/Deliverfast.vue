@@ -41,7 +41,7 @@
               value=""
             />
           </div>
-             <div class="controls nextBestActionControls padT20 col-xs-24">
+          <div class="controls nextBestActionControls padT20 col-xs-24">
             <button
               class="
                 btn btn-theme-secondary
@@ -68,31 +68,31 @@
             </button>
           </div>
         </li>
-        </ul>
+      </ul>
     </div>
   </div>
 </template>
 <script>
 export default {
-    name:"Deliverfast"
-}
+  name: "Deliverfast",
+};
 </script>
 <style scoped>
 .nbaFinalImage {
-    background-image: url("../assets/artboardNext.png");
-    background-repeat: no-repeat;
-    display: block;
-    background-position: center;
-    width: 133px;
-    height:88px;
+  background-image: url("../assets/artboardNext.png");
+  background-repeat: no-repeat;
+  display: block;
+  background-position: center;
+  width: 133px;
+  height: 88px;
 }
-.widgetImage{
-    height: 133px;
-    width:200px;
-    padding: 50px;
-    background-color: white;
-    margin-right: 50px;
-    margin-left: 3%;
+.widgetImage {
+  height: 133px;
+  width: 200px;
+  padding: 50px;
+  background-color: white;
+  margin-right: 50px;
+  margin-left: 3%;
 }
 .pincodeNbaSubmit {
   background-color: #333;
@@ -101,7 +101,7 @@ export default {
   height: 38px;
   border: none;
 }
-.pincodeSkipSubmit{
+.pincodeSkipSubmit {
   background-color: #fff;
   color: #000;
   padding: 4px 20px;
@@ -109,54 +109,52 @@ export default {
   height: 38px;
   border: none;
 }
-.content{
+.content {
   background: white;
-  width:230px;
-  height:329px;
-  font-size:15px;
+  width: 230px;
+  height: 329px;
+  font-size: 15px;
   padding: 4px;
   display: flex;
   justify-content: center;
   box-shadow: 1px 1px 5px black;
 }
-li{
+li {
   list-style: none;
 }
-.deliveryPin{
+.deliveryPin {
   text-align: center;
   margin-right: 10px;
-  font-size:12px;
+  font-size: 12px;
   color: gray;
 }
-.letDelivr{
-    font-size: 11px;
-    font-weight: normal;
-    line-height: 1.59;
-    text-align: left;
-    color: #5a5a59;
-    padding-left: 3px;
-    padding-right: 5px;
+.letDelivr {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.59;
+  text-align: left;
+  color: #5a5a59;
+  padding-left: 3px;
+  padding-right: 5px;
 }
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.controls{
+.controls {
   margin-left: 1%;
   margin-top: 20px;
 }
-input{
+input {
   margin-left: 1%;
   margin: 2px;
-
-
 }
-.deliver{
-    margin-top:2px;
-    margin-left:10px;
+.deliver {
+  margin-top: 2px;
+  margin-left: 10px;
 }
 </style>
 

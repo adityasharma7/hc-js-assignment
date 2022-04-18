@@ -95,7 +95,7 @@ export default {
   margin-left: 20px;
   color: #909090;
 }
-span{
-    color: black;
+span {
+  color: black;
 }
 </style>

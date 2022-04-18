@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
+    <Categorypage :cate="clicked" />
     <div class="products">
       <Product />
     </div>
-    <Categorypage :cate="clicked" />
     <div class="btn">
       <button>Load More</button>
     </div>

@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: "Product",
+  name: "Cartslide",
   data() {
     return {
       items: [

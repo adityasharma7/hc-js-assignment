@@ -3,7 +3,11 @@
     <h4>CATEGORIES FILTER</h4>
     <div class="carddiv flex">
       <div v-for="product in products" v-bind:key="product.id">
-        <div class="card child" style="width: 15rem">
+        <div
+          @click="productDetails(product.id)"
+          class="card child"
+          style="width: 15rem"
+        >
           <img class="card-img-top" :src="product.image" alt="Card image cap" />
           <div class="card-body">
             <p class="card-text">
@@ -57,6 +61,12 @@ export default {
       } catch (e) {
         console.log(e);
       }
+    },
+    productDetails(pid) {
+      this.$router.push({
+        name: "Productshow",
+        params: { pid },
+      });
     },
   },
   computed: {

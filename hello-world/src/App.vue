@@ -1,7 +1,12 @@
 <template>
+<div>
   <nav>
-   <router-view/>
-  </nav>
+  <router-link to="/HomeView">Home</router-link> |
+<router-link to="/loginPg">login</router-link> |
+<router-link to="/RegistrationPG">Registration</router-link>
+</nav>
+<router-view/>
+</div>
 </template>
 
 <style>

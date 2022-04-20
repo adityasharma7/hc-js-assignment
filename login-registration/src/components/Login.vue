@@ -6,7 +6,7 @@
     <form action="">
       <div class="data mb-3">
         <label for="exampleFormControlInput1" class="col-sm-2 col-form-label"
-          >User Name:</label
+          >{{$t('User Name:')}}</label
         >
         <div class="col-sm-10">
           <input
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="data mb-3">
-        <label for="password" class="col-sm-2 col-form-label">Password: </label>
+        <label for="password" class="col-sm-2 col-form-label">{{$t("Password:")}}</label>
         <div class="col-sm-10">
           <input
             type="password"
@@ -37,7 +37,7 @@
           id="check"
           required
           value=""
-        /><span>Remember Me! </span>
+        /><span>{{$t("Remember Me!")}}</span>
       </div>
       <hr />
       <input

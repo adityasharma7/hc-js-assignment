@@ -17,13 +17,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link :to="{ name: 'Registration' }" class="link"
-              >Registration</router-link
+              >{{$t('Registration')}}</router-link
             >
           </li>
           <br />
           <li class="nav-item">
             <router-link :to="{ name: 'Login' }" class="link">
-              Login</router-link
+              {{$t('Login')}}</router-link
             >
           </li>
         </ul>

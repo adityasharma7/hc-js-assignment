@@ -5,9 +5,9 @@
 
     <form>
       <div class="data mb-3">
-        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label"
-          >Email:</label
-        >
+        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">{{
+          $t("Email:")
+        }}</label>
         <div class="col-sm-10">
           <input
             type="email"
@@ -20,7 +20,9 @@
         </div>
       </div>
       <div class="data mb-3">
-        <label for="name" class="col-sm-2 col-form-label">Name:</label>
+        <label for="name" class="col-sm-2 col-form-label">{{
+          $t("Name:")
+        }}</label>
         <div class="col-sm-10">
           <input
             type="text"
@@ -33,9 +35,9 @@
         </div>
       </div>
       <div class="data mb-3">
-        <label for="inputpassword" class="col-sm-2 col-form-label"
-          >Password:</label
-        >
+        <label for="inputpassword" class="col-sm-2 col-form-label">{{
+          $t("Password:")
+        }}</label>
         <div class="col-sm-10">
           <input
             type="password"
@@ -46,9 +48,9 @@
         </div>
       </div>
       <div class="data mb-3">
-        <label for="inputpassword" class="col-sm-2 col-form-label"
-          >Confirmed Password:</label
-        >
+        <label for="inputpassword" class="col-sm-2 col-form-label">{{
+          $t("Confirmed Password:")
+        }}</label>
         <div class="col-sm-10">
           <input
             type="password"
@@ -63,41 +65,41 @@
         </div>
       </div>
       <div class="data mb-3">
-        <label for="First Name">First Name:</label>
+        <label for="First Name">{{ $t("First Name:") }}</label>
         <input type="text" class="form-control" v-model="firstName" />
       </div>
       <div class="data mb-3">
-        <label for="First Name">Last Name:</label>
+        <label for="First Name">{{ $t("Last Name:") }}</label>
         <input type="text" class="form-control" v-model="lastName" />
       </div>
 
       <div class="data mb-3">
-        <label for="User Name">User Name:</label>
+        <label for="User Name">{{ $t("User Name:") }}</label>
         <input type="text" class="form-control" v-model="userName" />
       </div>
       <div class="data mb-3">
-        <label for="User Id">Email Id:</label> <br />
+        <label for="User Id">{{ $t("Email Id:") }}</label> <br />
         <input type="email" class="form-control" v-model="email" />
       </div>
       <div class="data mb-3">
-        <label for="Phone Number">Phone Number</label>
+        <label for="Phone Number">{{ $t("Phone Number") }}</label>
         <input type="tel" class="form-control" v-model="phoneNumber" />
       </div>
       <div class="data mb-3">
-        <label for="Address Info">Address Info:</label>
+        <label for="Address Info">{{ $t("Address Info:") }}</label>
       </div>
       <div>
         <div class="data mb-3">
-          <label for="City">City:</label>
+          <label for="City">{{ $t("City:") }}</label>
           <input type="text" class="form-control" v-model="city" />
         </div>
         <div class="data mb-3">
-          <label for="zipcode">Zipcode:</label>
+          <label for="zipcode">{{ $t("Zipcode:") }}</label>
           <input type="text" class="form-control" v-model="zipcode" />
         </div>
       </div>
       <div class="data mb-3">
-        <label for="Street">Street:</label>
+        <label for="Street">{{ $t("Street:") }}</label>
         <input type="text" class="form-control" v-model="street" />
       </div>
 
@@ -107,14 +109,16 @@
           type="checkbox"
           required
           value=""
-        /><span>I accept that the data given by me is correct! </span>
+        /><span
+          >{{ $t("I accept that the data given by me is correct!") }}
+        </span>
       </div>
       <br />
       <input
         type="submit"
         @click="validate"
         class="btn btn-primary mb-3"
-        value="Login"
+        value="Register"
       />
     </form>
   </div>

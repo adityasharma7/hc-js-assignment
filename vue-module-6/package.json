@@ -1,0 +1,20 @@
+{
+  "name": "vue-module-6",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "axios-cache-adapter": "^2.7.3",
+    "vue": "^3.2.13",
+    "vue-i18n": "^9.2.0-beta.35",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
+  }
+}

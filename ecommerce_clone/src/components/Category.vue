@@ -48,7 +48,7 @@ export default {
   methods: {
     filter(val) {
       console.log(val);
-      this.$emit("cateval", val);
+      this.$emit("cate-val", val);
     },
     change(id) {
       this.value = id;

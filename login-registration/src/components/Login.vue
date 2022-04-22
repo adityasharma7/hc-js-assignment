@@ -1,52 +1,58 @@
 <template>
-  <Header />
-  <div class="container">
-    <h1 class="headtitle">Welcome to the Login!</h1>
+  <div>
+    <Header />
+    <div class="container">
+      <h1 class="headtitle">Welcome to the Login!</h1>
 
-    <form action="">
-      <div class="data mb-3">
-        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label"
-          >{{$t('User Name:')}}</label
-        >
-        <div class="col-sm-10">
-          <input
-            type="text"
-            required
-            class="form-control"
-            v-model="username"
-            placeholder="User name"
-          />
+      <form action="">
+        <div class="data mb-3">
+          <label
+            for="exampleFormControlInput1"
+            class="col-sm-2 col-form-label"
+            >{{ $t("User Name:") }}</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              required
+              class="form-control"
+              v-model="username"
+              placeholder="User name"
+            />
+          </div>
         </div>
-      </div>
-      <div class="data mb-3">
-        <label for="password" class="col-sm-2 col-form-label">{{$t("Password:")}}</label>
-        <div class="col-sm-10">
-          <input
-            type="password"
-            required
-            name="password"
-            class="form-control"
-            v-model="password"
-          />
+        <div class="data mb-3">
+          <label for="password" class="col-sm-2 col-form-label">{{
+            $t("Password:")
+          }}</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              required
+              name="password"
+              class="form-control"
+              v-model="password"
+            />
+          </div>
         </div>
-      </div>
-      <div>
+        <div>
+          <input
+            class="form-check-input mt-0"
+            type="checkbox"
+            id="check"
+            required
+            value=""
+          /><span>{{ $t("Remember Me!") }}</span>
+        </div>
+        <hr />
         <input
-          class="form-check-input mt-0"
-          type="checkbox"
-          id="check"
-          required
-          value=""
-        /><span>{{$t("Remember Me!")}}</span>
-      </div>
-      <hr />
-      <input
-        type="submit"
-        @click="login"
-        class="btn btn-primary mb-3"
-        value="Login"
-      />
-    </form>
+          type="submit"
+          @click="login"
+          class="btn btn-primary mb-3"
+          value="Login"
+        />
+      </form>
+    </div>
   </div>
 </template>
 

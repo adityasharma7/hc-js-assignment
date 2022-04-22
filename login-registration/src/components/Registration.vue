@@ -1,126 +1,130 @@
 <template>
-  <Header />
-  <div class="container">
-    <h1 class="headtitle">Welcome to the Registration!</h1>
+  <div>
+    <Header />
+    <div class="container">
+      <h1 class="headtitle">Welcome to the Registration!</h1>
 
-    <form>
-      <div class="data mb-3">
-        <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">{{
-          $t("Email:")
-        }}</label>
-        <div class="col-sm-10">
-          <input
-            type="email"
-            required
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-            v-model="email"
-          />
-        </div>
-      </div>
-      <div class="data mb-3">
-        <label for="name" class="col-sm-2 col-form-label">{{
-          $t("Name:")
-        }}</label>
-        <div class="col-sm-10">
-          <input
-            type="text"
-            name="name"
-            required
-            class="form-control"
-            id="name"
-            v-model="name"
-          />
-        </div>
-      </div>
-      <div class="data mb-3">
-        <label for="inputpassword" class="col-sm-2 col-form-label">{{
-          $t("Password:")
-        }}</label>
-        <div class="col-sm-10">
-          <input
-            type="password"
-            name="password"
-            class="form-control"
-            v-model="password"
-          />
-        </div>
-      </div>
-      <div class="data mb-3">
-        <label for="inputpassword" class="col-sm-2 col-form-label">{{
-          $t("Confirmed Password:")
-        }}</label>
-        <div class="col-sm-10">
-          <input
-            type="password"
-            required
-            name="password"
-            class="form-control"
-            v-model="confirmpassword"
-          />
-          <span class="error" v-if="show"
-            >Please Enter the correct Password!</span
+      <form>
+        <div class="data mb-3">
+          <label
+            for="exampleFormControlInput1"
+            class="col-sm-2 col-form-label"
+            >{{ $t("Email:") }}</label
           >
-        </div>
-      </div>
-      <div class="data mb-3">
-        <label for="First Name">{{ $t("First Name:") }}</label>
-        <input type="text" class="form-control" v-model="firstName" />
-      </div>
-      <div class="data mb-3">
-        <label for="First Name">{{ $t("Last Name:") }}</label>
-        <input type="text" class="form-control" v-model="lastName" />
-      </div>
-
-      <div class="data mb-3">
-        <label for="User Name">{{ $t("User Name:") }}</label>
-        <input type="text" class="form-control" v-model="userName" />
-      </div>
-      <div class="data mb-3">
-        <label for="User Id">{{ $t("Email Id:") }}</label> <br />
-        <input type="email" class="form-control" v-model="email" />
-      </div>
-      <div class="data mb-3">
-        <label for="Phone Number">{{ $t("Phone Number") }}</label>
-        <input type="tel" class="form-control" v-model="phoneNumber" />
-      </div>
-      <div class="data mb-3">
-        <label for="Address Info">{{ $t("Address Info:") }}</label>
-      </div>
-      <div>
-        <div class="data mb-3">
-          <label for="City">{{ $t("City:") }}</label>
-          <input type="text" class="form-control" v-model="city" />
+          <div class="col-sm-10">
+            <input
+              type="email"
+              required
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+              v-model="email"
+            />
+          </div>
         </div>
         <div class="data mb-3">
-          <label for="zipcode">{{ $t("Zipcode:") }}</label>
-          <input type="text" class="form-control" v-model="zipcode" />
+          <label for="name" class="col-sm-2 col-form-label">{{
+            $t("Name:")
+          }}</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              name="name"
+              required
+              class="form-control"
+              id="name"
+              v-model="name"
+            />
+          </div>
         </div>
-      </div>
-      <div class="data mb-3">
-        <label for="Street">{{ $t("Street:") }}</label>
-        <input type="text" class="form-control" v-model="street" />
-      </div>
+        <div class="data mb-3">
+          <label for="inputpassword" class="col-sm-2 col-form-label">{{
+            $t("Password:")
+          }}</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              v-model="password"
+            />
+          </div>
+        </div>
+        <div class="data mb-3">
+          <label for="inputpassword" class="col-sm-2 col-form-label">{{
+            $t("Confirmed Password:")
+          }}</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              required
+              name="password"
+              class="form-control"
+              v-model="confirmpassword"
+            />
+            <span class="error" v-if="show"
+              >Please Enter the correct Password!</span
+            >
+          </div>
+        </div>
+        <div class="data mb-3">
+          <label for="First Name">{{ $t("First Name:") }}</label>
+          <input type="text" class="form-control" v-model="firstName" />
+        </div>
+        <div class="data mb-3">
+          <label for="First Name">{{ $t("Last Name:") }}</label>
+          <input type="text" class="form-control" v-model="lastName" />
+        </div>
 
-      <div>
+        <div class="data mb-3">
+          <label for="User Name">{{ $t("User Name:") }}</label>
+          <input type="text" class="form-control" v-model="userName" />
+        </div>
+        <div class="data mb-3">
+          <label for="User Id">{{ $t("Email Id:") }}</label> <br />
+          <input type="email" class="form-control" v-model="email" />
+        </div>
+        <div class="data mb-3">
+          <label for="Phone Number">{{ $t("Phone Number") }}</label>
+          <input type="tel" class="form-control" v-model="phoneNumber" />
+        </div>
+        <div class="data mb-3">
+          <label for="Address Info">{{ $t("Address Info:") }}</label>
+        </div>
+        <div>
+          <div class="data mb-3">
+            <label for="City">{{ $t("City:") }}</label>
+            <input type="text" class="form-control" v-model="city" />
+          </div>
+          <div class="data mb-3">
+            <label for="zipcode">{{ $t("Zipcode:") }}</label>
+            <input type="text" class="form-control" v-model="zipcode" />
+          </div>
+        </div>
+        <div class="data mb-3">
+          <label for="Street">{{ $t("Street:") }}</label>
+          <input type="text" class="form-control" v-model="street" />
+        </div>
+
+        <div>
+          <input
+            class="form-check-input mt-0"
+            type="checkbox"
+            required
+            value=""
+          /><span
+            >{{ $t("I accept that the data given by me is correct!") }}
+          </span>
+        </div>
+        <br />
         <input
-          class="form-check-input mt-0"
-          type="checkbox"
-          required
-          value=""
-        /><span
-          >{{ $t("I accept that the data given by me is correct!") }}
-        </span>
-      </div>
-      <br />
-      <input
-        type="submit"
-        @click="validate"
-        class="btn btn-primary mb-3"
-        value="Register"
-      />
-    </form>
+          type="submit"
+          @click="validate"
+          class="btn btn-primary mb-3"
+          value="Register"
+        />
+      </form>
+    </div>
   </div>
 </template>
 

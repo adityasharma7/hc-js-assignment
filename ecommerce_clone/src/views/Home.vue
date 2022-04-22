@@ -3,7 +3,7 @@
     <Header />
     <div class="controldiv">
       <div>
-        <Category @cateval="getval" />
+        <Category @cate-val="getval" />
         <img src="../assets/barcode.png" alt="" />
       </div>
       <div class="right">

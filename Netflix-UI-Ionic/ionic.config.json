@@ -1,0 +1,7 @@
+{
+  "name": "Netflix-UI-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

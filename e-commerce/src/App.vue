@@ -1,7 +1,8 @@
 <template>
 <div>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/category">Categories</router-link>
   <router-view/> 
 
     <!-- Start Top Nav -->
@@ -69,7 +70,7 @@ body, ul, li, p, a, label, input, div {
 
   .w-100{
     display: flex;
-    background-color: chartreuse !important;
+    background-color: black !important;
     }
 
   .h1 {

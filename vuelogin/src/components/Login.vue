@@ -36,6 +36,33 @@
 
 <script>
 import axios from "axios";
+import { setupCache } from 'axios-cache-adapter'
+
+// Create `axios-cache-adapter` instance
+const cache = setupCache({
+  maxAge: 15 * 60 * 1000
+})
+
+// Create `axios` instance passing the newly created `cache.adapter`
+const api = axios.create({
+  adapter: cache.adapter
+})
+
+// Send a GET request to some REST api
+api({
+  url: 'https://fakestoreapi.com/products/1',
+  method: 'get'
+}).then(async (response) => {
+  // Do something fantastic with response.data \o/
+  console.log('Request response:', response)
+
+  // Interacting with the store, see `localForage` API.
+  const length = await cache.store.length();
+
+  console.log('Cache store length:', length)
+})
+
+
 axios.interceptors.request.use((config) => {
   console.log(
     `${config.method.toUpperCase()} request sent to ${

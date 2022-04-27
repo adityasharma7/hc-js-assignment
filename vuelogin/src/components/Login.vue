@@ -36,6 +36,15 @@
 
 <script>
 import axios from "axios";
+axios.interceptors.request.use((config) => {
+  console.log(
+    `${config.method.toUpperCase()} request sent to ${
+      config.url
+    } at ${new Date().getTime()}`
+  )
+  return config;
+});
+
 export default {
   name: "Login",
   data() {
@@ -53,7 +62,7 @@ export default {
       let config = {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "sometoken",
+          Authorization: "niharika",
         },
       };
 
@@ -62,7 +71,7 @@ export default {
         .then((res) => {
           console.log(res.data.token);
           localStorage.token = res.data.token;
-          // this.$router.push('/');
+        this.$router.push("/");
         })
         .catch((err) => {
           alert(err);

@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-   <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-   <Header/>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+    <Header />
     <!-- <HelloWorld/> -->
-    <Categories/>
-    <Featuredproduct/>
-    <BannerHero/>
-    <Footer/>
+    <Categories />
+    <Featuredproduct />
+    <BannerHero />
+    <Footer />
   </div>
 </template>
 
@@ -16,14 +16,14 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import HelloWorld from '@/components/HelloWorld'
 //import App from '@/views/App.vue'
-import BannerHero from '@/components/BannerHero'
-import Categories from '@/components/Categories'
-import Featuredproduct from '@/components/Featuredproduct'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import BannerHero from "@/components/BannerHero";
+import Categories from "@/components/Categories";
+import Featuredproduct from "@/components/Featuredproduct";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     // HelloWorld,
     //App,
@@ -31,7 +31,7 @@ export default {
     Categories,
     Featuredproduct,
     Header,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>

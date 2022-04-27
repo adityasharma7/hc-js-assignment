@@ -17,8 +17,8 @@
       </button>
 
       <div class="productcontainer flex">
-        <div v-for="category in categories" :key="category.id">
-          <div class="card" style="width: 15rem">
+        <div class="hovercard" v-for="category in categories" :key="category.id">
+          <div @click="productdetail(category.id)" class="card" style="width: 14rem">
             <img
               :src="category.image"
               class="card-img-top"
@@ -38,6 +38,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "CategoryView",
@@ -77,6 +78,12 @@ export default {
       const data = await response.json();
       this.categories = data;
     },
+    productdetail(p_id){
+      this.$router.push({
+        name: "Productdetail",
+        params: {p_id},
+      });
+    }
   },
 };
 </script>
@@ -87,6 +94,9 @@ export default {
 }
 .card {
   margin: 4px;
+}
+.hovercard :hover{
+ transform: scale(1.1);
 }
 </style>
 

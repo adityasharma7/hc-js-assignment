@@ -22,7 +22,14 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
-  }
+  },
+    {
+      path: '/Productdetail/:p_id',
+      name: 'Productdetail',
+      component: () => import('@/views/Productdetail.vue'),
+      props: true,
+    }
+
 ]
 
 const router = createRouter({
@@ -30,4 +37,4 @@ const router = createRouter({
   routes
 })
 
-export default router
+export default router;

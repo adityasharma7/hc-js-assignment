@@ -2,7 +2,8 @@
   <div class="container">
     <form>
       <div class="form-group">
-        <label for="text">User Name:</label>
+        <label for="text"> {{ $t('userName') }}
+</label>
         <input
           v-model="username"
           type="text"
@@ -12,7 +13,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="pwd">Password:</label>
+        <label for="pwd">{{ $t('Password') }}</label>
         <input
           type="password"
           v-model="password"
@@ -23,11 +24,11 @@
       </div>
       <div class="form-group form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" /> Remember me
+          <input class="form-check-input" type="checkbox" /> {{ $t('Remember me') }}
         </label>
       </div>
       <button @click.prevent="sentdata" type="submit" class="btn btn-primary">
-        Submit
+        {{ $t('Remember me') }}
       </button>
     </form>
   </div>

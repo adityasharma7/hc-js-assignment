@@ -14,7 +14,7 @@ console.log(x);
 
 var x = a.filter((item) => {
   let c = 0;
- for (let i = 0; i <= item; i++) {
+  for (let i = 0; i <= item; i++) {
     if (item % i == 0) {
       c++;
     }

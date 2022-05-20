@@ -1,0 +1,4 @@
+ regular functions, arrow functions do not have their own this.
+
+
+ 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    onclick="alert('body');"
+    style="
+      background-color: rgb(176, 83, 199);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div
+      onclick="alert('div grant parant')"
+      style="
+        background-color: red;
+        width: 70vw;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        onclick="alert('div parant')"
+        style="
+          background-color: green;
+          width: 60vw;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          onclick="alert('child');"
+          style="
+            background-color: blue;
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div><button id="but">bubbling action</button></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var el = document.getElementById("but");
+      if (el) {
+        el.addEventListener(
+          "click",
+          () => {
+            return console.log("capturing occurs");
+          },
+          true
+        );
+      }
+    </script>
+  </body>
+</html>

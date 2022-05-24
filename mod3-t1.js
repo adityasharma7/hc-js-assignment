@@ -5,5 +5,10 @@ const Obj = [
   { id: 4, name: "Rohit Verma", age: 35 },
   { id: 5, name: "Ajay Jain", age: 17 },
 ];
-let minAge = Infinity;
-let maxindex = Obj.findIndex((value, index) => {})
+const min = Obj.reduce((acc, ele) => {
+  return acc.age < ele.age ? acc.age : ele.age;
+}, Infinity);
+
+let { id, name, age } = Obj.find((ele) => ele.age === min);
+
+console.log(" the younest one is " + name + " having id " + id);

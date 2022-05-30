@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>click on table</h1>
     <table>
       <tr>
         <td>0</td>
@@ -60,10 +61,13 @@
     <script>
       var table = document.querySelector("table");
       let rows = table.querySelectorAll("tr");
-      console.log(rows[1].cells[1]);
-      for (let i = 0; i <= rows.length; i++) {
-        rows[i].cells[1].style.backgroundColor = "red";
-      }
+      //   console.log(rows[1].cells[1]);
+      table.addEventListener("click", () => {
+        for (let i = 0; i <= rows.length; i++) {
+          let x = (rows[i].cells[1].style.backgroundColor = "red");
+        }
+        return x;
+      });
     </script>
   </body>
 </html>

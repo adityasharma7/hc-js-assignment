@@ -11,5 +11,5 @@ function sum(...nums) {
   return add(nums, 0);
 }
 
-var x = sum(1,2,3,4,6,7,8);
-console.log(x);
+var x = sum(1, 2, 3, 4, 6, 7, 8);
+console.log(x)

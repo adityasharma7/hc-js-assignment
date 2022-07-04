@@ -1,5 +1,5 @@
 <template>
-	<div class="category-col">
+	<div  class="category-col">
 		<img src="../assets/img/hp1.png" alt="">
 		<h5>{{category}}</h5>
 </div>

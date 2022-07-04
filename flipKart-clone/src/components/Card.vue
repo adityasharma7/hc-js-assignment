@@ -1,15 +1,24 @@
 <template>
 	<div class="common-col">
-		<img src="../assets/img/p1.jpeg" alt="mobile">
-		<h3>Poco m2 pro</h3>
+		<img :src="image" alt="mobile">
+		<h3>{{title}}</h3>
 		<h4>5000mAh Bttery</h4>
-		<h6>Now<i class="fas fa-rupee-sign"></i>13999</h6>
+		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
+
+        
   </div>
 </template>
 
 <script>
 export default {
+     props: {
+        title: String,
+        image: String,
+        price: String,
+        category:String
 
+
+     }
 }
 </script>
 

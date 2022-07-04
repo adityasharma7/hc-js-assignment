@@ -1,4 +1,5 @@
 <template>
+<h1>hello</h1>
   <div class="card">
 		<div class="common-heading">
 				<div class="common-heading-left">
@@ -11,17 +12,20 @@
 		</div>
 		<div class="common-row">
 
-        <div v-for="ele in $store.state.Storedata" :key="ele.id">
-        <Card :image="ele.image" :title="ele.title" :price="ele.price" /></div>
+        <div v-for="ele in $store.state.Storedata" :key="ele.id"><Card :image="ele.image" :title="ele.title" :price="ele.price" /></div>
 		</div>
   </div>
+
 </template>
 
 <script>
-import Card from '../components/Card.vue'
 export default {
-  components: { Card },
+  name:"CateogoryListing",
+  data() {
+    return {
 
+    }
+  }
 }
 </script>
 
@@ -68,4 +72,5 @@ export default {
      margin: 10px 0px;
      overflow: scroll;
  }
+
 </style>

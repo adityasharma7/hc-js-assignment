@@ -1,10 +1,11 @@
 <template>
   <div class="category-row">
-     <CategorySectionEle v-for="(sec, index) in section" :key="index" :category="sec"/>
+     <CategorySectionEle v-for="(sec, index) in sections" :key="index" :category="sec"/>
      
 
 
   </div>
+	<CategoryListing/>
 </template>
 
 <script>
@@ -15,9 +16,10 @@ export default {
     components: { CategorySectionEle },
     data() {
         return {
-            section:["Top Offer","grocery","electronics","Mobiles","fasion","home","Appliences","travel","beauty Toy& more"]
+            sections:["Top Offer","men's clothing", "jewelery","electronics","women's clothing"]
         }
-    }
+    },
+   
 }
 
 </script>
@@ -30,5 +32,6 @@ export default {
      height: auto;
      margin-top: 10px;
      text-align: center;
+		 overflow:scroll;
  }
 </style>

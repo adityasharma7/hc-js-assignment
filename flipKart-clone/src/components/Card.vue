@@ -2,7 +2,7 @@
 	<div class="common-col">
 		<img :src="image" alt="mobile">
 		<h3>{{title}}</h3>
-		<h4>awesome Product</h4>
+		<h4>rating:{{rating}}</h4>
 		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
 
         
@@ -15,7 +15,8 @@ export default {
         title: String,
         image: String,
         price: String,
-        category:String
+        category:String,
+        rating:String
 
 
      }

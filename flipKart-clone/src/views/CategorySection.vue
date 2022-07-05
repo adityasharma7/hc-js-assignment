@@ -27,6 +27,6 @@ export default {
      height: auto;
      margin-top: 10px;
      text-align: center;
-		 overflow:scroll;
+	 overflow:scroll;
  }
 </style>

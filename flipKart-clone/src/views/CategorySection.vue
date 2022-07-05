@@ -1,15 +1,10 @@
 <template>
   <div class="category-row">
      <CategorySectionEle v-for="(sec, index) in sections" :key="index" :category="sec"/>
-     
-
-
   </div>
-	<CategoryListing/>
 </template>
 
 <script>
-
 import CategorySectionEle from '../components/CategorySectionEle.vue';
 export default {
     name:"CategorySection",

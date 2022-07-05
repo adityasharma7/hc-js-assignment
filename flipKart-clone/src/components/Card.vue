@@ -2,7 +2,7 @@
 	<div class="common-col">
 		<img :src="image" alt="mobile">
 		<h3>{{title}}</h3>
-		<h4>5000mAh Bttery</h4>
+		<h4>awesome Product</h4>
 		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
 
         

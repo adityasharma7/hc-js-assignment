@@ -1,26 +1,17 @@
 <template>
-<h1>hello</h1>
-  <div class="card">
-		<div class="common-heading">
-				<div class="common-heading-left">
-					<h1>Best Battery Phones</h1>
-					<h2>More than 4000mAh</h2>
-				</div>
-				<div class="common-heading-right">
-					<button>view all</button>
-				</div>
-		</div>
-		<div class="common-row">
-
-        <div v-for="ele in $store.state.Storedata" :key="ele.id"><Card :image="ele.image" :title="ele.title" :price="ele.price" /></div>
-		</div>
-  </div>
-
+<div>
+    hello from {{$route.params.category}}
+    <div v-for="ele in $store.state.Storedata" :key="ele.id">
+         <Card v-if="ele.category===$route.params.category" :image="ele.image" :title="ele.title" :price="ele.price" />
+    </div>
+</div>
 </template>
 
 <script>
+import Card from '../components/Card.vue'
 export default {
   name:"CateogoryListing",
+  components: {Card},
   data() {
     return {
 

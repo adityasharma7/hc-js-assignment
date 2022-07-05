@@ -1,7 +1,9 @@
 <template>
      <header>
           <div class="header-left">
-           <a href="#">Flipkart</a>
+            <router-link to="/">
+                <a href="#"> Flipkart</a>
+            </router-link>
            <div class="header-left-p">
            <p><a href="#">Explore</a> <span>Plus<i class="fas fa-plus"></i></span></p>
         </div>
@@ -18,6 +20,7 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
 export default {
 
 }

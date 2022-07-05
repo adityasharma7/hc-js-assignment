@@ -1,10 +1,10 @@
 <script >
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 import NavBarVue from './views/NavBar.vue';
 import CategorySection from './views/CategorySection.vue';
-import Banner from './views/Banner.vue';
 import FooterCon from './views/FooterCon.vue';
-import FirstSection from './views/FirstSection.vue';
+import HomePage from './views/HomePage.vue';
+
 
 
 export default {
@@ -21,27 +21,21 @@ export default {
   components: {
     NavBarVue,
     CategorySection,
-    Banner,
     FooterCon,
-    FirstSection,
-  
+    HomePage
 }
 }
 </script>
 
 <template>
-
-  <NavBarVue/>
 <div>
+  <NavBarVue/>
   <section><CategorySection/></section>
-  <section ><Banner/></section>
-  <section><FirstSection/></section>
-  <section><FirstSection/></section>
-  <section><FirstSection/></section>
-  <section><FirstSection/></section>
+<div>
+<router-view/>
+</div>
   <footer><FooterCon/></footer>
 </div>
-
 </template>
 
 <style>

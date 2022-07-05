@@ -1,11 +1,14 @@
 <template>
 	<div  class="category-col">
 		<img src="../assets/img/hp1.png" alt="">
-		<h5>{{category}}</h5>
+		<h5>
+			<router-link :to="{path:category}">{{category}}</router-link>
+		</h5>
 </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
 export default {
 	name:"CategorySectionEle",
 	data(){

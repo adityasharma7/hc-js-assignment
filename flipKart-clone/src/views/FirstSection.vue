@@ -2,8 +2,8 @@
   <div class="card">
 		<div class="common-heading">
 				<div class="common-heading-left">
-					<h1>Best Battery Phones</h1>
-					<h2>More than 4000mAh</h2>
+					<h1>Best {{category}}</h1>
+					<h2>the collection which you like most</h2>
 				</div>
 				<div class="common-heading-right">
 					<button>view all</button>
@@ -12,7 +12,7 @@
 		<div class="common-row">
 
         <div v-for="ele in $store.state.Storedata" :key="ele.id">
-        <Card :image="ele.image" :title="ele.title" :price="ele.price" /></div>
+        <Card v-if="ele.category===category" :image="ele.image" :title="ele.title" :price="ele.price" /></div>
 		</div>
   </div>
 </template>
@@ -21,6 +21,9 @@
 import Card from '../components/Card.vue'
 export default {
   components: { Card },
+  props: {
+    category:String
+  }
 
 }
 </script>

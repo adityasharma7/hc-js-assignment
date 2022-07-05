@@ -27,7 +27,8 @@ export default {
 .grid-container {
   display: grid;
   grid-template-rows: 1fr,1fr,1fr;
-  margin-left: 300px;
+  padding-top: 30px;
+  margin-left: 350px;
   padding-left: 20px;
   gap: 50px;
 }

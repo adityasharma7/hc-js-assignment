@@ -1,18 +1,20 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <main-grid/>
+
   </ion-app>
 </template>
 
 <script lang="ts">
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { IonApp,  } from '@ionic/vue';
+import MainGrid from './views/MainGrid.vue';
 
-export default defineComponent({
+export default{
   name: 'App',
   components: {
     IonApp,
-    IonRouterOutlet
-  }
-});
+   
+    MainGrid
+}
+};
 </script>

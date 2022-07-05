@@ -6,10 +6,10 @@
       </ion-toolbar>
     </ion-header>
     
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
+    <ion-content >
+      <ion-header>
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">twitter</ion-title>
         </ion-toolbar>
       </ion-header>
     

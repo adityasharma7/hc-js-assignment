@@ -1,20 +1,20 @@
 <template>
   <ion-app>
-    <main-grid/>
-
+      
+      <FooterPage/>
   </ion-app>
 </template>
 
 <script lang="ts">
-import { IonApp,  } from '@ionic/vue';
-import MainGrid from './views/MainGrid.vue';
+import { IonApp,} from '@ionic/vue';
+import FooterPage from './Components/FooterPage.vue';
+
 
 export default{
   name: 'App',
   components: {
     IonApp,
-   
-    MainGrid
+    FooterPage
 }
 };
 </script>

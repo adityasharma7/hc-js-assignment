@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+
+<body style=" background-color: rgb(31, 7, 7); color: rgb(125, 134, 130); ">
+    <h1 style="text-align: center; margin-top: 40px;"> <u>Registration Page</u></h1><br><br>
+
+
+    <form style="text-align: center; margin-top: 40px; background-color: rgb(20, 4, 4);">
+
+        <fieldset>            
+
+            <legend style="font-weight: bold;"><h2>Tell us about yourself</h2></legend>
+
+
+            <label for="Username">Enter Name</label> <br>
+            <input type="text" id="Username" name="Username" size="30"><br><br>
+
+
+            <label for="email">Email</label> <br>
+            <input type="email" id="email" name="email" size="30"><br><br>
+
+            <label for="phone">Phone No.</label> <br>
+
+            <input type="text" name="phone" size="12" > <br>
+
+
+            <label for="gender">Gender: </label>
+            <input type="radio" id="gender" name="gender" value="male" size="30">Male
+            <input type="radio" id="gender" name="gender" value="female" size="30">Female <br /><br>
+
+            <label for="password">Enter Password</label> <br>
+            <input type="password" id="password" name="password" size="30"><br><br>
+
+
+            <label for="Cpassword">Confirm Password</label> <br>
+            <input type="password" id="Cpassword" name="Cpassword" size="30"><br><br>
+
+
+
+            <label>Country/Region</label> <br>
+            <select name="country" id="Country" style="width:160px"><br>
+                <option value="india">India</option>
+                <option value="pakistan">London</option>
+                <option value="africa">Africa</option>
+                <option value="china">China</option>
+                <option value="other">other</option>
+            </select> <br><br>
+
+            <label for="address">Enter Address </label> <br>
+            <textarea name="address" id="address" cols="30" rows="3" ></textarea><br><br><br>
+
+            <input type="submit" value="Submit" id="submit">
+    <input type="reset" value="Reset" id="reset"><br><br><br>
+
+    <label for="T&C">I have read and understood the Terms and Conditions of E-comm </label> <br>
+    <input type="checkbox" value="checkbox" id="T&C" size="30"><br><br><br>
+
+     
+     
+    <label for="alreadyRe">Already Registered? </label> <br>
+    
+    <a href="Login.html" target ="_blank">Login</a>
+
+        </fieldset>
+               
+    
+
+    </form>
+   
+   
+
+</body>
+
+</html>

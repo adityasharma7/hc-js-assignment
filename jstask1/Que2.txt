@@ -1,0 +1,59 @@
+Que 2. Find out about the most popular open-source JavaScript frameworks
+Ans :1. Angular.js
+Angular.js is one of the most popular JavaScript frameworks. It is used by developers to create complex web apps. The idea behind Angular.js is its one-page app model. It also supports MVC architecture. With Angular.js, the developer can use JavaScript code in the front end, literally extending the HTML vocabulary.
+
+Angular.js has improved a great deal since its inception in 2009. The current stable version of Angular 1 is 1.5.8/1.2.30. You can also try out Angular 2, a significant improvement over Angular 1, but this framework is still not yet adopted by developers across the world.
+
+Angular.js uses data binding as one of the main concepts to get work done. The user interacts with the interface. When the interaction is done, the view is then updated with the new values, which in turn interact with the model and ensure everything is synchronized. The DOM gets updated after the underlying logic is executed in the model.
+
+2. Backbone.js
+Not everyone intends to build a complex web application. Simpler web application frameworks such as Backbone.js are a great fit for those learning web app development. Backbone.js is a straightforward framework that makes building simple web apps fun and speedy. Just like Angular.js, Backbone.js also comes with MVC support. Other key features of Backbone.js are routing, RESTful API’s support, proper state management, and much more. You can also use Backbone.js to build single page apps.
+
+The current stable version is 1.3.3 and is available from GitHub.
+
+3. D3.js
+D3.js is an excellent JavaScript library that enables developers to create rich web pages with data manipulation features. D3.js uses SVG, HTML, and CSS to make the magic happen. With D3.js, you can bind data to DOM easily and enable data-driven events. With D3.js, you also can create high-quality data-driven web pages that offer a better understanding of data coupled with great visuals. Check Hamiltonian Graphs from LCF notation, powered by D3.js.
+
+4. React.js
+React.js is an interesting JavaScript framework to work with. Unlike other JavaScript frameworks, React.js is ideal for building highly scalable front-end user interfaces. React.js came into existence in 2013 under a BSD license and is growing rapidly thanks to the advantages that it brings to developing complex yet beautiful user interfaces.
+
+The core idea behind React.js is the virtual DOM. Virtual DOM acts as a mediator between the client-side and the server-side, bringing improved performance. The changes made in the virtual DOM are matched with the server DOM, and only the needed elements are updated, making the process much faster than a traditional UI update.
+
+You can also use material design with React, enabling you to develop modern web apps with unparalleled performance.
+
+jQuery
+jQuery is a very popular JavaScript library with features such as event handling, animation, and much more. When working on a web project, you don’t want to waste time writing code for simple tasks. jQuery frees you from this with its easy-to-use API. It also works with all the popular web browsers. With jQuery, you can seamlessly control the DOM and also develop an Ajax application, which is in high demand for the last few years. With jQuery, developers don’t have to worry about low-level interactions and can easily develop their web applications faster and easier.
+
+jQuery also facilitates the separation of HTML and JavaScript code, enabling developers to write clean code with cross-browser compatibility. Moreover, web apps created using jQuery are easily improved and extended in the future.
+
+7. Ember.js
+Ember.js is a mix of Angular.js and React.js when it comes to functionality. You can easily see the popularity of Ember.js when observing the support community. New features are added constantly. It works similar to Angular.js when it comes to syncing data. The two-way data exchange ensures that the app is fast and scalable. It also helps developers to create front-end elements.
+
+When it comes to React.js for similarities, Ember.js provides similar server-side Virtual DOM for better performance and scalability. Ember.js also encourages minimal code writing, offers excellent APIs to work with, and has an excellent community.
+
+8. Polymer.js
+If you ever thought of creating your own HTML5 elements, you can do so with the help of Polymer.js. Polymer’s main focus is to provide extended functionality to web developers by giving them the ability to create their own tags. For example, you can create a <my_video> element with its own functionality that is similar to the <video> element in HTML5.
+
+Polymer was introduced in the year 2013 by Google and is covered under 3-Clause BSD.
+
+9. Three.js
+Three.js is yet another JavaScript library, with a focus on 3D development. If you are into animation and game development, you can use Three.js to your advantage. Under the hood, Three.js uses WebGL and can easily be used to render 3D objects on the screen. A popular example of the power of Three.js is HexGL, a futuristic racing game.
+
+10. PhantomJS
+Working with JavaScript can also mean working with different browsers, and, when we talk about browsers, resource management comes into the discussion easily. With PhantomJS, you can monitor the performance of your web app thanks to the headless WebKit provided. The headless WebKit is part of the rendering engine used in Chrome and Safari.
+
+The entire process is automated, and all you need to is set up your web application using the available APIs.
+
+11. BabylonJS
+BabylonJS stands in the territory of Three.js, providing JavaScript APIs to create seamless, powerful 3D web apps. It is open source and is based on JavaScript and the power of WebGL. Creating simple 3D objects such as a sphere is easy and you can do so with just a few lines of code. You can get a good grasp of what the library has to offer by going through its documentation. The homepage also offers excellent demos for inspiration purposes. Do check them out by visiting the official website.
+
+12. Boba.js
+Web apps always have one need in common, analytics. If you have struggled to insert analytics into your JavaScript web app, then look to Boba.js. Boba.js can help you insert analytics into your web app with support for the old ga.js. You can also integrate metrics with Boba.js. The only requirement is jQuery.
+
+13. Underscore.js
+Underscore.js is the answer to your blank HTML editor file. When you start a project, feeling lost or doing a series of steps that repeat what you have done in earlier projects is common. To simplify the process of starting a project and to give you a head start, the Underscore.js JavaScript library provides you with a set of functions. For example, you can use your favorite Backbone.js suspenders or with jQuery functions that you use in your projects frequently.
+
+Functional helpers such as "filter" and "invoke the map" provide you with a good head start so you can dive into your work as quickly as possible. Underscore.js also comes with a suite for easy testing purposes.
+
+14. Meteor.js
+Meteor.js is a fast way to get started building JavaScript apps. It is open source in nature and can be used to create apps for desktop, mobile, and the web. Meteor.js is a full-stack framework and enables end-to-end development for multiple platforms. You can create back-end and front-end features with Meteor.js, and also keep tabs on the performance of the application. The community surrounding Meteor.js is huge, so there are frequent feature and bug fix updates. Meteor.js is also modular in nature and can be equipped with amazing APIs.

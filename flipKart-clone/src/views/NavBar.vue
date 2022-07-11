@@ -12,7 +12,7 @@
         <input class="header-center-input" type="text" placeholder=" Search for products,Brands and more"><i class="fas fa-search"></i>
           </div>
           <div class="header-right">
-            <a class="active" href="#">Login</a>
+            <a class="active" href="/login">Login</a>
             <a href="#">more<i class="fas fa-sort-down"></i></a>
             <a href="#"><i class="fas fa-shopping-cart"></i>cart</a>
           </div>

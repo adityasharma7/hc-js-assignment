@@ -12,7 +12,7 @@
 		<div class="common-row">
 
         <div v-for="ele in $store.state.Storedata" :key="ele.id">
-        <Card v-if="ele.category===category" :image="ele.image" :title="ele.title" :price="ele.price" /></div>
+        <Card v-if="ele.category===category" :image="ele.image" :title="ele.title" :price="ele.price" :id="ele.id" /></div>
 		</div>
   </div>
 </template>

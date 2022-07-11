@@ -1,10 +1,11 @@
 <template>
 	<div class="common-col">
-		<img :src="image" alt="mobile">
+        <img :src="image" alt="mobile">
 		<h3>{{title}}</h3>
 		<h4>rating:{{rating}}</h4>
 		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
-
+        <!-- <router-link :to="{path:ProductDetail/id}">detailpage</router-link> -->
+         
         
   </div>
 </template>
@@ -12,6 +13,7 @@
 <script>
 export default {
      props: {
+        id: String,
         title: String,
         image: String,
         price: String,

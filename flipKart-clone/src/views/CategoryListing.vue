@@ -3,7 +3,7 @@
     <!-- hello from {{$route.params.category}} -->
     <ProductFilter/>
     <div class="grid-container" v-for="ele in $store.state.Storedata" :key="ele.id">
-         <Card class="grid-item" v-if="ele.category===$route.params.category" :image="ele.image" :title="ele.title" :price="ele.price" :rating="ele.rating.rate" />
+         <Card class="grid-item" v-if="ele.category===$route.params.category" :image="ele.image" :title="ele.title" :price="ele.price" :rating="ele.rating.rate" :id="ele.id" />
     </div>
 </div>
 </template>

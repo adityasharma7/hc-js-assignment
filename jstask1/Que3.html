@@ -1,0 +1,48 @@
+<script>
+
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Filtering Odd Numbers 
+
+let arr =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for(let i =0 ; i<arr.length; i++){
+   if(i%2 != 0){
+    console.log(arr[i])
+   }
+}
+
+// Filtering Even Numbers
+
+let arr1 =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for(let i =0 ; i<arr1.length; i++){
+   if(i%2 == 0){
+    console.log(arr1[i])
+   
+   }
+}
+
+
+// Filtering out Prime numbers
+
+let arr3 =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let result = [];
+function isPrime(arr3) {
+  if(arr3 < 2) return false;
+
+  for (let k = 2; k < arr3; k++){
+    if(arr3 % k == 0){
+      return false;
+    }
+  }
+  return true;
+}
+arr3.forEach(function (element) {
+  const item = isPrime(element);
+  if (item) {
+    result.push(element);
+  }
+});
+console.log(result);
+
+</script>

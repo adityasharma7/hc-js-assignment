@@ -1,0 +1,38 @@
+<script>
+
+// Print “List has a prime no” if there is a prime no in it
+let arr3  = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
+let arr2 =[8 , 6 ,14 ,16]
+
+let result = [];
+function isPrime(arr3) {
+  if(arr3 < 2) return false;
+
+  for (let k = 2; k < arr3; k++){
+    if(arr3 % k == 0){
+      return false;
+    }
+  }
+  return true;
+}
+arr3.forEach(function (element) {
+  const item = isPrime(element);
+  if (item) {
+    result.push(element);
+  }
+});
+
+let count = 0
+for( let i of arr3 ){
+    if(isPrime(i)){
+    count++
+    
+}
+}
+if(count>=1){
+console.log("List has a prime number in it ")
+}else{
+    console.log("list dont have  prime numbers")
+}
+
+</script>

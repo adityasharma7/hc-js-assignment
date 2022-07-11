@@ -1,0 +1,20 @@
+<!-- Remove duplicate values from the list () -->
+<!-- [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10] -->
+
+
+<script>
+function getUnique(arr){
+    
+    let uniqueArr = [];
+    
+      for(let i of arr) {
+        if(uniqueArr.indexOf(i) === -1) {
+            uniqueArr.push(i);
+        }
+    }
+    console.log(uniqueArr);
+}
+
+const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+getUnique(array);
+</script>

@@ -1,0 +1,7 @@
+{
+  "name": "twitter-UI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

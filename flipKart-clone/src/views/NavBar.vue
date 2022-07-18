@@ -14,6 +14,11 @@
           <div class="header-right">
             <a class="active" href="/login">Login</a>
             <a href="#">more<i class="fas fa-sort-down"></i></a>
+              <div class="locale-changer">
+    <select v-model="$i18n.locale">
+      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
+    </select>
+  </div>
             <a href="#"><i class="fas fa-shopping-cart"></i>cart</a>
           </div>
      </header>
@@ -28,11 +33,11 @@ export default {
 
 <style scoped>
  header{
-     display: flex;
-     justify-content: space-evenly;
-     background-color: #2874f0;
-     width: 100%;
-     height: 56px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #2874f0;
+    width: 100%;
+    height: 56px;
    position: sticky;
    top: 0px;
    z-index: 1;

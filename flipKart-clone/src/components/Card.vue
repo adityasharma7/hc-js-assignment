@@ -1,16 +1,17 @@
 <template>
 	<div class="common-col">
-        <img :src="image" alt="mobile">
+        <!-- <router-link :to="{path:id}">{{category}}</router-link> -->
+        <img :src="image" :alt="title">
 		<h3>{{title}}</h3>
 		<h4>rating:{{rating}}</h4>
 		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
-        <!-- <router-link :to="{path:ProductDetail/id}">detailpage</router-link> -->
-         
-        
-  </div>
+        {{$route.params.id}}
+       
+    </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
 export default {
      props: {
         id: String,
@@ -21,14 +22,24 @@ export default {
         rating:String
 
 
+     },
+     methods: {
+        // switchroute(){
+        //     return this.router.push(`/${this.category}/productDetail`)
+        // }
      }
 }
 </script>
 
 <style scoped>
 .common-col{
+     width: 260px;
+     height: 330px;
      text-align: center;
      line-height: 22px;
+     border: 1px solid rgb(240, 205, 205) ;
+     box-shadow: rgb(161,161,161) 1 1;
+     margin: 3px;
  }
  .common-col img{
      width: 69px;

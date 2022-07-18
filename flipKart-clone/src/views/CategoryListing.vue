@@ -1,9 +1,11 @@
 <template>
-<div >
+<div class="container">
     <!-- hello from {{$route.params.category}} -->
-    <ProductFilter/>
-    <div class="grid-container" v-for="ele in $store.state.Storedata" :key="ele.id">
-         <Card class="grid-item" v-if="ele.category===$route.params.category" :image="ele.image" :title="ele.title" :price="ele.price" :rating="ele.rating.rate" :id="ele.id" />
+    <ProductFilter class="filter-section"/>
+    <div class="product-section">
+      <div class="grid-container" v-for="ele in $store.state.Storedata" :key="ele.id">
+           <Card class="grid-item" v-if="ele.category===$route.params.category" :image="ele.image" :title="ele.title" :price="ele.price" :rating="ele.rating.rate" :id="ele.id" />
+      </div>
     </div>
 </div>
 </template>
@@ -24,6 +26,8 @@ export default {
 
 <style scoped>
 
+
+
 .grid-container {
   display: grid;
   grid-template-rows: 1fr,1fr,1fr;
@@ -36,7 +40,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  width: 70vw;
+  width: 50vw;
   height: 35vh;
   font-size: 30px;
   text-align: center;

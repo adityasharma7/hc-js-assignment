@@ -69,6 +69,6 @@ export default {
      width: 100%;
      max-height: 366px;
      margin: 10px 0px;
-     overflow: scroll;
+     overflow:hidden;
  }
 </style>

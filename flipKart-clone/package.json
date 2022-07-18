@@ -1,6 +1,8 @@
 {
   "name": "flipkart-clone",
   "version": "0.0.0",
+  "main": "./index.html",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,13 +10,16 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "axios-cache-plugin": "^0.1.0",
+    "chalk": "^5.0.1",
     "vue": "^3.2.37",
-    "vue-i18n": "^8.27.2",
+    "vue-i18n": "^9.2.0-beta.37",
     "vue-router": "^4.0.16",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.12"
+    "vite": "^2.9.12",
+    "vue-cli-plugin-i18n": "~2.3.1"
   }
 }

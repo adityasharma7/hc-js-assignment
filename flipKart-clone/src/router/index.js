@@ -8,6 +8,7 @@ import ProductDetailPageVue from '../views/ProductDetailPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  
   routes: [
     {
       path: '/',
@@ -17,7 +18,8 @@ const router = createRouter({
     {
       path: '/:category',
       name: 'category',
-      component:CategoryListing
+      component:CategoryListing,
+
     },
         {
       path: '/login',
@@ -29,14 +31,23 @@ const router = createRouter({
       name: 'SignUpPage',
       component:SignUpPageVue
     },
-    // {
-    //   path: '/ProductDetail/:id',
-    //   name: 'ProductDetailPage',
-    //   component:ProductDetailPageVue
-    // },
+
+    {   name:'ProductDetailPage',
+        path:'/:id',
+        component:ProductDetailPageVue
+      }
+
     
     
   ]
 })
+
+// const isAuthenticated = false
+
+// router.beforeEach((to, from, next) => {
+//   if (to.name !== 'login' && !isAuthenticated) next({ name: 'login' })
+
+//   else next()
+// })
 
 export default router

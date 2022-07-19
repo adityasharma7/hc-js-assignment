@@ -1,0 +1,47 @@
+Que 2 : Identify the difference between regular functions and arrow functions
+Ans: 1. “this” Keyword
+this keyword is one of the most used keywords in JavaScript. But when it comes to regular functions and arrow functions, 
+it behaves in entirely different ways.
+
+In regular function, this changes according to the way that function is invoked.
+
+Simple Invocation: this equals the global object or maybe undefined if you are using strict mode.
+Method Invocation: this equals the object that owns the method.
+Indirect Invocation: this equals the first argument.
+Constructor Invocation: this equals the newly created instance.
+
+
+But, in the arrow functions, the behavior of this changes completely.
+
+Arrow functions don't have their own “this”, and they don’t redefine the value of “this ”within the function.
+
+Regardless of how you execute arrow functions, this inside an arrow function always refers to this from the outer context. 
+This means that this keyword is lexically bound in arrow functions.
+
+This behavior of arrow functions makes them really useful when using callbacks inside methods.
+
+You don't need to use workarounds like const self = this or callback.bind(this) with arrow functions, 
+and it prevents any mistakes that can be caused by the use of this within callbacks.
+
+2. Arguments Object.
+In regular JavaScript functions, arguments keywords can be used to access the passed arguments when the function is invoked.
+
+But, arrow functions do not have their own arguments and it uses the arguments from the outer function.
+
+The behavHowever, if you want to access arguments directly in an arrow function, you can use the rest parameters feature:
+
+ior of the arguments keyword within an arrow function is similar to the behavior of this keyword we discussed earlier, and it is resolved lexically.
+
+3. Constructors / “new” keyword
+As well know, we can easily construct objects with regular functions. We just need to invoke the function with the new keyword.
+
+However, arrow functions can not be used as constructors.
+
+4. Implicit return
+In regular functions, we can use the return keyword to return any value from a function. If we don’t return anything, the function will implicitly 
+return undefined.
+
+Arrow functions behave in the same way when returning values. But there is one advantage you can take from it.
+
+If the arrow function contains one expression, you can omit the curly braces, and then the expression will be implicitly returned.
+

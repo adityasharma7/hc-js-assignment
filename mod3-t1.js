@@ -24,6 +24,7 @@ const Obj = [
 
 
 
+<<<<<<< HEAD
 // answer b
 
 
@@ -54,3 +55,6 @@ for (ele of Obj) {
 }
 
 console.log(R, A);
+=======
+console.log(" the younest one is " + name + " having id " + id);
+>>>>>>> parent of 520fa1f... avarage question

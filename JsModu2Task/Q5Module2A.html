@@ -1,0 +1,59 @@
+<!-- a. Find the sum, min, and max -->
+
+<script>
+
+    //  Sum of array
+
+    let arr = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
+
+    let sum = 0
+    arr.forEach(function (numbers) {
+        sum+=numbers
+
+    })
+    console.log(sum)
+
+    // Using Reduce Method 
+
+ const summ= arr.reduce((accumulator ,currentValue) => {
+   return  accumulator +currentValue
+  })
+console.log(summ)
+
+
+
+    // MAx and Min 
+
+    //find min 
+
+     
+  const min =  arr.reduce((number , value)=> {
+   
+  if(number>value){
+   number = value 
+ 
+  }
+return number
+ 
+
+   }) 
+
+   console.log(min)
+
+    //find max
+
+    
+    const max =  arr.reduce((number , value)=> {
+   
+   if(number<value){
+    number = value 
+  
+   }
+ return number
+  
+ 
+    }) 
+ 
+    console.log(max)
+
+</script>

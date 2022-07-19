@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+
+<script>
+
+//  Print id and name of the youngest person and the oldest Person 
+
+let person = [
+{id: 1, name: "Amit Kumar",age: 25},
+{id: 2, name: "Rahul Dixit",age: 20},
+{id: 3, name: "Ravi Joshi",age: 55},
+{id: 8, name: "Aj" ,       age: 56},
+{id: 4, name: "Rohit Verma",age: 35},
+{id: 5, name: "Ajay Jain" ,age: 27}
+]
+
+
+// const ages = person.reduce ((accumulator , element) =>{  
+
+// return accumulator.concat(element.age)
+// },[])
+
+// const min = Math.min(...ages)
+// const max = Math.max(...ages)
+
+
+// var {id ,name,age} =person.find((element) => element.age==min)
+// console.log("Youngest person is"+name+"and his age is" +age+"and product ID is " +id)
+
+
+// var {id ,name,age} =person.find((element) => element.age==max)
+// console.log("Oldest person is"+name+"and his age is" +age+"and product ID is " +id)
+
+
+
+
+// // //   b. Create another list having id and name of all the person above 18 years
+
+
+// const above = person.filter((aboveEighteen) => aboveEighteen.age>18)
+// console.log(above)
+
+
+// // //  c .Find the average age
+
+
+// const average = person.reduce((accu , element)=>{
+//     accu = accu + element.age
+//     return accu
+
+// },0) 
+// console.log(average/person.length)
+
+
+// d Create 2 list with names starting with only ‘A’ and ‘R’ respectively
+
+const A = person.filter((startsWa) => startsWa.name[0] == "A")
+console.log(A)
+
+
+const R = person.filter((startsWa) => startsWa.name[0] == "R")
+console.log(R)
+console.log(JSON.stringify(R));
+
+
+// 
+
+</script>
+
+
+
+
+<body>
+   
+</body>
+</html>

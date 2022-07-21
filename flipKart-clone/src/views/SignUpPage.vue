@@ -28,7 +28,6 @@
         <a href="/login">Login</a>
       </div>
     </div>
-    <pre>{{signUp}}</pre>
   </div>
 </template>
 
@@ -50,11 +49,13 @@ export default {
       if(this.signUp.userName === null && this.signUp.email === null && this.signUp.password === null && this.confirmPassward === null) {
          alert("all must be filled ")
          console.log(this.signUp);
-      } else {
-        if (false) {   //this.signUp.password !== this.signUp.confirmPassword
+      } 
+      else {
+        if (this.signUp.password != this.signUp.confirmPassword) {   //
           console.log("h1")
           alert("password confirmation does not match");
-        } else {
+        } 
+        else {
         //update user credential
           const updataobj = {
           userName: this.signUp.userName,

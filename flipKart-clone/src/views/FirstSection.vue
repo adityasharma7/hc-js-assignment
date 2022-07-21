@@ -23,7 +23,7 @@ export default {
   components: { Card },
   props: {
     category:String
-  }
+  },
 
 }
 </script>

@@ -3,7 +3,7 @@
     <div class="container">
       <div>
         <h1>{{$t('signUp')}}</h1>
-       <form>
+       <form @submit.prevent="signUpFunc()">
       <div>
         <label for="userName">{{$t('UserName')}}</label>
         <input type="text" v-model="signUp.userName">
@@ -20,7 +20,7 @@
         <label for="confirmpassword">{{$t('ConfirmPassword')}}</label>
         <input type="password" name="confirmpassword" v-model="signUp.confirmPassward">
         </div>
-         <input  type="submit" value="SignUp" @click.prevent="signUpFunc()">
+         <input  type="submit" value="SignUp" >
        </form>
       </div>
       <div>
@@ -62,6 +62,7 @@ export default {
           password: this.signUp.password,
           };
           let userdata;
+          localStorage.clear()
           localStorage.getItem("userdata") === null ? (userdata = []):(userdata = JSON.parse(localStorage.getItem("userdata")));
           userdata.push(updataobj);
           localStorage.setItem("userdata", JSON.stringify(userdata));

@@ -16,7 +16,6 @@ export default {
   },
   async created() {
     await this.$store.dispatch('getfackApi')
-    
   },
   components: {
     NavBarVue,

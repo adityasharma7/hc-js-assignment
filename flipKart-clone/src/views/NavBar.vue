@@ -12,7 +12,11 @@
         <input class="header-center-input" type="text" placeholder=" Search for products,Brands and more"><i class="fas fa-search"></i>
           </div>
           <div class="header-right">
-            <a class="active" href="/login">Login</a>
+            <div>
+              <a v-if="$store.state.auth" class="active" href="/login">login</a>
+              <button v-else class="active" @click="logOut()" >logout</button>
+              
+            </div>
             <a href="#">more<i class="fas fa-sort-down"></i></a>
               <div class="locale-changer">
     <select v-model="$i18n.locale">
@@ -27,6 +31,21 @@
 <script>
 import { RouterLink } from 'vue-router'
 export default {
+  name:'navbar',
+  data() {
+    return {
+      status: false
+    }
+  },
+  methods: {
+    logOut(){
+      console.log("logout",this.$store.state.userData)
+      if(this.$store.state.userData){
+            this.$store.commit('userAuth',true)
+            }
+            
+    }
+  }
 
 }
 </script>
@@ -101,7 +120,7 @@ export default {
    text-transform: capitalize;
    line-height: 50px;
  }
- .header-right a{
+ .header-right a ,button{
      text-decoration: none;
      color: white;
      margin: 0px 25px;

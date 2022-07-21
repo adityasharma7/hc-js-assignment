@@ -32,10 +32,11 @@ const router = createRouter({
       component:SignUpPageVue
     },
 
-    {   name:'ProductDetailPage',
-        path:'/:id',
-        component:ProductDetailPageVue
-      }
+    {  
+      path:'/productdetail/:id',
+      name:'ProductDetailPage',
+      component:ProductDetailPageVue,
+    }
 
     
     

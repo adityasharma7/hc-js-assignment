@@ -1,11 +1,11 @@
 <template>
 	<div class="common-col">
-        <!-- <router-link :to="{path:id}">{{category}}</router-link> -->
+        <router-link :to="{ path: `/productdetail/${id}` }">
         <img :src="image" :alt="title">
 		<h3>{{title}}</h3>
 		<h4>rating:{{rating}}</h4>
 		<h6>Now<i class="fas fa-rupee-sign"></i>{{price}}</h6>
-        {{$route.params.id}}
+        </router-link>
        
     </div>
 </template>
@@ -24,9 +24,7 @@ export default {
 
      },
      methods: {
-        // switchroute(){
-        //     return this.router.push(`/${this.category}/productDetail`)
-        // }
+ 
      }
 }
 </script>

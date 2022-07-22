@@ -101,7 +101,7 @@
             <p>© 2007-2021 Flipkart.com</p>
         </div>
         <div class="footer-row2-col">
-            <img src=" flipkart images/payment.png" alt="payments">
+            <img src="#" alt="payments">
         </div>
     </div>
   </footer>

@@ -56,12 +56,6 @@ const store = createStore({
 		async getfackApi({ commit,state }){
 			try{
 				const res = await http.get('https://fakestoreapi.com/products',
-				{
-					headers: {
-						Authorization: 'Bearer'+ state.token ,
-						ContentType: 'application/json'
-        }
-				}
 				)
 				const data = await res.data
 				console.log("datafromstore",data)

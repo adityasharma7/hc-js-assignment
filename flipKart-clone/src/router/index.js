@@ -4,6 +4,10 @@ import CategoryListing from '../views/CategoryListing.vue'
 import LoginPageVue from '../views/LoginPage.vue'
 import SignUpPageVue from '../views/SignUpPage.vue'
 import ProductDetailPageVue from '../views/ProductDetailPage.vue'
+import Cart from '../views/Cart.vue'
+import Profile from '../views/Profile.vue'
+import store from '../../Store/index.js'
+
 
 
 const router = createRouter({
@@ -37,7 +41,33 @@ const router = createRouter({
       path:'/productdetail/:id',
       name:'ProductDetailPage',
       component:ProductDetailPageVue,
+    },
+    {  
+      path:'/profile',
+      name:'Profile',
+      component:Profile,
+      beforeEnter: (to,from,next) =>{
+        if(!store.state.token){
+          next({ name: 'login' })
+        }else{
+          next()
+        }
+      }
+    },
+    {  
+      path:'/Cart',
+      name:'Cart',
+      component:Cart,
+      beforeEnter: (to,from,next) =>{
+        if(!store.state.token){
+          next({ name: 'login' })
+        }else{
+          next()
+        }
+      }
     }
+
+
 
     
     

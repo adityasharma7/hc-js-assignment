@@ -13,17 +13,17 @@
           </div>
           <div class="header-right">
             <div>
-              <a v-if="$store.state.auth" class="active" href="/login">login</a>
+              <router-link v-if="!$store.state.token" class="active" to="/login">login</router-link>
               <button v-else class="active" @click="logOut()" >logout</button>
               
             </div>
-            <a href="#">more<i class="fas fa-sort-down"></i></a>
+            <router-link to="/Profile" v-show="$store.state.token">profile<i class="fas fa-sort-down"></i></router-link>
               <div class="locale-changer">
     <select v-model="$i18n.locale">
       <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
     </select>
   </div>
-            <a href="#" v-if="!$store.state.auth"><i class="fas fa-shopping-cart" ></i>cart</a>
+            <router-link to="/Cart" v-show="$store.state.token"><i class="fas fa-shopping-cart" ></i></router-link>
           </div>
      </header>
 </template>
@@ -34,22 +34,23 @@ export default {
   name:'navbar',
   data() {
     return {
-      status: false
+      
     }
   },
+  updated(){
+    this.$store.commit('userAuth')
+  },
+
   methods: {
     async logOut(){
-      console.log("logout",this.$store.state.userData)
-      if(this.$store.state.userData){
-            this.$store.commit('userAuth',true)
-            localStorage.removeItem('token')
-            await this.$store.dispatch('getfackApi')
-            
-            }
-            
+      this.$store.commit('userAuth')
+      console.log("logout",this.$store.state.token)
+      if(this.$store.state.token){
+        localStorage.removeItem('token')
+        await this.$store.dispatch('getfackApi')
+      }       
     }
   }
-
 }
 </script>
 

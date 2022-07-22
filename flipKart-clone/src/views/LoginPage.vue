@@ -43,7 +43,8 @@ export default {
           token = a.token
           localStorage.setItem("token", token);
           token = localStorage.getItem("token");
-          this.$store.commit('userToken',token)        
+          this.$store.commit('userToken',token)
+          this.$store.commit('userAuth')        
           this.$router.push('/')
         }else{console.log("wrong1")}
       }else{

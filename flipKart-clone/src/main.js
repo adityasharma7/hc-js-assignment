@@ -8,8 +8,9 @@ import axios from 'axios'
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
 	if(token){
-		config.headers.common['Authorization'] =  'Bearer' + token;
+		config.headers.Authorization =  'Bearer ' + token;
 		config.headers['Content-Type'] = 'application/json';
+    config.headers['author'] = "Rakesh RAjput"
 	}
     return config;
 },
@@ -23,7 +24,6 @@ axios.interceptors.request.use((config) => {
 axios.interceptors.response.use(function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
-
     console.log(response)
     return response;
   },

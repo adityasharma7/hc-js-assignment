@@ -28,6 +28,7 @@ export default {
     return {
       email: null,
       password: null,
+      token:null
     }
   },
   methods: {
@@ -36,7 +37,13 @@ export default {
     this.$store.state.userData.find((a) => {
       if (a.email == this.email) {
         if (a.password == this.password) { 
-          this.$store.dispatch('getfackApi')         
+          this.$store.dispatch('getfackApi') 
+          let token;
+          localStorage.getItem("token") === null ? (token = ""):(token = localStorage.getItem("token"));
+          token = a.token
+          localStorage.setItem("token", token);
+          token = localStorage.getItem("token");
+          this.$store.commit('userToken',token)        
           this.$router.push('/')
         }else{console.log("wrong1")}
       }else{

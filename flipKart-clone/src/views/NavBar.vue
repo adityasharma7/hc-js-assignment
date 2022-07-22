@@ -23,7 +23,7 @@
       <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
     </select>
   </div>
-            <a href="#"><i class="fas fa-shopping-cart"></i>cart</a>
+            <a href="#" v-if="!$store.state.auth"><i class="fas fa-shopping-cart" ></i>cart</a>
           </div>
      </header>
 </template>
@@ -38,10 +38,13 @@ export default {
     }
   },
   methods: {
-    logOut(){
+    async logOut(){
       console.log("logout",this.$store.state.userData)
       if(this.$store.state.userData){
             this.$store.commit('userAuth',true)
+            localStorage.removeItem('token')
+            await this.$store.dispatch('getfackApi')
+            
             }
             
     }

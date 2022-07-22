@@ -2,7 +2,7 @@
 	<div  class="category-col">
 		<img src="../assets/img/hp1.png" alt="">
 		<h5>
-			<router-link :to="{path:category}">{{category}}</router-link>
+			<router-link :to="{path:`/product/${category}`}">{{category}}</router-link>
 		</h5>
 </div>
 </template>
@@ -25,9 +25,9 @@ export default {
 
 <style scoped>
  .category-col{
-     padding: 10px 0px;
-     cursor: pointer;
-     color: rgb(85,83,83);
+		padding: 10px 0px;
+		cursor: pointer;
+		color: rgb(85,83,83);
  }
 
  .category-col img{

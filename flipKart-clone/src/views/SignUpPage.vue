@@ -49,10 +49,10 @@ export default {
       if(this.signUp.userName === null && this.signUp.email === null && this.signUp.password === null && this.confirmPassward === null) {
          alert("all must be filled ")
          console.log(this.signUp);
+         console.log("password validation",this.signUp.password != this.signUp.confirmPassword)
       } 
       else {
-        if (this.signUp.password != this.signUp.confirmPassword) {   //
-          console.log("h1")
+        if (false) {   //
           alert("password confirmation does not match");
         } 
         else {
@@ -61,9 +61,9 @@ export default {
           userName: this.signUp.userName,
           email: this.signUp.email,
           password: this.signUp.password,
+          token: this.signUp.password
           };
           let userdata;
-          localStorage.clear()
           localStorage.getItem("userdata") === null ? (userdata = []):(userdata = JSON.parse(localStorage.getItem("userdata")));
           userdata.push(updataobj);
           localStorage.setItem("userdata", JSON.stringify(userdata));

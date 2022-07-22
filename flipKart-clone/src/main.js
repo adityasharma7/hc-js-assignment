@@ -6,10 +6,9 @@ import i18n from './i18n'
 import axios from 'axios'
 
 axios.interceptors.request.use((config) => {
-  const data = localStorage.getItem('userdata')
-	if(data[0].password){
-    console.log("axiosinterceptor",data[0].passward)
-		config.headers.common['Authorization'] =  'Bearer'+data[0].passward;
+  const token = localStorage.getItem('token')
+	if(token){
+		config.headers.common['Authorization'] =  'Bearer' + token;
 		config.headers['Content-Type'] = 'application/json';
 	}
     return config;

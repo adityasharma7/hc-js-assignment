@@ -17,12 +17,10 @@ const store = createStore({
 		return {
 			Storedata: [],
 			userData: [],
+			filterPrice: 2000,
 			auth: false,
-			inputEmail: '',
-			inputPassword: '',
-	    userEmail:'',
-			userPassword:'',
-			isauthenticated: false
+			isauthenticated: false,
+			token:""
 			
 	
 			
@@ -40,20 +38,29 @@ const store = createStore({
 		userAuth(state, payload){
 			state.auth = payload
 			console.log("userAuth",payload);
+		},
+
+		userToken(state,token){
+      state. token = token
+		},
+		filterprice(state,price) {
+      state.filterPrice = price
 		}
+
+		
 
 	
 	},
 
 	actions: {
-		async getfackApi({ commit }){
+		async getfackApi({ commit,state }){
 			try{
 				const res = await http.get('https://fakestoreapi.com/products',
 				{
-				// 	headers: {
-				// 		Authorization: 'Bearer'+ this.userData.email,
-				// 		ContentType: 'application/json'
-        // }
+					headers: {
+						Authorization: 'Bearer'+ state.token ,
+						ContentType: 'application/json'
+        }
 				}
 				)
 				const data = await res.data

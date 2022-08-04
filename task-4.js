@@ -20,6 +20,7 @@ arr.forEach(num => {
 console.log("Sum: ", sum, "Minimum value: ", min, "Maximum value: ", max)
 
 //  b. Print “List is full of prime no” if every element is prime
+//  c. Print “List has a prime no” if there is a prime no in it
 
 let isPrime = (num) => {
   if (num <= 1) return false;
@@ -44,3 +45,13 @@ if(countPrime == size)
   console.log("List is full of primes.")
 else if(countPrime > 0)
   console.log("List has a prime number.")
+
+//  d. Remove duplicate values from the list ()
+let arrWithNoDuplicates = []
+arr.forEach(num => {
+  if(!arrWithNoDuplicates.includes(num)) {
+    arrWithNoDuplicates.push(num)
+  }
+})
+
+console.log(arrWithNoDuplicates)

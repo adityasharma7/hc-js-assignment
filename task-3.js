@@ -1,16 +1,27 @@
-// Provided the following  array:[0, 2, 4, 6, 8, 10, 12, 14, 16]
-// Generate and print another list such that: 
-//  a. every element being twice of elements in the current list.
-//  b. every element being half of the elements in the current list.
+// Provided the following  array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Filter out odd, even, and prime numbers and print them
 
-const arr = [0, 2, 4, 6, 8, 10, 12, 14, 16]
-const twice = []
-const half = []
+const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-arr.forEach(num => {
-  twice.push(num*2)
-  half.push(num/2)
-})
+const evens = arr.filter((n) => {
+  return n % 2 == 0;
+});
 
-console.log("Twice of every element: ", twice)
-console.log("Half of every element: ", half)
+const odds = arr.filter((n) => {
+  return n % 2;
+});
+
+const primes = arr.filter((n) => {
+  if (n <= 1) return false;
+  if (n % 2 == 0 && n > 2) return false;
+  const s = Math.sqrt(n);
+  for (let i = 3; i <= s; i += 2) {
+    if (n % i === 0) return false;
+  }
+  return true;
+  true;
+});
+
+console.log("Evens are: ", evens);
+console.log("Odds are: ", odds);
+console.log("Primes are: ", primes);

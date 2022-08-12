@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// Implement code to deep clone an object using JSON methods
+
+
+const Artists = 
+{
+
+"squad": "crazy Artists",
+"members": 4,
+"active": true,
+"formed": 2020,
+"country": "India",
+
+"membersDesc" : [{
+
+    "name": "Kanchan Pal",
+    "age": 20,
+    "powers": ["singer", "Dancer", "Guitarist"]
+},
+{
+    "name": "Sarthak",
+    "age": 21,
+    "powers": ["Guitarist" , "Singer"]
+
+},
+{
+    "name": "Aaditya",
+    "age": 22,
+    "powers": ["Lyricist", "Drums"]
+},
+{
+   " name": "Rishi",
+   " age": 22,
+    "powers": ["voilin", "Electric Guitar"]
+}
+
+]
+}
+console.log(Artists)
+
+// Depp cloning the Artists  object
+
+const clone = JSON.parse(JSON.stringify(Artists))
+console.log(clone)
+
+
+
+
+    </script>
+</body>
+</html>

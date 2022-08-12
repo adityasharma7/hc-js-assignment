@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Regular Expressions </title>
+</head>
+<body>
+
+<!-- To implement regular expression for name with letters -->
+
+<script>
+
+
+    const str =  "Kanchan , Kartik , Atharva"
+    const Regularexp = /K/g;
+
+    const find = str.search(Regularexp);
+    const result = Regularexp.test(str);
+
+    console.log(`Finding  a name with letter  ${str[find]}`);
+    result ? console.log(`the name exists with the letter 'K' at  ${find}th index`) : console.log("the name doesn't exist with the letter 'K'");
+   
+   
+   
+    // Another Way
+
+
+
+     let reg = /Kanchan/g
+     let string = "Hii I am Kanchan, just exploring SE field"
+     let resultt = reg.exec(string)
+     console.log(result)
+   
+     
+      
+
+</script> 
+
+</body>
+
+</body>
+</html>

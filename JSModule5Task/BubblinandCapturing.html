@@ -1,0 +1,75 @@
+
+
+<!-- Implement 2 event listener on click event of which one executes on bubbling and while other on capture -->
+
+<html>
+<head>
+    <title>Bubbling and Capturing </title>
+     <style>
+   
+   div{
+    min-width: 100px;
+    min-height: 100px;
+    padding: 50px;
+    border: 2px solid black;
+   }
+
+  </style>
+  
+</head>
+<body>
+
+<div id="grandParent" style="border-color: red">
+    <div id="Parent">
+        <div id="child">
+
+        </div>
+    </div>
+</div>
+
+<script>  
+
+
+// Bubbling
+document.getElementById("grandParent").addEventListener('click', () => {
+console.log("hey I am GrandParent ");
+},false);
+
+
+document.getElementById("Parent").addEventListener('click', () => {
+    console.log("Hii I am just Parent");
+    },false);
+
+    
+document.getElementById("child").addEventListener('click', () => {
+    console.log("Hey I am to just a innocent child");
+    
+    },false);
+    
+  
+    // Capturing 
+
+    document.getElementById("grandParent").addEventListener('click', () => {
+        console.log("hey I am GrandParent ");
+        },true);
+        
+        
+        document.getElementById("Parent").addEventListener('click', () => {
+            console.log("Hii I am just Parent");
+            },true);
+        
+            
+        document.getElementById("child").addEventListener('click', () => {
+            console.log("Hey I am to just a innocent child");
+            
+            },true);
+            
+
+    
+ 
+
+
+
+</script>
+</body>
+</html>

@@ -1,74 +1,26 @@
-// Provided following array:
+// 1 Implement code to deep clone an object using JSON methods
 
-// [
-// {“id”: 1, “name”: “Amit Kumar”, “age”: 25},
-// {“id”: 2, “name”: “Rahul Dixit”, “age”: 20},
-// {“id”: 3, “name”: “Ravi Joshi”, “age”: 55},
-// {“id”: 4, “name”: “Rohit Verma”, “age”: 35},
-// {“id”: 5, “name”: “Ajay Jain”, “age”: 17},
-// ]
-//   a. Print id and name of the youngest and oldest person
-//   b. Create another list having id and name of all the person above 18 years
-//   c. Find the average age
-//   d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively
+const obj = {
+  1: "one",
+  2: "two",
+  3: "three",
+  4: "four"
+};
 
-const arr = [
-  { id: 1, name: "Amit Kumar", age: 25 },
-  { id: 2, name: "Rahul Dixit", age: 20 },
-  { id: 3, name: "Ravi Joshi", age: 55 },
-  { id: 4, name: "Rohit Verma", age: 35 },
-  { id: 5, name: "Ajay Jain", age: 17 }
-];
+const deepClonedObject = JSON.parse(JSON.stringify(obj));
 
-//   a. Print id and name of the youngest and oldest person
+// 2 Implement regular expression for name with letters
 
-const minAge = arr.reduce((prev, curr) => {
-  return Math.min(curr.age, prev);
-}, Number.MAX_VALUE);
+const reForName = new RegExp("^[a-zA-Z ]+$").test("Ketuman Vishwakarma");
 
-const maxAge = arr.reduce((prev, curr) => {
-  return Math.max(curr.age, prev);
-}, Number.MIN_VALUE);
+// 3 Implement code for sum using recursion
 
-const [youngestPerson] = arr.filter((obj) => obj.age === minAge);
-const [oldestPerson] = arr.filter((obj) => obj.age === maxAge);
+let sum = 0;
+const arr = [1, 2, 4, 5, 6];
+const sumRecurr = (arr, index) => {
+  if (index === arr.length) return sum;
+  else sum += arr[index];
+  return sumRecurr(arr, index + 1);
+};
 
-console.log(
-  `Youngest person has name: ${youngestPerson.name} and ID: ${youngestPerson.id}`
-);
-console.log(
-  `Oldest person has name: ${oldestPerson.name} and ID: ${oldestPerson.id}`
-);
-
-//   b. Create another list having id and name of all the person above 18 years
-
-const aboveEighteen = arr
-  .filter((obj) => obj.age > 18)
-  .map((obj) => {
-    const { id, name } = obj;
-    return [id, name];
-  });
-
-console.log(aboveEighteen);
-
-//   c. Find the average age
-
-const totalAge = arr.reduce((prev, curr) => {
-  return curr.age + prev;
-}, 0);
-
-console.log(`The average age is: ${totalAge / arr.length}`);
-
-//   d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively
-
-const namesWithA = arr.filter(obj => {
-  return obj.name[0] === 'A'
-})
-
-const namesWithR = arr.filter(obj => {
-  return obj.name[0] === 'R'
-})
-
-console.log(`Names with A: ${namesWithA}`)
-console.log(`Names with R: ${namesWithR}`)
-
+console.log(sumRecurr(arr, 0));

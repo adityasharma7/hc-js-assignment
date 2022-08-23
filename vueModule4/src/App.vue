@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 import NavBar from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavBar.vue'
+import NavInner from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavInner.vue'
 import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/Footer.vue'
 
 
@@ -9,7 +10,7 @@ import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueMo
  
  export default {
   name: "App",
-  components: { NavBar, Footer},
+  components: { NavBar ,NavInner , Footer},
  
   
 };
@@ -27,9 +28,9 @@ import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueMo
       </nav> -->
 
       <NavBar />
+         <NavInner />
       <Footer />
-      <banner />
-      <test />
+ 
 
   </header>
 

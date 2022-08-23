@@ -3,10 +3,13 @@
 
 <div>
 
-<div class="backtotop"> Back To Top</div>
   <div class="container">
      
 
+<div class="backtotop"> 
+<span class="NavFooterbackToTop"> Back To top</span>
+  
+</div>
     <div class="first">
     
       <div class="head-1">Get to Know Us</div>
@@ -43,6 +46,30 @@
         </li>
         <li>
           <a href="">Instagram</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="first">
+      <div class="head-1">Make Money With US</div>
+        <ul>
+        <li>
+          <a href="">Sell on Amazon</a>
+        </li>
+        <li>
+          <a href="">Sell under Amazon Accelerator</a>
+        </li>
+        <li>
+          <a href="">Amazon Global Selling</a>
+        </li>
+        <li>
+          <a href="">Become an Affiliate</a>
+        </li>
+        <li>
+          <a href="">Fulfilment by Amazon</a>
+        </li>
+          <li>
+          <a href="">Amazon Pay on Merchants</a>
         </li>
       </ul>
     </div>
@@ -101,12 +128,20 @@ export default {
 .head-1 {
     font-weight: 700;
     padding: 60px;
-    padding-bottom: 60px;
+
   
 }
 a {
-    color: white;
+    color: rgb(218, 208, 208);
     text-decoration: none;
     padding: 60px;
+}
+
+.backtotop{
+text-align: center;
+padding: 20px;
+background-color: #4b5c70;
+    
+
 }
 </style> 

@@ -63,7 +63,7 @@ export default {
             <h5 class="card-title">{{ women.title }}</h5>
             <p class="card-text">{{ women.description }}</p>
             <p class="priceofproduct">₹{{women.price}} </p>
-            
+            <h6>Rating :{{women.rating.rate}}</h6>
             <a href="#" class="btn btn-primary">Shop-now</a>
           </div>
         </div>
@@ -82,6 +82,7 @@ export default {
             <h5 class="card-title">{{ men.title }}</h5>
             <p class="card-text">{{ men.description }}</p>
             <p class="priceofproduct">₹{{men.price}} </p>
+               <h6>Rating :{{men.rating.rate}}</h6>
             <a href="#" class="btn btn-primary">Shop-now</a>
           </div>
         </div>
@@ -103,6 +104,8 @@ export default {
             <h5 class="card-title">{{ elec.title }}</h5>
             <p class="card-text">{{ elec.description }}</p>
             <p class="priceofproduct">₹{{elec.price}} </p>
+            <h6>Rating :{{elec.rating.rate}}</h6>
+          
             <a href="#" class="btn btn-primary">Shop-now</a>
           </div>
         </div>
@@ -122,6 +125,7 @@ export default {
             <h5 class="card-title">{{ jew.title }}</h5>
             <p class="card-text">{{ jew.description }}</p>
             <p class="priceofproduct">₹{{jew.price}} </p>
+            <h6>Rating :{{jew.rating.rate}}</h6>
             <a href="#" class="btn btn-primary">Shop-now</a>
           </div>
         </div>

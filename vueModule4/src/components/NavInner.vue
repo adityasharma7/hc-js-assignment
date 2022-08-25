@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: 'NavBarCat'
+    name: 'NavInner'
 }
 </script>
 

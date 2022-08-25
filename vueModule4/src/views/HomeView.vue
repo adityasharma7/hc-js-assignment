@@ -8,7 +8,7 @@ import TheWelcome from '@/components/TheWelcome.vue'
   </main>
 </template> -->
 
-<template>
+<!-- <template>
   <h1>  Hello Vue </h1>
 </template>
 
@@ -20,4 +20,4 @@ export default {
 
 <style>
 
-</style>
+</style> -->

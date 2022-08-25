@@ -124,6 +124,8 @@ export default {
     min-width: 100%;
     position: absolute;
     color: #fff;
+      position: relative;
+ 
 }
 .head-1 {
     font-weight: 700;

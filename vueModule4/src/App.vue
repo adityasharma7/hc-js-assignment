@@ -3,6 +3,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
 import NavBar from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavBar.vue'
 import NavInner from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavInner.vue'
+
+
+import ImageSlider from './components/ImageSlider.vue'
+
+import Category from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/Category.vue'
 import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/Footer.vue'
 
 
@@ -10,7 +15,7 @@ import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueMo
  
  export default {
   name: "App",
-  components: { NavBar ,NavInner , Footer},
+  components: { NavBar, NavInner , ImageSlider,Category, Footer },
  
   
 };
@@ -29,11 +34,24 @@ import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueMo
 
       <NavBar />
          <NavInner />
-      <Footer />
+         <!-- <Category /> -->
+          
+          <ImageSlider /> 
+     
+         <Category />
+      <Footer class="footer" /> 
  
 
   </header>
 
-  <!-- <RouterView /> -->
+ <RouterView /> 
 </template>
 
+<style>
+.footer{
+
+
+
+}
+
+</style>

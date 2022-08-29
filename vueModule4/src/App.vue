@@ -1,21 +1,20 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
 
-import NavBar from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavBar.vue'
-import NavInner from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/NavInner.vue'
-
-
+import NavBar from './components/NavBar.vue'
+import NavInner from './components/NavInner.vue'
 import ImageSlider from './components/ImageSlider.vue'
+import Button from './components/Button.vue'
+import  Category from './components/Category.vue'
 
-import Category from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/Category.vue'
-import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueModule4/src/components/Footer.vue'
+// import Footer from './components/Footer.vue'
 
 
 
  
  export default {
   name: "App",
-  components: { NavBar, NavInner , ImageSlider,Category, Footer },
+  components: { NavBar, NavInner, ImageSlider, Button,Category,  },
  
   
 };
@@ -26,20 +25,16 @@ import Footer from '/home/kanchan/Learning/HotwaxTraining/hc-js-assignment/vueMo
 
 <template>
   <header>
-    
-      <!-- <nav>
-      <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink> 
-      </nav> -->
-
+       
       <NavBar />
          <NavInner />
-         <!-- <Category /> -->
+       
           
           <ImageSlider /> 
-     
-         <Category />
-      <Footer class="footer" /> 
+        <!-- <Home /> -->
+     <!-- <Category />  -->
+       
+      <!-- <Footer />  -->
  
 
   </header>

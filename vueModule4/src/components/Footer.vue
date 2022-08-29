@@ -119,12 +119,12 @@ export default {
     justify-content: space-evenly;
     top: 1250px;
     margin-bottom: 0;
-    padding-bottom: 0;
+    margin-top: 20%;
     background-color: #232f3e;
     min-width: 100%;
     position: absolute;
     color: #fff;
-      position: relative;
+      /* position: relative; */
  
 }
 .head-1 {

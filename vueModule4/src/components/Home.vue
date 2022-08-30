@@ -42,15 +42,7 @@ export default {
     };
   },
   methods: {
-    goToHome(categoryName) {
-      // alert(categoryName)
-      this.$router.push("/category");
-      this.$router.push({
-        name: "category",
-        params: { category_name: categoryName },
-      });
-    },
-    async getData() {
+     async getData() {
       try {
         let response = await fetch("https://fakestoreapi.com/products");
         this.posts = await response.json();
@@ -60,7 +52,7 @@ export default {
       }
     },
     updateCategory(categoryName) {
-      console.log(this.posts)
+      // console.log(this.posts)
       this.posts = this.allCategories
       if (categoryName !== "all") {
         this.posts = this.posts.filter((post) => post.category === categoryName);

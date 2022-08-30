@@ -17,14 +17,14 @@ export default {
     },
     methods: {
  
-    goToHome(categoryName) {
-      // alert(categoryName)
-      // this.$router.push("/category");
-      this.$router.push({
-        name: "category",
-        params: { category_name: categoryName },
-      });
-    },
+    // goToHome(categoryName) {
+    //   // alert(categoryName)
+    //   // this.$router.push("/category");
+    //   this.$router.push({
+    //     name: "category",
+    //     params: { category_name: categoryName },
+    //   });
+    // },
  
   },
   props: {

@@ -24,6 +24,7 @@
         <div class="card">
           <img class="image" :src="product.image" alt="Product Image" style="width:100px">
           <h4 style="font-weight: bold; font-size: 15px; width: 270px; height: 50px;">{{  product.title  }}</h4>
+          <p style="font-size: 14px; color: orange;">{{product.rating.rate}} <span style="font-size: 22px; color: #ffe11b;"> &#11088;</span> </p>	
           <p class="price">${{  product.price  }}</p>
           <button class="details-button">Get details</button>
         </div>
@@ -119,7 +120,7 @@ export default {
 .card {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
   max-width: 350px;
-  height: 320px;
+  height: 350px;
   margin: 10px;
   text-align: center;
   font-family: arial;

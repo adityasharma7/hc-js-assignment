@@ -2,7 +2,7 @@
   <div>
     <ul v-if="categories" class="nav">
       <li v-for="category in categories" :key="category">\
-        <a @click="showCategoryProducts(category)">{{ category.toUpperCase() }}</a>
+        <a @click="showCategoryProducts(category)">{{  category.toUpperCase()  }}</a>
       </li>
     </ul>
 
@@ -10,9 +10,9 @@
       <div v-for="product in products" :key="product.id">
         <div class="card">
           <img class="image" :src="product.image" alt="Product Image" style="width:100px">
-          <h4>{{ product.title }}</h4>
-          <p class="price">${{ product.price }}</p>
-          <p>{{ product.description.substr(0, 100) }}...</p>
+          <h4>{{  product.title  }}</h4>
+          <p class="price">${{  product.price  }}</p>
+          <p>{{  product.description.substr(0, 100)  }}...</p>
         </div>
       </div>
     </div>
@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       products: null,
+      productsCopy: null,
       categories: null,
     }
   },
@@ -35,6 +36,7 @@ export default {
       try {
         const productsData = await axios.get('https://fakestoreapi.com/products');
         this.products = await productsData.data
+        this.productsCopy = this.products
       } catch (error) {
         console.log(error);
       }
@@ -52,12 +54,10 @@ export default {
 
     async showCategoryProducts(category) {
       try {
-        if (category == 'all') {
-          this.showAllProducts()
-        } else {
-          const productsData = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
-          this.products = await productsData.data
-        }
+        this.products = this.productsCopy
+        if (category != 'all') {
+          this.products = this.products.filter((product) => product.category == category)
+        } 
       } catch (error) {
         console.log(error);
       }

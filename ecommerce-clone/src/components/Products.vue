@@ -1,18 +1,31 @@
 <template>
   <div>
     <ul v-if="categories" class="nav">
-      <li v-for="category in categories" :key="category">\
+      <li v-for="category in categories" :key="category">
         <a @click="showCategoryProducts(category)">{{  category.toUpperCase()  }}</a>
       </li>
     </ul>
 
+    <div style="text-align: center;">
+      <label style="padding: 20px;" for="sort">Sort by:</label>
+      <select style="padding: 4px 0" name="sort-categories" v-model="sortBy">
+        <option value="price">Price</option>
+        <option value="rating">Rating</option>
+      </select>
+      <button style="padding: 4px 5px; margin-left: 10px; background-color: #ffe11b; color: #333; border: none;"
+        v-on:click="ascending = !ascending" class="sort-button">
+        <span v-if="ascending">Showing Increasing</span>
+        <span v-else>Showing Decreasing</span>
+      </button>
+    </div>
+
     <div v-if="products" class="container">
-      <div v-for="product in products" :key="product.id">
+      <div v-for="product in filteredProducts" :key="product.id">
         <div class="card">
           <img class="image" :src="product.image" alt="Product Image" style="width:100px">
-          <h4>{{  product.title  }}</h4>
+          <h4 style="font-weight: bold; font-size: 15px; width: 270px; height: 50px;">{{  product.title  }}</h4>
           <p class="price">${{  product.price  }}</p>
-          <p>{{  product.description.substr(0, 100)  }}...</p>
+          <button class="details-button">Get details</button>
         </div>
       </div>
     </div>
@@ -26,9 +39,38 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      ascending: true,
+      sortBy: 'price',
       products: null,
       productsCopy: null,
       categories: null,
+      category: 'all'
+    }
+  },
+  computed: {
+    filteredProducts() {
+      let filteredProducts = this.productsCopy
+      if (this.category != 'all') {
+        filteredProducts = filteredProducts.filter(p => {
+          return p.category == this.category
+        })
+      }
+
+      filteredProducts = filteredProducts.sort((a, b) => {
+        if (this.sortBy == 'price') {
+          return a.price - b.price
+
+        } else if (this.sortBy == 'rating') {
+          return a.rating.rate - b.rating.rate
+        }
+      })
+
+      if (!this.ascending) {
+        filteredProducts.reverse()
+      }
+
+
+      return filteredProducts
     }
   },
   methods: {
@@ -53,14 +95,7 @@ export default {
     },
 
     async showCategoryProducts(category) {
-      try {
-        this.products = this.productsCopy
-        if (category != 'all') {
-          this.products = this.products.filter((product) => product.category == category)
-        } 
-      } catch (error) {
-        console.log(error);
-      }
+      this.category = category
     }
   },
   mounted() {
@@ -84,24 +119,24 @@ export default {
 .card {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
   max-width: 350px;
+  height: 320px;
   margin: 10px;
   text-align: center;
   font-family: arial;
   width: 50%;
-  height: 350px;
   float: left;
   padding: 40px;
 }
 
 .price {
-  color: grey;
-  font-size: 22px;
+  color: #444;
+  font-size: 18px;
 }
 
 .card button {
   border: none;
-  outline: 0;
-  padding: 12px;
+  border-radius: 12px;
+  padding: 6px;
   color: white;
   background-color: #000;
   text-align: center;
@@ -111,7 +146,8 @@ export default {
 }
 
 .card button:hover {
-  opacity: 0.7;
+  background-color: #2874f0;
+  color: #ffe11b;
 }
 
 /*Sidenav*/

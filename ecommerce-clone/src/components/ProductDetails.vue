@@ -1,10 +1,8 @@
 <template>
-
-
-  <div class="container mt-5 mb-5">
+  <div class="container" style="margin-top: 40px;">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10">
-        <div class="card">
+        <div class="p-card">
           <div class="row">
             <div class="col-md-6">
               <div class="images p-3">
@@ -15,9 +13,9 @@
             <div class="col-md-6">
               <div class="product p-4">
                 <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">
+                  <div class="d-flex align-items-center"> 
                       <RouterLink to="/">Back</RouterLink>
-                    </span> </div> <i class="fa fa-shopping-cart text-muted"></i>
+                  </div> 
                 </div>
                 <div class="mt-4 mb-3">
                   <h1 class="text-uppercase">{{  product.title  }}</h1>
@@ -28,7 +26,7 @@
                 <p class="about">{{  product.description  }}</p>
 
                 <div class="cart mt-4 align-items-center"> <button class="btn btn-primary text-uppercase mr-2 px-4">Add
-                    to cart</button> <i class="fa fa-heart text-muted"></i> <i class="fa fa-share-alt text-muted"></i>
+                    to cart</button> 
                 </div>
               </div>
             </div>
@@ -51,7 +49,6 @@ export default {
   data() {
     return {
       product: null,
-      a: "aa"
     }
   },
   props: {
@@ -79,12 +76,12 @@ body {
   background-color: #000
 }
 
-.card {
-  border: none
+.images {
+  margin: 40px;
 }
 
-.product {
-  background-color: #eee
+.p-card {
+  border: none
 }
 
 .brand {
@@ -92,7 +89,7 @@ body {
 }
 
 .act-price {
-  color: red;
+  color: #2874f0;
   font-weight: 700
 }
 

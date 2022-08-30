@@ -125,7 +125,6 @@ export default {
   margin: 10px;
   text-align: center;
   font-family: arial;
-  width: 50%;
   float: left;
   padding: 40px;
 }

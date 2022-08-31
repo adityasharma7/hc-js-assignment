@@ -100,7 +100,7 @@ export default {
       this.category = category
     }
   },
-  mounted() {
+  created() {
     this.getCategories();
     this.showAllProducts()
   }

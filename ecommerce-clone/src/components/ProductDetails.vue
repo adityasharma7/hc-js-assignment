@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="margin-top: 40px;">
+  <div v-if="product" class="container" style="margin-top: 40px;">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10">
         <div class="p-card">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="mt-4 mb-3">
                   <h1 class="text-uppercase">{{  product.title  }}</h1>
-                  <h2 class="price d-flex flex-row align-items-center"> <span class="act-price">{{  product.price 
+                  <h2 class="price d-flex flex-row align-items-center"> <span class="act-price">${{  product.price 
                       }}</span>
                   </h2>
                 </div>

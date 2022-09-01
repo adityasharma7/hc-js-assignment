@@ -14,7 +14,7 @@
               <div class="product p-4">
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center"> 
-                      <RouterLink to="/">Back</RouterLink>
+                      <RouterLink to="/">Home</RouterLink>
                   </div> 
                 </div>
                 <div class="mt-4 mb-3">
@@ -43,7 +43,15 @@
 <script>
 
 import axios from 'axios'
-import { provide } from 'vue';
+import { setupCache } from 'axios-cache-adapter'
+
+const cache = setupCache({
+  maxAge: 30 * 60 * 1000
+})
+
+const api = axios.create({
+  adapter: cache.adapter
+})
 
 export default {
   data() {
@@ -57,7 +65,7 @@ export default {
   methods: {
     async showAllProducts() {
       try {
-        const productData = await axios.get(`https://fakestoreapi.com/products/${this.id}`);
+        const productData = await api.get(`https://fakestoreapi.com/products/${this.id}`);
         this.product = await productData.data
 
       } catch (error) {

@@ -4,10 +4,15 @@
       <div class="container">
         <div class="row row1">
           <ul class="largenav pull-right">
-            <li class="upper-links"><a class="links" href="">Link 1</a></li>
-            <li class="upper-links"><a class="links" href="">Link 2</a></li>
-            <li class="upper-links"><a class="links" href="">Link 3</a></li>
-            <li class="upper-links"><a class="links" href="">Link 4</a></li>
+            <li class="upper-links">
+              <RouterLink class="router" to="/register">{{$t('register')}}</RouterLink>
+            </li>
+            <li class="upper-links">
+              <RouterLink class="router" to="/login">{{$t('login')}}</RouterLink>
+            </li>
+            <li class="upper-links">
+              <RouterLink class="router" to="/" @click="logoutUser()">{{$t('logout')}}</RouterLink>
+            </li>
             <li class="upper-links">
               <a class="links" href="">
                 <svg class="" width="16px" height="12px" style="overflow: visible;">
@@ -21,8 +26,12 @@
         </div>
         <div class="row row2">
           <div class="col-sm-2">
-            <h2 style="margin:0px;"><span class="smallnav menu">☰ flopkart</span></h2>
-            <h1 style="margin:0px; font-weight: bolder;"><span class="largenav"><i>flopkart</i></span></h1>
+            <h2 style="margin:0px;"><span class="smallnav menu">flopkart</span></h2>
+            <h1 style="margin:0px; font-weight: bolder;"><span class="largenav">
+                <RouterLink class="router title" to="/"><i>
+                  {{ $t('flopkart') }}
+                </i></RouterLink>
+              </span></h1>
           </div>
           <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
             <div class="row">
@@ -50,11 +59,35 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    logoutUser() {
+      if (localStorage.token) {
+        localStorage.removeItem('token')
+        alert("Logged out!")
+      }
+      this.$router.push('/login')
+    }
+  }
+}
+</script>
+
 <style scoped>
+.router {
+  text-decoration: none;
+  color: white;
+}
+
+.router:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
 #flipkart-navbar {
   background-color: #2874f0;
   color: #FFFFFF;
@@ -139,8 +172,10 @@
   color: inherit;
   border: none;
   outline: none;
-  font-size: 12px;
+  font-size: 16px;
+  text-decoration: underline;
 }
+
 
 .links {
   color: #fff;
@@ -183,6 +218,4 @@
     margin: 0px;
   }
 }
-
-
 </style>

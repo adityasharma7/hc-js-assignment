@@ -1,0 +1,14 @@
+{
+  "flopkart": "flopkart",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "password2": "Confirm Password",
+  "register": "Register",
+  "alreadyAccount": "Already have an account",
+  "username": "Username",
+  "login": "Login",
+  "logout": "Logout",
+  "getDetails": "Get details",
+  "sortBy": "Sort by"
+}

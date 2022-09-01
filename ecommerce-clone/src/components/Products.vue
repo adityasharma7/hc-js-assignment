@@ -1,13 +1,13 @@
 <template>
   <div>
-    <ul v-if="categories" class="nav">
+    <ul class="nav">
       <li v-for="category in categories" :key="category">
         <a @click="showCategoryProducts(category)">{{  category.toUpperCase()  }}</a>
       </li>
     </ul>
 
     <div style="text-align: center;">
-      <label style="padding: 20px;" for="sort">Sort by:</label>
+      <label style="padding: 20px;" for="sort">{{ $t('sortBy') }}:</label>
       <select style="padding: 4px 0" name="sort-categories" v-model="sortBy">
         <option value="price">Price</option>
         <option value="rating">Rating</option>
@@ -24,10 +24,12 @@
         <div class="card">
           <img class="image" :src="product.image" alt="Product Image" style="width:100px">
           <h4 style="font-weight: bold; font-size: 15px; width: 270px; height: 50px;">{{  product.title  }}</h4>
-          <p style="font-size: 14px; color: orange;">{{ product.rating.rate }} <span
+          <p style="font-size: 14px; color: orange;">{{  product.rating.rate  }} <span
               style="font-size: 22px; color: #ffe11b;"> &#11088;</span> </p>
           <p class="price">${{  product.price  }}</p>
-          <RouterLink class="details-button" :to="`/product/${product.id}`">Get details</RouterLink>
+          <RouterLink class="details-button" :to="`/product/${product.id}`">
+            {{ $t('getDetails') }}
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -37,6 +39,15 @@
 
 <script>
 import axios from 'axios'
+import { setupCache } from 'axios-cache-adapter'
+
+const cache = setupCache({
+  maxAge: 30 * 60 * 1000
+})
+
+const api = axios.create({
+  adapter: cache.adapter
+})
 
 export default {
   data() {
@@ -45,7 +56,13 @@ export default {
       sortBy: 'price',
       products: null,
       productsCopy: null,
-      categories: null,
+      categories: [
+        "all",
+        "electronics",
+        "jewelery",
+        "men's clothing",
+        "women's clothing"
+      ],
       category: 'all'
     }
   },
@@ -75,22 +92,13 @@ export default {
       return filteredProducts
     }
   },
+
   methods: {
     async showAllProducts() {
       try {
-        const productsData = await axios.get('https://fakestoreapi.com/products');
+        const productsData = await api.get('https://fakestoreapi.com/products');
         this.products = await productsData.data
         this.productsCopy = this.products
-      } catch (error) {
-        console.log(error);
-      }
-    },
-
-    async getCategories() {
-      try {
-        const allCategories = await axios.get('https://fakestoreapi.com/products/categories')
-        this.categories = await allCategories.data
-        this.categories.unshift('all')
       } catch (error) {
         console.log(error);
       }
@@ -101,9 +109,8 @@ export default {
     }
   },
   created() {
-    this.getCategories();
     this.showAllProducts()
-  }
+  },
 }
 </script>
 

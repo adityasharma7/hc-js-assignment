@@ -36,8 +36,9 @@
 				<div class="delivery-location-container">
                     <div class="name-address">
                         <span class="delivery-name">Hello, SignIn</span>
-                        <span class="delivery-address">Accounts & Lists</span>
-                    </div>
+                       <span class="delivery-address">Accounts & Lists</span>
+
+                  </div>
                 </div>
 
 				<div class="delivery-location-container">

@@ -29,7 +29,10 @@
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Shamshera/400x39-SWM_179._CB629959833_.jpg" alt="">
     </div>
 
+   
+
 </div>
+
 </template>
 
 <script>

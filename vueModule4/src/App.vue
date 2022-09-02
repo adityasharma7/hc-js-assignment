@@ -5,7 +5,7 @@ import NavBar from './components/NavBar.vue'
 import NavInner from './components/NavInner.vue'
 import ImageSlider from './components/ImageSlider.vue'
 import Button from './components/Button.vue'
-import  Category from './components/Category.vue'
+// import  Category from './components/Category.vue'
 
 // import Footer from './components/Footer.vue'
 
@@ -14,7 +14,7 @@ import  Category from './components/Category.vue'
  
  export default {
   name: "App",
-  components: { NavBar, NavInner, ImageSlider, Button,Category,  },
+  components: { NavBar, NavInner, ImageSlider, Button },
  
   
 };

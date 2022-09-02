@@ -63,7 +63,7 @@ export default {
     id: String
   },
   methods: {
-    async showAllProducts() {
+    async getProductDetails() {
       try {
         const productData = await api.get(`https://fakestoreapi.com/products/${this.id}`);
         this.product = await productData.data
@@ -74,7 +74,7 @@ export default {
     },
   },
   created() {
-    this.showAllProducts()
+    this.getProductDetails()
   }
 }
 </script>

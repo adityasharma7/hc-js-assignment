@@ -40,26 +40,29 @@ export default {
     return {
       username: "mor_2314",
       password: "83r5^_",
+      userAccessToken : null
     };
   },
 
   methods: {
           async loginUser() {
 
-
+            if(localStorage.token){
         const cardentials  = {
             username: this.username,
             password: this.password
         }
         
         const response = await axios.post('https://fakestoreapi.com/auth/login', cardentials)
-         localStorage.setItem('token' , response.data.token)
-//    this.$router.push('/') 
-
-
+     
+        localStorage.setItem('token', response.data.token)
+          this.$router.push('/')
+    }
     }
   },
+  
 }
+   
 
 </script>
 

@@ -56,8 +56,19 @@
 </template> 
 
 <script>
-import Button from "./Button.vue";
+
 import axios from 'axios'
+import { setupCache } from 'axios-cache-adapter'
+const cache = setupCache({
+  maxAge: 30 * 60 * 1000
+})
+const api = axios.create({
+  adapter: cache.adapter
+})
+
+
+import Button from "./Button.vue";
+
 export default {
   components: { Button },
 
@@ -103,7 +114,7 @@ export default {
   methods: {
     async getData() {
       try {
-        let response = await axios.get("https://fakestoreapi.com/products");
+        let response = await api.get("https://fakestoreapi.com/products");
         this.posts = await response.data;
         this.allCategories = this.posts;
       } catch (error) {

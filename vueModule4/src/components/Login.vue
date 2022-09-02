@@ -54,12 +54,23 @@ export default {
         }
         
         const response = await axios.post('https://fakestoreapi.com/auth/login', cardentials)
-     
+        //  this.$router.push('/')
+
         localStorage.setItem('token', response.data.token)
           this.$router.push('/')
     }
     }
   },
+//     userAuthentication(){
+//         if(localStorage.token){
+//             this.$router.push('/')
+//         }
+//     },
+//     created() {
+//      this.userAuthentication()
+//   }
+
+
   
 }
    

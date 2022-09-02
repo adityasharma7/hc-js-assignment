@@ -1,37 +1,38 @@
 <template>
- 
   <div>
     <ImgSlider class="space" />
-    
+
     <div style="text-align: center">
-
       <div>
-<h5>Already Have an Account?<RouterLink to="/Login"> Login </RouterLink></h5>
-<h5>New Customer?
-<RouterLink to="/Register"> Start Here By Registering yourself </RouterLink></h5>
-
-
+        <h5>
+         
+          {{$t('Already Have an Account?')}}<RouterLink to="/Login"> Login </RouterLink>
+        </h5>
+        <h5>
+         {{$t('NewCustomer?')}}
+          <RouterLink to="/Register">
+            Start Here By Registering yourself
+          </RouterLink>
+        </h5>
       </div>
-      <label style="padding: 20px" for="sort">Sort by:</label>
+      <label style="padding: 20px" for="sort">{{$t('sortBy')}}:</label>
       <select style="padding: 4px 0" name="sort-categories" v-model="sortBy">
         <option value="price">Price</option>
         <option value="rating">Rating</option>
       </select>
 
-
-      
       <button v-on:click="ascending = !ascending" class="sort-button">
         <span v-if="ascending">High to Low</span>
         <span v-else>Low to High</span>
       </button>
     </div>
 
-    <h2 style="text-align: center; color: black">Amazing deals</h2>
+    <h2 style="text-align: center; color: black">{{$t('AmazingDeals')}}</h2>
 
     <div class="container">
-      <div class="cat"> 
+      <div class="cat">
         <Button :updateCategory="updateCategory" />
-       
+
         <div class="row">
           <div
             class="card col-md-3 col-6 my-1 align"
@@ -43,10 +44,11 @@
               <h5 class="card-title">{{ post.title }}</h5>
               <p class="card-text">{{ post.description }}</p>
               <p class="priceofproduct">${{ post.price }}</p>
-              <h6>Rating :{{ post.rating.rate }}</h6>
+              <h6>{{$t("Rating")}} :{{ post.rating.rate }}</h6>
               <!-- <a @click=" productDetails(post.id)"  class="btn btn-primary">Shop-now</a> -->
-              <RouterLink :to="`/ProductDetail/${post.id}`"> Shop Now </RouterLink>
-              
+              <RouterLink :to="`/ProductDetail/${post.id}`">
+                {{ $t('getDetails') }}
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -56,16 +58,14 @@
 </template> 
 
 <script>
-
-import axios from 'axios'
-import { setupCache } from 'axios-cache-adapter'
+import axios from "axios";
+import { setupCache } from "axios-cache-adapter";
 const cache = setupCache({
-  maxAge: 30 * 60 * 1000
-})
+  maxAge: 30 * 60 * 1000,
+});
 const api = axios.create({
-  adapter: cache.adapter
-})
-
+  adapter: cache.adapter,
+});
 
 import Button from "./Button.vue";
 
@@ -77,10 +77,10 @@ export default {
     return {
       posts: [],
       allCategories: [],
-      sortBy: 'price',
+      sortBy: "price",
       ascending: true,
-      category: 'all',
-      productId: null
+      category: "all",
+      productId: null,
     };
   },
   computed: {
@@ -104,12 +104,10 @@ export default {
         filteredProducts.reverse();
       }
 
-      console.log(filteredProducts );
-      return filteredProducts;  
+      console.log(filteredProducts);
+      return filteredProducts;
     },
   },
-
-  
 
   methods: {
     async getData() {
@@ -122,11 +120,9 @@ export default {
       }
     },
     updateCategory(categoryName) {
-      this.category = categoryName
+      this.category = categoryName;
     },
-
-   },
- 
+  },
 
   created() {
     this.getData();

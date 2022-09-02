@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import axios from 'axios'
+import i18n from './locales/i18n'
 
 import './assets/main.css'
 import wrapper from 'axios-cache-plugin'
@@ -28,5 +29,6 @@ axios.interceptors.request.use(
     }
   );
   export default http
+  app.use(i18n)
 
 app.mount('#app')

@@ -1,5 +1,5 @@
 <template>
-  <div id="home-parent">
+  <div>
     <ImgSlider class="space" />
     <div style="text-align: center">
       <label style="padding: 20px" for="sort">Sort by:</label>
@@ -16,8 +16,9 @@
     <h2 style="text-align: center; color: black">Amazing deals</h2>
 
     <div class="container">
-      <div class="cat">
+      <div class="cat"> 
         <Button :updateCategory="updateCategory" />
+       
         <div class="row">
           <div
             class="card col-md-3 col-6 my-1 align"
@@ -30,7 +31,9 @@
               <p class="card-text">{{ post.description }}</p>
               <p class="priceofproduct">₹{{ post.price }}</p>
               <h6>Rating :{{ post.rating.rate }}</h6>
-              <a href="#" class="btn btn-primary">Shop-now</a>
+              <!-- <a @click=" productDetails(post.id)"  class="btn btn-primary">Shop-now</a> -->
+              <RouterLink :to="`/ProductDetail/${post.id}`"> Shop Now </RouterLink>
+              
             </div>
           </div>
         </div>
@@ -53,14 +56,15 @@ export default {
       sortBy: 'price',
       ascending: true,
       category: 'all',
+      productId: null
     };
   },
   computed: {
     filteredProducts() {
       let filteredProducts = this.allCategories;
       if (this.category != "all") {
-        filteredProducts = filteredProducts.filter((p) => {
-          return p.category == this.category;
+        filteredProducts = filteredProducts.filter((products) => {
+          return products.category == this.category;
         });
       }
 
@@ -81,6 +85,8 @@ export default {
     },
   },
 
+  
+
   methods: {
     async getData() {
       try {
@@ -95,23 +101,14 @@ export default {
       this.category = categoryName
     },
 
-    // sortByPrice(sortbyprice){
-    //   this.price = this.response.price
-    //   if(sortbyprice >= 400){
-    //     this.post = this.price.filter((pri) => pri.price === sortbyprice);
+   },
+ 
 
-    //   }
-    //   console.log(this.price)
-    // }
-  },
   created() {
     this.getData();
   },
 };
 </script>
-
-
-
 
 <style scoped>
 #home-parent {

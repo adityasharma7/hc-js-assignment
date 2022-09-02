@@ -15,20 +15,9 @@ export default {
             curentCategory: ""
         }      
     },
-    methods: {
  
-    // goToHome(categoryName) {
-    //   // alert(categoryName)
-    //   // this.$router.push("/category");
-    //   this.$router.push({
-    //     name: "category",
-    //     params: { category_name: categoryName },
-    //   });
-    // },
- 
-  },
   props: {
-    'updateCategory': Array,
+    'updateCategory':Function,
   },
 }
 </script>

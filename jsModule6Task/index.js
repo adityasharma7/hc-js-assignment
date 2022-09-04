@@ -1,38 +1,19 @@
-for(let name of names) {
-    name.addEventListener("click", () => {
-        names.forEach(name => name.classList.toggle("change-background"));
-    })
+
+const button = document.querySelector("button");
+const rows = document.querySelectorAll("tr");
+
+function clickhandler(event) {
+    console.log('hii');
+
 }
 
-nameHeading.addEventListener("click", () => {
-    for(let name of names) {
-        name.style.backgroundColor = "blue";
-    }
-})
 
-names.addEventListener("click", () => {
-    for(let name of names) {
-        name.style.backgroundColor = "blue";
-    }
-})
+for (let element of document.querySelectorAll('*')) {
+    element.addEventListener('click', clickhandler)
 
-// ===============================================
-
-let rows = document.querySelectorAll("tr");
-rows[0].children[1].addEventListener("click", () => {
-    for(let row of rows) {
-        row.children[1].style.backgroundColor = "blue";
-    }
-})
-
-
-
-let tbl = document.querySelectorAll("table");
-
-tbl[0].addEventListener("click", (e) => {
-    console.log(e.target);
-})
-
-
-
-row.children[1].innerHTML !== 'Name' ? row.children[1].style.backgroundColor = "blue" : null;
+}
+button.addEventListener("click", (e) => {
+    rows.forEach((element) => {
+        element.cells[1].style.background = "aqua";
+    });
+});

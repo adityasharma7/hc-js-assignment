@@ -1,101 +1,74 @@
 <html>
+    <head>
 
-<head>
-    <title>Module 6 Task</title>
+        <style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+        </style>
+<title>JS Module 5</title>
 </head>
-
-
-<!-- change the background color of the second column of a table using querySelector.</h2> -->
-
-
 <body>
-
-    <style>
-        table,
-        th,
-        td {
-            border: 2px solid black;
-        }
-    </style>
-
-
-    <body style="background-color:rgb(159, 196, 176); margin-top: 3cm;">
-        <h2 style="text-align: center;"> Data</h2>
-        <table style="width: 100%">
-            <tr>
-                <th>Name</th>
-                <th>username</th>
-                <th>Gender</th>
-                <th>Qualities and Talents</th>
-                <th>age</th>
-                <th>Contact no.</th>
-            </tr>
-
-            <tr>
-                <th>Kanchan </th>
-                <th>Kanchu_11</th>
-                <th>Female</th>
-                <th>Dance, singing ,Guitar,ExploringStuff </th>
-                <th>20</th>
-                <th>7894561237</th>
-
-
-            </tr>
-
-            <tr>
-
-                <th>Kartik </th>
-                <th>iamKartik</th>
-                <th>male</th>
-                <th>coding , football</th>
-                <th>21</th>
-                <th>789456152342</th>
-            </tr>
-
-            <tr>
-                <th>keshav</th>
-                <th>its_Keshav</th>
-                <th>male</th>
-                <th>Personal Therapist , Good Listner and adviser ,buisness mind</th>
-                <th>20</th>
-
-                <th>789456152342</th>
-
-            </tr>
-
-            <tr>
-
-                <th>Rishab</th>
-                <th>Mr.Rishab99</th>
-                <th>male</th>
-                <th>amazing singer , shayar</th>
-                <th>22</th>
-                <th>789456152342</th>
-
-            </tr>
-
-            <tr>
-                <th>Aaditya</th>
-                <th>aadi_11</th>
-                <th>male</th>
-                <th>Model , Influencer</th>
-                <th>21</th>
-
-                <th>789456152342</th>
+<table>
+  <tbody>
+    
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+        </tr>
+        <tr>
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+        </tr>
    
-   
-            </tr>
-    </body>
-    <script>
-        let x = document.querySelectorAll('tr>th:nth-child(1),td:nth-child(1)');
-        for (let i = 0; i < x.length; i++) {
-            x[i].addEventListener("click", () => {
-                for (let j = 0; j < x.length; j++) {
-                    x[j].style.backgroundColor = 'Pink';
-                }
-            });
-        }
+      
 
-    </script>
-
+  </tbody>
+</table>
+<br>
+<button type="submit">Change the 2nd row's color</button>
+<script src="index.js"></script>
+</body>
 </html>

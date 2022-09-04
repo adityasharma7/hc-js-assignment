@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Module 9 Task </title>
+</head>
+<body>
+    <script src="pallndRace.js"></script>
+    
+<script>
+
+let p = new Promise((resolve,reject) =>{
+ 
+ let a = "kanchaan"
+ 
+ if (a == "kanchan"){
+     resolve('let her in')
+ }
+ else {
+     reject('Pardon me , I dont want you inside ')
+ }
+
+
+})
+
+p.then((msg)=>{
+ console.log(msg)
+})
+.catch((msg) =>{
+ console.log(msg)
+})
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

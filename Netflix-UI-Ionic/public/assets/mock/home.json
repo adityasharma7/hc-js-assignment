@@ -1,0 +1,83 @@
+{
+    "spotlight":{
+        "id":2,
+        "name": "Firefly",
+        "rating": "#5 in Germany Today",
+        "desc": "One fame and fortune. The order love and family. Lifelong best friend"
+      },
+      "sections":[
+      {
+        "title": "Continue  Watching for Simon",
+        "type": "continue",
+        "series": [
+            {
+                "id": 1,
+                "progress":42,
+                "title": "Bridergton",
+                "season": "s1:E3"
+            },
+            {
+                "id": 2,
+                "progress":80,
+                "title": "Lupin",
+                "season": "s1:E5" 
+            },
+            {
+                "id": 3,
+                "progress":12,
+                "title": "Money Heist",
+                "season": "s3:E4"
+            }
+
+
+        ]
+      },
+      {
+          "title": "Netflix Originals",
+          "type": "original",
+          "series":[
+            {
+                "id":1
+            } ,
+            {
+                "id":2
+            },
+            {
+                "id":3
+            } 
+          ]
+      },
+      {
+          "title": "Treading Now",
+          "type": "series",
+          "series":[
+            {
+                "id":1
+            } ,
+            {
+                "id":2
+            },
+            {
+                "id":3
+            }, 
+            {
+                "id":4
+            } ,
+            {
+                "id":5
+            },
+            {
+                "id":6
+            }, 
+            {
+                "id":7
+            } ,
+            {
+                "id":8
+            }
+            
+            
+          ]
+     }
+    ]
+}

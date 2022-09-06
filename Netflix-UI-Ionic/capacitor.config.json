@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Netflix-UI-Ionic",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

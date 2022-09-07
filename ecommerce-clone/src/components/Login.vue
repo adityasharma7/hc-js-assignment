@@ -49,7 +49,6 @@ export default {
   },
   methods: {
     changeButtonText() {
-      console.log('button')
       document.querySelector('.btn').innerHTML = "Loading..."
     },
     async userLogin() {
@@ -61,6 +60,7 @@ export default {
           })
 
           localStorage.setItem('token', response.data.token)
+          localStorage.setItem('loginStatus', "true")
           this.$router.push('/')
         }
       } catch (error) {

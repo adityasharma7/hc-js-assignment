@@ -7,10 +7,10 @@
             <li class="upper-links">
               <RouterLink class="router" to="/register">{{$t('register')}}</RouterLink>
             </li>
-            <li class="upper-links">
+            <li v-if="!loggedIn" class="upper-links">
               <RouterLink class="router" to="/login">{{$t('login')}}</RouterLink>
             </li>
-            <li class="upper-links">
+            <li v-else class="upper-links">
               <RouterLink class="router" to="/" @click="logoutUser()">{{$t('logout')}}</RouterLink>
             </li>
             <li class="upper-links">
@@ -29,8 +29,8 @@
             <h2 style="margin:0px;"><span class="smallnav menu">flopkart</span></h2>
             <h1 style="margin:0px; font-weight: bolder;"><span class="largenav">
                 <RouterLink class="router title" to="/"><i>
-                  {{ $t('flopkart') }}
-                </i></RouterLink>
+                    {{ $t('flopkart') }}
+                  </i></RouterLink>
               </span></h1>
           </div>
           <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
@@ -65,14 +65,24 @@
 
 <script>
 export default {
+  data() {
+    return {
+      loggedIn: null
+    }
+  },
   methods: {
     logoutUser() {
       if (localStorage.token) {
         localStorage.removeItem('token')
+        localStorage.removeItem('loginStatus')
         alert("Logged out!")
       }
       this.$router.push('/login')
     }
+  },
+  created() {
+    this.loggedIn = JSON.parse(localStorage.getItem('loginStatus'))
+    console.log(this.loggedIn);
   }
 }
 </script>

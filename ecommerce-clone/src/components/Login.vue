@@ -18,7 +18,7 @@
                 <input v-model="password" autocomplete="off" type="password">
               </div>
               <div class="mb-3">
-                <button class="btn">
+                <button class="btn" @click="changeButtonText()">
                   {{  $t('login')  }}
                 </button>
               </div>
@@ -48,6 +48,10 @@ export default {
     }
   },
   methods: {
+    changeButtonText() {
+      console.log('button')
+      document.querySelector('.btn').innerHTML = "Loading..."
+    },
     async userLogin() {
       try {
         if (!localStorage.token) {

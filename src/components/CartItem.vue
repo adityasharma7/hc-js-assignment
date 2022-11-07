@@ -1,0 +1,74 @@
+<template>
+  <tr>
+    <td>
+      <router-link to="/">{{ item.product.title }}</router-link>
+    </td>
+    <td>${{ item.product.price }}</td>
+    <td>
+      {{ item.quantity }}
+      <a @click="decrementQuantity(item)"> - </a>
+      <a @click="incrementQuantity(item)"> + </a>
+    </td>
+    <td>${{ getItemTotal(item).toFixed(2) }}</td>
+    <td>
+      <button class="delete-button" @click="removeFromCart(item)">❎</button>
+    </td>
+  </tr>
+</template>
+
+<script>
+import { mapActions } from 'vuex';
+
+export default {
+  name: "CartItem",
+  props: {
+    initialItem: Object,
+  },
+  data() {
+    return {
+      item: this.initialItem,
+    };
+  },
+  methods: {
+    ...mapActions(['changeCart']),
+    getItemTotal(item) {
+      return item.quantity * item.product.price;
+    },
+    decrementQuantity(item) {
+      item.quantity -= 1;
+
+      if (item.quantity === 0) {
+        this.$emit("removeFromCart", item);
+      }
+
+      this.updateCart();
+    },
+    incrementQuantity(item) {
+      item.quantity += 1;
+
+      this.updateCart();
+    },
+    updateCart() {
+      changeCart;
+    },
+    removeFromCart(item) {
+      this.$emit("removeFromCart", item);
+
+      this.updateCart();
+    },
+  },
+};
+</script>
+<style scoped>
+a {
+  cursor: pointer;
+}
+.delete-button {
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+}
+td {
+  padding: 0px 50px;
+}
+</style>

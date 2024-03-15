@@ -24,6 +24,6 @@ The JS-Assignment project is designed to demonstrate proficiency in JavaScript p
 3. **Open in a Code Editor**: Use your preferred code editor to explore the project files.
 4. **Complete Assigned Tasks**: Read the instructions provided for each task in the assignment and write JavaScript code to fulfill the requirements.
 5. **Test Your Solutions**: Test your solutions locally to ensure they meet the specified criteria.
-6. **Submit Your Solutions**: Once completed, submit your solutions as per the guidelines provided.
+6. **Submit Your Solutions**: Once completed, submit your solutions as per the guidelines provided..
 
 
